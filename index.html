@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Reflectory Riff-Ökologie.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Reflectory Riff-Ökologie" startnode="1" creator="Twine" creator-version="2.3.16" ifid="9A729464-4100-4DB1-9D7E-B7592829AD5B" zoom="0.25" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">audio {
+<tw-storydata name="Reflectory Riff-Ökologie" startnode="1" creator="Twine" creator-version="2.3.16" ifid="9A729464-4100-4DB1-9D7E-B7592829AD5B" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">audio {
 visibility:hidden
 }
 
@@ -139,7 +139,7 @@ Viel Spaß!
 ##(text-style: &quot;buoy&quot;,&quot;fade-in-out&quot;)[[Start-&gt;Flughafen]]
 
 </tw-passagedata><tw-passagedata pid="2" name="Flug" tags="" position="300,300" size="200,100">##Der Flug
-Beim Boarding ertauschst du dir einen Fensterplatz von deiner Sitznachbarin, der Flieger startet und du überquerst ohne weitere Zwischenfälle den Atlantik...
+Beim Boarding tauschst du den Platz mit deiner Sitznachbarin, sodass du am Fenster sitzen kannst. Der Flieger startet und du überquerst ohne weitere Zwischenfälle den Atlantik...
 =&gt;&lt;=
 &lt;style&gt; img {max-width:60%}&lt;/style&gt;
 &lt;img src = &quot;pic/pixab/travel-6030190_960_720.png&quot; &gt;
@@ -149,19 +149,21 @@ Voller Vorfreude auf deine kommenden Abenteuer erinnerst du dich an das Video au
 Du schaust ...
 [[...aus dem Fenster um einen ersten Blick auf die Insel zu erhaschen.-&gt;Fenster]]
 [[...zurück auf den Bildschirm um das Video zu schauen. -&gt;Info]]
+
+
+[[Glossar]]
 &lt;audio controls autoplay loop&gt;
 &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
 &gt;</tw-passagedata><tw-passagedata pid="3" name="Ankommen" tags="" position="300,500" size="200,100">#Die Ankunft
-Nach der Landung verlässt du den Flughafen und lässt dich begeistert von all den ungewohnten Farben, Gerüchen und Geräuschen treiben bevor du einen Bus zu deinem Ziel ein Stück außerhalb der Stadt, im Grünen nimmst. Dort angekommen, betrittst du das Tauchresort: Eine weitläufige Anlage mit einigen Häusern, bunt verteilt zwischen dichter tropischer Vegetation.
+Nach der Landung verlässt du den Flughafen und lässt dich begeistert von all den ungewohnten Farben, Gerüchen und Geräuschen treiben bevor du einen Bus zu deinem Ziel ein Stück außerhalb der Stadt nimmst. Dort angekommen, betrittst du das Tauchresort: Eine weitläufige Anlage mit einigen Häusern, bunt verteilt zwischen dichter tropischer Vegetation.
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
 &lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
 
-Auf dem Weg zu Rezeption kommt dir eine Frau entgegen: 
+Auf dem Weg zur Rezeption kommt dir eine Frau entgegen: 
 &lt;b&gt;&quot;Hey ho! Du bist $name, nehme ich an? Schön, dass du da bist! Ich bin Jane. Wie war der Flug?&quot;&lt;/b&gt;
 &lt;==&gt;
-Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu deinem &quot;kapitalen Popel&quot;. Sie erzählt dir, dass sie sich aber freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange keinen erwachsenen Menschen einen Popel essen sehen hat.](if:$popel&lt;10)[Sie erkennt dich auch und hofft dass du deinen Blick aus dem Fenster genossen hast und sie sich darauf freut diese Welt mit dir zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Mira&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
-((Moco - Spanisch Popel))
+Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange keinen erwachsenen Menschen einen Popel essen sehen hat.](if:$popel&lt;10)[Sie erkennt dich auch und hofft dass du deinen Blick aus dem Fenster genossen hast und sie sich darauf freut diese Welt mit dir zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Mira&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
 
 ---
 
@@ -172,7 +174,7 @@ Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der
 
 Du bist nun Teil einer Industrie die vom Riff-Tourismus lebt und jährlich 36 Mrd$ umsetzt.
 
---
+---
 Als Abschluss der Tour zeigt Mira dir dein Zimmer, du wirfst deinen Backpack ab und lernst den Rest der Leute beim Abendessen kennen. Morgen startet das Programm...
 
 [[Erster Tag]]
@@ -269,6 +271,8 @@ Abstract von Abelson 2020:
 Klimawandel und Ansauerung sind globale Probleme die langfristig in den Griff bekommen werden müssen. Bis dahin kann es sein, dass das Riff durch Bleichen stirbt. Wie kann dem Riff Zeit erkauft werden? Wie kann lokal gehandelt werden um den Stress der Korallen zu vermindern?
 
 [[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="8" name="Initiale Krise" tags="" position="292,1099" size="200,100">Nachricht, dass andere Riffe in der Nähe von Bleiche betroffen sind.
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mtyiOcix7ws&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 ####Infomaterial zu Korallenbleiche
 //
@@ -406,16 +410,15 @@ Riffe ganz Allgemein
 
 
 Nachdem du das Video zuende geschaut hast ...
-[[... blickst su aus dem Fenster.-&gt;Info zu Fenster]]
+[[... blickst du aus dem Fenster.-&gt;Info zu Fenster]]
 (if:$popel is 0)[[... bohrst du in der Nase.-&gt;Popeln]]
 (if:$landung&gt;0)[[... bereitest du dich auf die Landung vor.-&gt;Ankommen]]
 
 
-
-[[Glossar]]
 &lt;audio controls autoplay loop&gt;
 &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-&gt;</tw-passagedata><tw-passagedata pid="20" name="Popeln" tags="" position="925,400" size="100,100">{(if:$info is 1)[ (set:$landung to 1) ]
+&gt;
+[[Glossar]]</tw-passagedata><tw-passagedata pid="20" name="Popeln" tags="" position="925,400" size="100,100">{(if:$info is 1)[ (set:$landung to 1) ]
 Wirklich? Ok...}
 Na also gut.
 Du ziehst dir einen saftigen Popel aus der Nase. Was nun?
@@ -455,7 +458,7 @@ Gesagt, getan. Ein kapitaler Brocken. Du bist nun auf jeden Fall satt, entscheid
 (goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="25" name="Info zu Fenster" tags="" position="550,275" size="100,100">(set:$popel to ($popel+1))
 (set:$landung to 1)
 (goto: &quot;Fenster&quot;)</tw-passagedata><tw-passagedata pid="26" name="Popel zu Info" tags="" position="925,650" size="100,100">(set:$landung to 1)
-(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="289,836" size="200,100">Nachmittags ist es so weit: Ihr packt das Equipment auf eines der Boote, bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
+(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">Nachmittags ist es so weit: Ihr packt das Equipment auf eines der Boote, bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
 Ihr kommt an, der Fahrer stellt den Motor aus, du setzt dich auf den Bootsrand und bereitest dich darauf vor dich rückwärts fallen zu lassen.
 Bist du bereit?
 
@@ -471,7 +474,7 @@ Bist du bereit?
 
 ((Infos Tauchgang))
 
-Beigeistert zurück an Land, zum Abendessen kommt ihr zusammen.
+Begeistert zurück an Land, zum Abendessen kommt ihr zusammen.
 
 [[Abendessen-&gt;Initiale Krise]]
 
@@ -570,17 +573,17 @@ CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/#
 Sound:
 Unter-Wasser-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;
 
-Unter-Wasser-Tauch-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;</tw-passagedata><tw-passagedata pid="42" name="Erster Tag" tags="" position="297,664" size="200,100">###Tag 1
-Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. Gebannt hören du und die anderen Neuen zu, was Mira euch beizubringen hat. Nachmittags bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
+Unter-Wasser-Tauch-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;</tw-passagedata><tw-passagedata pid="42" name="Erster Tag" tags="" position="298,632" size="200,100">###Tag 1
+Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. &lt;b&gt;Morgen $name! Gut geschlafen?&lt;/b&gt;, begrüßt dich Mira freundlich.(if:$popel&lt;40 and &gt;19)[ Du scheinst dir einen neuen Spitznamen eingefangen zu haben, Moco ist ist wohl Spanisch und bedeutet so viel wie &#39;Popel&#39;.] Gebannt hören du und die anderen Neuen zu, was Mira euch beizubringen hat. Nachmittags bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
 &lt;style&gt; img {max-width:70%}&lt;/style&gt; 
 &lt;img src = &quot;pic/pixab/diving-equipment-6810171_960_720.jpg&quot; &gt;
 
-Abends Mira schließt den Unterricht mit einigen allgemeinen Infos zu Korallen:
+Abends schließt Mira den Unterricht mit einigen allgemeinen Infos zu Korallen:
 ((Infovideo 2))
 
 Ihr lasst den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
 
-[[Der erste Tauchgang -&gt; Erste Bootsfahrt]]
+[[Der erste Tauchgang -&gt;Erste Bootsfahrt]]
 &lt;audio controls autoplay loop&gt;
  	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="43" name="Flughafen" tags="" position="300,168" size="200,100">##Abflug
 Du hast einen Platz zur Ausbildung zum Dive Master ergattert, die letzten Monate viel gespart und einen bezahlbaren Flug nach Roatán bekommen. 
@@ -618,7 +621,7 @@ eine lokale NGO unterstützen</tw-passagedata><tw-passagedata pid="51" name="Glo
 
 Übersicht Korallenpolypen
 
-Übersicht RiffTypen</tw-passagedata><tw-passagedata pid="52" name=" Erste Bootsfahrt" tags="" position="297,784" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+Übersicht RiffTypen</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
