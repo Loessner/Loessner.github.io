@@ -12,6 +12,7 @@
 <tw-storydata name="Reflectory Riff-Ökologie" startnode="1" creator="Twine" creator-version="2.3.16" ifid="9A729464-4100-4DB1-9D7E-B7592829AD5B" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">audio {
 visibility:hidden
 }
+audio.shown {visibility:visible}
 
 tw-dialog {
 color: white;
@@ -42,7 +43,6 @@ tw-link {color: darkslategrey;
  padding: 0.1em 0.2em 0.1em 0.2em;
  background-color: #61C2DF;
  margin: 0px;
- border-width: 2,5px;
  border-style: solid;
  border-color: white;
  border-radius: 15px;}
@@ -50,6 +50,13 @@ tw-link:hover {color: white;}
 
 tw-link.visited {color: darklatesgrey;}
 tw-link.visited:hover {color: white}
+
+tw-hook[name=glossar] tw-link {
+  color: #e8e8e8;
+ background:none;
+border:none;
+  text-decoration: underline;
+}
 
 tw-passage {
   /* Box background (black with 100% opacity) */
@@ -105,6 +112,7 @@ tw-passage {
   font-size: 100%;
   text-align: justify;
 }
+
 tw-icon { display:none; }
 
 [tags="1"] {
@@ -117,6 +125,7 @@ tw-icon { display:none; }
 (set:$fenster to 0)
 (set:$info to 0)
 (set:$cook to 0)
+(set:$vorher to 0)
 }
 (if:$landung is 0)[
 =&gt;&lt;=
@@ -128,7 +137,11 @@ Hallo $name! Willkommen zur aktuellen Arbeitsversion von:
 &lt;img src = &quot;pic/OceanImageBank_JordanRobins_02.jpg&quot; &gt;
 Hierbei handelt es sich um &#39;&#39;Reflectory&#39;&#39; - eine interaktive Geschichte in deren Verlauf du aufgefordert wirst Entscheidungen zu treffen, welche den Verlauf der Geschichte beeinflussen. Du solltest dir daher die Zeit nehmen um deine Entscheidungen gut abzuwägen...
 
-Für eine optimale Erfahrung empfielt es sich den Ton anzustellen und auf Vollbildmodus (F11) zu wechseln.
+Im Verlauf der Geschichte findest du am Ende der Seite immer wieder den Link zum &#39;&#39;Glossar&#39;&#39;. Dort kannst du Begriffe und Namen noch einmal nachschlagen. Alternativ kannst du natürlich auch das Internet zur Recherche nutzen.
+
+Für eine optimale Erfahrung empfielt es sich den Ton anzustellen und Kopfhörer zu verwenden zu wechseln.
+
+Alle Charaktere sind bisher von einer Person eingesprochen, dies wird für die finale Version überarbeitet. 
 
 Viel Spaß!
 {&lt;audio controls autoplay loop&gt; 
@@ -136,9 +149,7 @@ Viel Spaß!
 &gt;
 }]
 =&gt;&lt;=
-##(text-style: &quot;buoy&quot;,&quot;fade-in-out&quot;)[[Start-&gt;Flughafen]]
-
-</tw-passagedata><tw-passagedata pid="2" name="Flug" tags="" position="300,300" size="200,100">##Der Flug
+##(text-style: &quot;buoy&quot;,&quot;fade-in-out&quot;)[[Start-&gt;Flughafen]]</tw-passagedata><tw-passagedata pid="2" name="Flug" tags="" position="300,300" size="200,100">##Der Flug
 Beim Boarding tauschst du den Platz mit deiner Sitznachbarin, sodass du am Fenster sitzen kannst. Der Flieger startet und du überquerst ohne weitere Zwischenfälle den Atlantik...
 =&gt;&lt;=
 &lt;style&gt; img {max-width:60%}&lt;/style&gt;
@@ -149,12 +160,11 @@ Voller Vorfreude auf deine kommenden Abenteuer erinnerst du dich an das Video au
 Du schaust ...
 [[...aus dem Fenster um einen ersten Blick auf die Insel zu erhaschen.-&gt;Fenster]]
 [[...zurück auf den Bildschirm um das Video zu schauen. -&gt;Info]]
-
-
-[[Glossar]]
 &lt;audio controls autoplay loop&gt;
 &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-&gt;</tw-passagedata><tw-passagedata pid="3" name="Ankommen" tags="" position="300,500" size="200,100">#Die Ankunft
+&gt;&lt;/audio&gt;
+(set:$vorher to &quot;Flug&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="3" name="Ankommen" tags="" position="300,500" size="200,100">#Die Ankunft
 Nach der Landung verlässt du den Flughafen und lässt dich begeistert von all den ungewohnten Farben, Gerüchen und Geräuschen treiben bevor du einen Bus zu deinem Ziel ein Stück außerhalb der Stadt nimmst. Dort angekommen, betrittst du das Tauchresort: Eine weitläufige Anlage mit einigen Häusern, bunt verteilt zwischen dichter tropischer Vegetation.
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
@@ -166,7 +176,9 @@ Auf dem Weg zur Rezeption kommt dir eine Frau entgegen:
 Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange keinen erwachsenen Menschen einen Popel essen sehen hat.](if:$popel&lt;10)[Sie erkennt dich auch und hofft dass du deinen Blick aus dem Fenster genossen hast und sie sich darauf freut diese Welt mit dir zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Mira&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
 
 ---
-
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;0 Jane über resort.mp3&quot;&gt;
+&lt;/audio&gt;
 - Mira, die Chefin, führt euch herum und stellt den Betrieb vor:
 ((Vorstellung Betrieb: &quot;Alt-eingesessene&quot; Tauchschule mit Verpflegung und Unterbringung; Chefin, mehrere TauchlehrerInnen und Tauch-BegleiterInnen, BootsfahrerInnen, Küchenpersonal, Reinigungskräfte,... + mehrere Boote, &quot;Riff-Toiletten?&quot;))
 
@@ -180,7 +192,10 @@ Als Abschluss der Tour zeigt Mira dir dein Zimmer, du wirfst deinen Backpack ab 
 [[Erster Tag]]
 
 &lt;audio controls autoplay loop&gt;
- 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="4" name="Konsum" tags="" position="292,1224" size="200,100">####Informaterial zu Tierhaltung und Co2
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;
+(set:$vorher to &quot;Ankommen&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="4" name="Konsum" tags="" position="300,1396" size="200,100">####Informaterial zu Tierhaltung und Co2
 
 Riff-fishing: Jagdleinen scrape-off
 
@@ -192,7 +207,7 @@ Riff-fishing: Jagdleinen scrape-off
 //
 * Lebensmittelindustrie für tierische Produkte als einer der größen Produzenten für CO2
 //
-[[Meinungen zur Konsum-Entscheidung]]</tw-passagedata><tw-passagedata pid="5" name="Meinungen zur Konsum-Entscheidung" tags="" position="292,1349" size="200,100">Meinung Bootsfaher*in/ Küchenchef*in:
+[[Meinungen zur Konsum-Entscheidung]]</tw-passagedata><tw-passagedata pid="5" name="Meinungen zur Konsum-Entscheidung" tags="" position="300,1521" size="200,100">Meinung Bootsfaher*in/ Küchenchef*in:
 - Haben schon immer Fisch gegessen
 - Können doch eh unser Riff nicht schützen, wenn der Rest der Welt weiter macht wie bisher
 - Es sollten alle Freiheit haben für sich selbst zu entscheiden
@@ -227,7 +242,7 @@ Wofür willst du in der Diskussion argumentieren?
 [[Umstellung auf Bio/Ökoerzeugnisse-&gt; Bio/Öko]]
 [[Freie Entscheidung für die Angestellten und Kunden-&gt;Frei]]
 
-</tw-passagedata><tw-passagedata pid="6" name="Vegan" tags="" position="111,1502" size="200,100">(set: $stress to $stress + 0)
+</tw-passagedata><tw-passagedata pid="6" name="Vegan" tags="" position="119,1662" size="200,100">(set: $stress to $stress + 0)
 (set:$cook to ($cook+1))
 
 (if:$vegan is Freiheit)[Koch geht]
@@ -255,7 +270,7 @@ Neue Kommunikationsgrundlage ins Programm der Tauchschule aufgenommen um mit Kun
 Abstract von Abelson 2020:
 Klimawandel und Ansauerung sind globale Probleme die langfristig in den Griff bekommen werden müssen. Bis dahin kann es sein dass das Riff durch Bleichen stirbt. Wie kann dem Riff Zeit erkauft werden? Wie kann lokal gehandelt werden um den Stress der Korallen zu vermindern?
 
-[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="7" name="Frei" tags="" position="370,1500" size="200,100">(set: $stress to $stress + 30)
+[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="7" name="Frei" tags="" position="378,1660" size="200,100">(set: $stress to $stress + 30)
 
 Kundenstamm bleibt.
 
@@ -274,6 +289,8 @@ Klimawandel und Ansauerung sind globale Probleme die langfristig in den Griff be
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mtyiOcix7ws&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
+https://www.sueddeutsche.de/wissen/korallen-riff-mexiko-krankheit-sctld-1.5601031
+
 ####Infomaterial zu Korallenbleiche
 //
 * Was ist eine Bleiche?
@@ -285,9 +302,353 @@ Einbettung:
 (Fotos)
 (tatsächliche Onlineartikel zu Bleichen?)
 
-Ihr entscheidet euch als Tauchsresort aktiv zu werden um euer Riff zu schützen. Doch wo anfangen? Temperaturanstieg und Ansauerung sind die grundlegende Probleme. Das resort bietet Verpflegung für Kunden und angestellte. Tauchlehrerin macht den Vorschlag Küche auf vegan umzustellen.
+Ihr entscheidet euch als Tauchsresort aktiv zu werden um euer Riff zu schützen. Doch wo anfangen? Temperaturanstieg und Ansauerung sind die grundlegende Probleme. Das Resort bietet Verpflegung für Kunden und Angestellte. Tauchlehrerin macht den Vorschlag Küche auf vegan umzustellen.
 
-[[Konsum]]</tw-passagedata><tw-passagedata pid="9" name="Rotfeuerfische am Riff" tags="" position="292,2386" size="200,100">Video mit Fisch - bist alarmiert. Hast schon von dem Fisch gehört. Was nun?
+[[BleichenInfo]]</tw-passagedata><tw-passagedata pid="9" name="Saison beginnt" tags="" position="295,2569" size="200,100">Saison beginnt
+, dem Riff geht es gut soweit
+aufgeregt, du begleitest Gruppen
+einer der Kunden schmerzhaften Stich - behauptet ein wunderschöner Fisch habe ihn gestochen, Wird behandelt
+
+sprichst mit Miri: Verletzung und Beschreibung des Fisches passt auf den indischen Rotfeuerfisch
+eine invasive Art die sich von Norden aus ausgebreitet hat
+Augen aufhalten bei den nächsten Tauchgängen
+
+[[Rotfeuerfische am Riff]]</tw-passagedata><tw-passagedata pid="10" name=" Meinungen zu Rofeuerfisch-Entscheidung" tags="" position="292,2902" size="200,100">Ökol:
+Wieso einen Fisch jagen wenn es doch um Korallen geht?
+der Fisch bedroht die Gesundheit des Riffs
+Bejagen löst das Problem nicht dauerhaft/ zu kleiner bzw temporärer Unterschied
+
+augenscheinlicher Konflikt mit veganismus Entscheidung
+augenscheinliche Problematik: Ist Überfischung nicht einer der größten lokalen Bedrohungen für Korallenriffe?
+
+Ökon: 
+Kundenattraktion: Fisch ist schön anzusehen
+alternative Kundenattraktion: Kunden an Jagt beteiligen
+Harpunen-Equipment günstig
+Jagen könnte Tierliebhaber unter den Kunden verschrecken
+Zubereitung und Verzehr im Resort bietet optionale Attraktion
+Zubereitung auf Grund von giftigen Stacheln aufwendig - mehr Küchenpersonal?
+
+Soz: 
+gute Möglichkeit mit Kunden über Nachhaltigkeit zu kommunizieren
+Tiere töten ist immer verwerflich/möchte das nicht
+Feuerfisch ist guter Speise-Fisch
+Feuerfisch trägt schmerzhaftes Gift
+
+[[Fisch bejagen-&gt; Auswirkungen: Fisch bejagen]]
+[[Fisch bejagen und essen-&gt;Auswirkungen: Fisch bejagen und essen]]
+[[Fisch als Kundenatraktion bewerben-&gt; Auswirkungen: Fisch als Kundenattraktion bewerben]]</tw-passagedata><tw-passagedata pid="11" name=" Auswirkungen: Fisch bejagen" tags="" position="287,3035" size="200,100">(set: $stress to $stress + 0)
+
+Chefin bittet dich 
+Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail und bekommst kurz darauf eine begeisterte Antwort mit dem Angebot euch Equipment und einweisung zu stellen.
+((Bild Ausrüstung))
+
+Ein paar Tage später erhaltet ihr Besuch von einem Instructor. Er bringt einige Dreizackspreere und Harpunen mit Gummizügen mit und gibt dir und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken.
+
+Die Chefin besteht darauf dass alle TauchbegleiterInnen sich an dem Projekt beteiligen.
+Dive Master 3 will selber keine Tiere töten. Es kommt zu einer hitzigen Diskussion mit der Chefin. Dive Master 3 verweigert und wechselt 2 Wochen später zu anderer Tauchschule
+
+Ihr macht einige Tauchgänge im Tauchbegleitungsteam um die Handhabung zu lernen.
+
+((Bilder/Video Jagd: bestenfalls first person perspective))
+
+Ihr bringt 500/30Tauchende Fische nach Hause. Führt Buch und entsorgt sie im Müll.
+
+verschreckt einige Ökokunden aber begeistert andere
+
+
+[[Schildkröten am Riff]]</tw-passagedata><tw-passagedata pid="12" name=" Auswirkungen: Fisch als Kundenattraktion bewerben" tags="" position="534,3037" size="200,100">(set: $stress to $stress + 40)
+
+Biodiversität sinkt weiter aber Rotfeuerfisch ist hübsch
+
+[[lokal weiter entlasten -&gt;Schildkröten am Riff]]</tw-passagedata><tw-passagedata pid="13" name="Schildkröten am Riff" tags="" position="290,3201" size="200,100">Riff ist ein wichtiger grazing/breeding ground für Schildkröten
+Tauchtourismus stört die Schildkröten
+
+[[Meinungen: Schutzzonen]]</tw-passagedata><tw-passagedata pid="14" name="Meinungen: Schutzzonen" tags="" position="288,3328" size="200,100">Sollen Schutzzonen eingerichtet werden?
+
+1: Schlüsselspezies fürs Riff: Dauerhaft schützen um dem Riff einen Teil der Belastung zu nehmen und so Überlebenswahrscheinlichkeiten zu erhöhen. 
+
+2: Viele Kunden kommen wegen der Schildkröten. Verstehe, dass wir sie nicht zuletzt deshalb schützen müssen, deswegen halten wir uns ja an die Regeln zu Abstand.Teile des Riffs wo die Schildkröten sich vornehmlich aufhalten nichtmehr zu betauchen zu krass und die Auswirkungen nur sehr langfristig positiv für die Tauchschule, wenn überhaupt. Könnten noch strengere Tauchverhaltensregeln auferlegen?
+
+
+
+[[Schutzzone dauerhaft nicht betauchen]]
+
+[[Schutzzone zeitweise nicht betauchen]]
+
+[[Schutzzone weiterhin betauchen aber strengere Regeln]]</tw-passagedata><tw-passagedata pid="15" name="Schutzzone dauerhaft nicht betauchen" tags="" position="43,3474" size="200,100">(set: $stress to $stress + 30)
+
+[[Abreise]]</tw-passagedata><tw-passagedata pid="16" name="Schutzzone zeitweise nicht betauchen" tags="" position="288,3478" size="200,100">(set: $stress to $stress + 0)
+
+[[Abreise]]</tw-passagedata><tw-passagedata pid="17" name="Schutzzone weiterhin betauchen aber strengere Regeln" tags="" position="539,3480" size="200,100">(set: $stress to $stress + 20)
+
+[[Abreise]]</tw-passagedata><tw-passagedata pid="18" name="Fenster" tags="" position="150,400" size="100,100">{(if: $fenster is 0)[Ihr scheint aus Richtung des Wassers zu landen, denn statt der Insel hast du einen Blick auf das Karibische Meer und große Riffstrukturen unter der Wasseroberfläche...]
+(if: $fenster is 1)[Ihr befindet euch weiterhin im Anflug und unter dir erstreckt sich das Riff.]}
+{&lt;style&gt; img {max-width:100%}
+&lt;/style&gt;
+&lt;img src=&quot;pic/OceanImageBank_KaterinaKatopis_42.jpg&quot;&gt;
+}
+(if: $fenster is 0)[Fasziniert betrachtest du die Verläufe von flacheren und tieferen Strukturen und stellst dir vor wie es unter der Oberfläche aussehen mag.] 
+
+
+Du...{
+(set: $fenster to 1)}
+[[... blickst zurück auf dein Handy.-&gt;Fenster zu Info]]
+(if:$popel is 0)[[... bohrst in der Nase.-&gt;Popeln]]
+(if:$landung is 1)[[... bereitest dich auf die Landung vor.-&gt;Ankommen]]
+&lt;audio controls autoplay loop&gt;
+  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+  &gt;</tw-passagedata><tw-passagedata pid="19" name="Info" tags="" position="550,398" size="100,100">{
+(set:$info to 1)
+####Infovideo zu Korallenriffen
+}
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/dBv_OP7dwrU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+Riffe ganz Allgemein
+* Ökologische Bedeutung
+* Form und Funktion
+
+
+Nachdem du das Video zuende geschaut hast ...
+[[... blickst du aus dem Fenster.-&gt;Info zu Fenster]]
+(if:$popel is 0)[[... bohrst du in der Nase.-&gt;Popeln]]
+(if:$landung&gt;0)[[... bereitest du dich auf die Landung vor.-&gt;Ankommen]]
+
+
+&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+&gt;&lt;/audio&gt;
+(set:$vorher to &quot;Info&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="20" name="Popeln" tags="" position="1010,566" size="100,100">{(if:$info is 1)[ (set:$landung to 1) ]
+Wirklich? Ok...}
+Na also gut.
+Du ziehst dir einen saftigen Popel aus der Nase. Was nun?
+
+&lt;==
+
+Du...
+[[... schaust in deinem Handgepäck nach einem Taschentuch.]]
+[[... schmierst den Popel so unauffällig wie möglich an die Armlehne deiner Sitznachbarin.]]
+[[... isst den Popel auf.]]
+
+&lt;audio controls autoplay loop&gt;
+  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+  &gt;</tw-passagedata><tw-passagedata pid="21" name="... schaust in deinem Handgepäck nach einem Taschentuch." tags="" position="860,691" size="100,100">(set:$popel to ($popel+10))
+Gesagt, getan. Du entsorgst deinen Fang erfolgreich und sauber und dein Blick wandert in Richtung ...
+
+[[... Handybildschirm.-&gt;Popel zu Info]]
+[[... Fenster.-&gt;Fenster]]
+&lt;audio controls autoplay loop&gt;
+  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+  &gt;</tw-passagedata><tw-passagedata pid="22" name="... schmierst den Popel so unauffällig wie möglich an die Armlehne deiner Sitznachbarin." tags="" position="1010,691" size="100,100">(set:$popel to ($popel+20))
+Äußerst unauffällig setzt du deinen Plan in die Tat um. Ein anschließender Seitenblick zeigt dir die belustigte Miene deiner Sitznachbarin aber das könnte hundert andere Gründe haben.
+Deine Aufmerksamkeit wandert in Richtung ...
+
+[[... Handybildschirm.-&gt;Popel zu Info]]
+[[... Fenster.-&gt;Fenster]]
+&lt;audio controls autoplay loop&gt;
+  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="23" name="... isst den Popel auf." tags="" position="1160,691" size="100,100">{(set:$popel to ($popel+30))
+Gesagt, getan. Ein kapitaler Brocken. Du bist nun auf jeden Fall satt, entscheidest dich etwaige Blicke deiner Mitmenschen zu ignorieren und dein Blick wandert in Richtung ...}
+
+[[... Handybildschirm.-&gt;Popel zu Info]]
+[[... Fenster.-&gt;Fenster]]
+&lt;audio controls autoplay loop&gt;
+  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+  &gt;</tw-passagedata><tw-passagedata pid="24" name="Fenster zu Info" tags="" position="150,275" size="100,100">(set:$popel to ($popel+1))
+(set:$landung to 1)
+(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="25" name="Info zu Fenster" tags="" position="550,275" size="100,100">(set:$popel to ($popel+1))
+(set:$landung to 1)
+(goto: &quot;Fenster&quot;)</tw-passagedata><tw-passagedata pid="26" name="Popel zu Info" tags="" position="1010,816" size="100,100">(set:$landung to 1)
+(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">Nachmittags ist es so weit: Ihr packt das Equipment auf eines der Boote, bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
+Ihr kommt an, der Fahrer stellt den Motor aus, du setzt dich auf den Bootsrand und bereitest dich darauf vor dich rückwärts fallen zu lassen.
+Bist du bereit?
+
+[[Na Klar!-&gt;Tauch1]]
+[[Nope!]]
+&lt;audio player autoplay loop&gt;
+&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tauch1" tags="" position="292,974" size="200,100">Du drückst mit einer Hand deine Taucherbrille fest in dein Gesicht und lässt dich rückwärts fallen. Um dich schlägt das Wasser zusammen und Luftblasen verschleiern zunächst deine Sicht. Du orientierst dich und es bietet sich dir der folgende Anblick:
+
+&lt;style&gt; img {max-width:100%}
+
+&lt;/style&gt;
+&lt;img src=&quot;pic/OceanImageBank_MattCurnock_29.jpg&quot;&gt;
+
+((Infos Tauchgang))
+
+Begeistert zurück an Land, zum Abendessen kommt ihr zusammen.
+
+[[Abendessen-&gt;Initiale Krise]]
+
+&lt;audio controls autoplay&gt;
+&lt;source src=&quot;aud/splash-by-blaukreuz-6261.mp3&quot;&gt;
+&lt;/audio&gt;
+&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/under-water-sounds-while-scuba-diving-14866.mp3&quot;&gt;
+&lt;/audio&gt;
+(set:$vorher to &quot;Tauch1&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="29" name="Nope!" tags="" position="528,765" size="100,100">Du überprüfst nochmal dein Equipment, rückst alles zurecht und erinnerst dich daran was du gleich zu tun hast. Da kann nichts schief gehen.
+
+[[Na dann los!-&gt;Tauch1]]</tw-passagedata><tw-passagedata pid="30" name="Abreise" tags="" position="282,3643" size="200,100">(if: $stress&gt;99)[Kurz vor deiner geplanten Abreise ]
+(if: $stress&lt;100)[Kurz vor deiner geplanten Abreise geht es dem Riff weiterhin gut ]
+
+
+Der Aufenthalt des Charakters am Riff endet mit Rückflug.
+
+Es wird sich von dem Setting und den handelnden Charakteren verabschiedet und Handlungsstränge geschlossen.
+
+Der handelnde Charakter lässt die Zeit Revue passieren und so werden die getroffenen Entscheidungen erzählend zusammengefasst 
+
+Je nach vorangegangenen Entscheidungen ist das Riff von einer langen Bleiche betroffen, das Tauchresort in unterschiedlichem ökonomischen Zustand und die handelnden Charaktere unterschiedlich zufrieden. 
+
+&lt;img src=&quot;bild/1.jpg&quot;&gt;
+
+[[Referenzen-&gt;Credits]]</tw-passagedata><tw-passagedata pid="31" name="Notes" tags="" position="717,57" size="100,100">Tags nutzen für kopf/Fuß-Zeile oder &quot;Startup&quot;
+
+(set: &quot;Riff&quot; to (datamap:))
+(dm: [&quot;name&quot;, &quot;Korallenriff&quot;]) -&gt; Datamap
+
+https://www.youtube.com/watch?v=NZroyIYTk2k&amp;list=PLFgjYYTq6xyjBtXJTvEaBTVUWxirY6q24&amp;index=8 ab Mitte gucken
+
+dynamic links
+
+hooks: ab Mitte des videos: schriftfeld auf das man klickt wird ersetzt (bist du sicher dass du das tun willst?)</tw-passagedata><tw-passagedata pid="32" name="Meinungen: Klo" tags="" position="297,2275" size="200,100">Meinungen zu Klärsystem
+
+Das Tauchresort hat ein veraltetes Klärsystem/ Toiletten direkt über dem Riff.
+
+###Informationsmaterial zu Eutrophierung als Bedrohung für Korallenriffe
+* Konkurrenz Algen/Bakterien/Korallen
+
+((eventuell Rifftoilette als erste Maßnahme und dann zusätzlich zu Antriebsalternative für Boote?))
+
+1: Haben wir schon immer so gemacht. Alternative sehr teuer.
+Optional: Haben schon Geld für andere Umrüstung ausgegeben/haben ja etwas mehr Geld weil keins ausgegeben. Kunden normalerweise angetan von &quot;Erlebnistoilette&quot;
+
+2: Einfache Lösung mit großer Wirkung. &quot;Rückständig&quot;, dass noch nicht umgerüstet
+
+3: Etwas mehr Geld in die Hand nehmen und einmal richtig machen
+
+(if:$geld&lt;3)(text-style:&quot;strike&quot;)[in modernes Klärsystem investieren]
+(if:$geld&gt;2)[[in modernes Klärsystem investieren -&gt;Kläranlage]]
+[[in Sickergrube investieren -&gt;Kompostklo]]
+[[Geld sparen -&gt;Plumsklo]]</tw-passagedata><tw-passagedata pid="33" name="Kläranlage" tags="" position="46,2408" size="200,100">(set: $stress to $stress + 0)
+
+Kredit wird bewilligt, subventioniert?, Anlage wird gebaut, dauert Monate aber dann kann Rifftoilette abgebaut werden
+
+innerhalb von weiteren Monaten verschwinden die x-Bakterienteppiche und erste Korallen siedeln sich wieder an
+
+[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Saison beginnt]]</tw-passagedata><tw-passagedata pid="34" name="Plumsklo" tags="" position="557,2407" size="200,100">(set: $stress to $stress + 35)
+
+Geld gespart und kann nun in Werbung/Reparaturen am Gebäude oder Boot gesteckt werden
+
+Bewuchs bleibt dieser Teil des Riffs bleibt &quot;tot&quot;
+
+[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Saison beginnt]]</tw-passagedata><tw-passagedata pid="35" name="Sonnencreme" tags="" position="302,1804" size="200,100">Sonnencreme ist schädlich fürs Riff
+So schädlich ist es wirklich.
+Es gibt verschiedene Alternativen: Vor und Nachteile
+
+[[Meinungen Sonnencreme]]</tw-passagedata><tw-passagedata pid="36" name="ohne Riffprodukte" tags="" position="679,1658" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="37" name=" Lokal" tags="" position="807,1661" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="38" name=" Bio/Öko" tags="" position="930,1663" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="39" name="Kompostklo" tags="" position="311,2409" size="200,100">[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Saison beginnt]]</tw-passagedata><tw-passagedata pid="40" name="Auswirkungen: Fisch bejagen und essen" tags="" position="29,3038" size="200,100">(set: $stress to $stress + 0)
+(set:$cook to ($cook+1))
+
+Chefin bittet dich 
+Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail und bekommst kurz darauf eine begeisterte Antwort mit dem Angebot euch Equipment und einweisung zu stellen.
+((Bild Ausrüstung))
+
+Ein paar Tage später erhaltet ihr Besuch von einem Instructor. Er bringt einige Dreizackspreere und Harpunen mit Gummizügen mit und gibt dir und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken.
+
+Die Chefin besteht darauf dass alle TauchbegleiterInnen sich an dem Projekt beteiligen.
+Dive Master 3 will selber keine Tiere töten. Es kommt zu einer hitzigen Diskussion mit der Chefin. Dive Master 3 verweigert und wechselt 2 Wochen später zu anderer Tauchschule
+
+Ihr macht einige Tauchgänge im Tauchbegleitungsteam um die Handhabung zu lernen.
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FQXplP4AyRQ?controls=0&amp;amp;start=5&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+((Bilder/Video Jagd: bestenfalls first person perspective))
+
+Ihr bringt 500/30Tauchende Fische nach Hause. Führt Buch
+
+(if:$cook is 0)[Koch geht]
+(if:$cook is 0)[Koch voll genervt]
+
+[[lokal weiter entlasten -&gt;Schildkröten am Riff]]
+</tw-passagedata><tw-passagedata pid="41" name="Credits" tags="" position="287,3843" size="200,100">
+
+Bilder:
+
+CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/#
+
+Sound:
+Unter-Wasser-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;
+
+Unter-Wasser-Tauch-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;</tw-passagedata><tw-passagedata pid="42" name="Erster Tag" tags="" position="298,632" size="200,100">###Tag 1
+Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. &lt;b&gt;Morgen $name! Gut geschlafen?&lt;/b&gt;, begrüßt dich Mira freundlich.(if:$popel&lt;40 and &gt;19)[ Du scheinst dir einen neuen Spitznamen eingefangen zu haben, Moco ist ist wohl Spanisch und bedeutet so viel wie &#39;Popel&#39;.] Gebannt hören du und die anderen Neuen zu, was Mira euch beizubringen hat. Nachmittags bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
+&lt;style&gt; img {max-width:70%}&lt;/style&gt; 
+&lt;img src = &quot;pic/pixab/diving-equipment-6810171_960_720.jpg&quot; &gt;
+
+Abends schließt Mira den Unterricht mit einigen allgemeinen Infos zu Korallen und ihrem Wachstum:
+&lt;iframe width=&quot;1280&quot; height=&quot;720&quot; src=&quot;https://www.youtube.com/embed/MUPY4zs2hgI&quot; title=&quot;Miri&#39;s Infos zu Korallenwachstum&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+Ihr lasst den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
+
+[[Der erste Tauchgang -&gt;Erste Bootsfahrt]]
+&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;
+(set:$vorher to &quot;Erster Tag&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="43" name="Flughafen" tags="" position="300,168" size="200,100">##Abflug
+Du hast einen Platz zur Ausbildung zum Dive Master ergattert, die letzten Monate viel gespart und einen bezahlbaren Flug nach Roatán bekommen. 
+
+Endlich geht es los! Nachdem du dich von deinen Liebsten für das nächste halbe Jahr verabschiedet hast, stellst du dich bei der Gepäckkontrolle an.
+=&gt;&lt;=
+&lt;style&gt; img {max-width:100%}&lt;/style&gt;
+&lt;img src = &quot;pic/pixab/airport-6911566_1280.jpg&quot; &gt;
+&lt;==&gt;
+Du reist einige Wochen vor der Saison an, um dich in einem Tauchresort ausbilden zu lassen und dann die Monate darauf als Dive Master zu arbeiten - also die Gäste des Resorts bei ihren Tauchgängen am lokalen Riff zu begleiten. 
+
+Während sich die Schlange langsam weiterbewegt, überfliegst du die ersten Abschnitte vom &lt;a href=&quot;https://de.wikipedia.org/wiki/Roat%C3%A1n&quot;; target=&quot;_blank&quot;&gt;Wikipedia-Artikel zu Roatán&lt;/a&gt;.
+Als du zuende gelesen hast, suchst du ein Infovideo zu Korallenriffen, doch bevor du es startest erreicht die Schlange die Gepäckkontrolle und du wirst aufgefordert deine Sachen abzugeben.
+
+Du speicherst das Video für später, deine Sachen werden durchleuchtet und du ...
+[[machst dich auf den Weg zum Gate.-&gt;Flug]]
+
+&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/plane/international-airport-intercom-madeira-19947.mp3&quot;
+&gt;&lt;/audio&gt;
+(set:$vorher to &quot;Flughafen&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="44" name="Meinungen Sonnencreme" tags="" position="302,1954" size="200,100">X:
+Y:
+Z:
+
+[[Freiheit]]
+[[Alternative 1]]
+[[ALternative 2]]</tw-passagedata><tw-passagedata pid="45" name="Freiheit" tags="" position="212,2112" size="100,100">[[lokal das Riff weiter entlasten?-&gt;Meinungen: Klo]]</tw-passagedata><tw-passagedata pid="46" name="Alternative 1" tags="" position="350,2110" size="100,100">[[lokal das Riff weiter entlasten?-&gt;Meinungen: Klo]]</tw-passagedata><tw-passagedata pid="47" name="ALternative 2" tags="" position="477,2116" size="100,100">[[lokal das Riff weiter entlasten?-&gt;Meinungen: Klo]]</tw-passagedata><tw-passagedata pid="48" name="Verhalten der Tauchenden" tags="" position="847,3479" size="200,100">Facts about:
+Störung des Riffs durch
+Tauchende können Höhe nicht gut kontrollieren - damage corals
+nähern sich den Tieren - ändern Verhalten
+
+[[Meinungen zu  Tauchregeln]]</tw-passagedata><tw-passagedata pid="49" name="Meinungen zu  Tauchregeln" tags="" position="847,3629" size="200,100">Advanced Open Water level als bedingung für bestimmte Bereiche des Riffs
+
+Intensiviertes Training</tw-passagedata><tw-passagedata pid="50" name="Weitere Entscheidungsideen" tags="" position="861,52" size="100,100">letzte Seite von Burke et al 2011 - what to do
+
+eine lokale NGO unterstützen
+
+stony coral tissue loss disease</tw-passagedata><tw-passagedata pid="51" name="Glossar" tags="" position="1610,75" size="200,200">#Glossar
+Hier kannst du jederzeit Namen und Begriffe nachschlagen. Danach kommst du |glossar&gt;[(link:&quot;hier zurück zur Geschichte&quot;)[(goto:$vorher)]].
+
+|glossar&gt;[[[[Jane]]]]
+|glossar&gt;[[[[Miri]]]]
+|glossar&gt;[[[[Polyp]]]]
+|glossar&gt;[[[[Roatán]]]]
+|glossar&gt;[[[[Rifftypen]]]]
+|glossar&gt;[[[[(Tauch-)Resort]]]]
+
+Hier geht es |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]].</tw-passagedata><tw-passagedata pid="52" name="Polyp" tags="" position="1700,423" size="100,100">bild polyp
+
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="53" name="Roatán" tags="" position="1697,297" size="100,100">&lt;style&gt; img {max-width:100%}&lt;/style&gt;
+&lt;img src = &quot;pic/CIA_map_Central_America_&amp;_Caribbean.png&quot; &gt;
+Roatán ist eine 60km lange und 8km breite Insel im westlichen Karibischen Meer. Sie gehört zum spanischsprachigen Land Honduras und liegt etwa 65 km vor der Küste. Hier liegt das Tauchresort, der Schauplatz des Reflectory.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="54" name="Rifftypen" tags="" position="1808,302" size="100,100">|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="55" name="Jane" tags="" position="1579,418" size="100,100">Jane ist die Chefin des Tauchresorts.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="56" name="Miri" tags="" position="1578,298" size="100,100">Miri ist deine Sitznachberin aus dem Flieger und später deine Tauchlehrerin. Sie hat Meeresbiologie studiert.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="57" name="Rotfeuerfische am Riff" tags="" position="296,2713" size="200,100">Video mit Fisch - bist alarmiert. Hast schon von dem Fisch gehört. Was nun?
 1
 {&lt;style&gt; img {max-width:100%}
 &lt;/style&gt;
@@ -312,316 +673,19 @@ Ihr entscheidet euch als Tauchsresort aktiv zu werden um euer Riff zu schützen.
 
 Geschichte der Ausbreiung und ihre Auswirkungen
 
-[[Abendliche Debatte was zu tun ist -&gt; Meinungen zu Rofeuerfisch-Entscheidung]]</tw-passagedata><tw-passagedata pid="10" name=" Meinungen zu Rofeuerfisch-Entscheidung" tags="" position="296,2516" size="200,100">Ökol:
-Wieso einen Fisch jagen wenn es doch um Korallen geht?
-der Fisch bedroht die Gesundheit des Riffs
-Bejagen löst das Problem nicht dauerhaft/ zu kleiner bzw temporärer Unterschied
-
-augenscheinlicher Konflikt mit veganismus Entscheidung
-augenscheinliche Problematik: Ist Überfischung nicht einer der größten lokalen Bedrohungen für Korallenriffe?
-
-Ökon: 
-Kundenattraktion: Fisch ist schön anzusehen
-alternative Kundenattraktion: Kunden an Jagt beteiligen
-Harpunen-Equipment günstig
-Jagen könnte Tierliebhaber unter den Kunden verschrecken
-Zubereitung und Verzehr im Resort bietet optionale Attraktion
-Zubereitung auf Grund von giftigen Stacheln aufwendig - mehr Küchenpersonal?
-
-Soz: 
-gute Möglichkeit mit Kunden über Nachhaltigkeit zu kommunizieren
-Tiere töten ist immer verwerflich/möchte das nicht
-Feuerfisch ist guter Speise-Fisch
-Feuerfisch trägt schmerzhaftes Gift
-
-[[Fisch bejagen-&gt; Auswirkungen: Fisch bejagen]]
-[[Fisch bejagen und essen-&gt;Auswirkungen: Fisch bejagen und essen]]
-[[Fisch als Kundenatraktion bewerben-&gt; Auswirkungen: Fisch als Kundenattraktion bewerben]]</tw-passagedata><tw-passagedata pid="11" name=" Auswirkungen: Fisch bejagen" tags="" position="291,2649" size="200,100">(set: $stress to $stress + 0)
-
-Chefin bittet dich 
-Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail und bekommst kurz darauf eine begeisterte Antwort mit dem Angebot euch Equipment und einweisung zu stellen.
-((Bild Ausrüstung))
-
-Ein paar Tage später erhaltet ihr Besuch von einem Instructor. Er bringt einige Dreizackspreere und Harpunen mit Gummizügen mit und gibt dir und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken.
-
-Die Chefin besteht darauf dass alle TauchbegleiterInnen sich an dem Projekt beteiligen.
-Dive Master 3 will selber keine Tiere töten. Es kommt zu einer hitzigen Diskussion mit der Chefin. Dive Master 3 verweigert und wechselt 2 Wochen später zu anderer Tauchschule
-
-Ihr macht einige Tauchgänge im Tauchbegleitungsteam um die Handhabung zu lernen.
-
-((Bilder/Video Jagd: bestenfalls first person perspective))
-
-Ihr bringt 500/30Tauchende Fische nach Hause. Führt Buch und entsorgt sie im Müll.
-
-verschreckt einige Ökokunden aber begeistert andere
-
-
-[[Schildkröten am Riff]]</tw-passagedata><tw-passagedata pid="12" name=" Auswirkungen: Fisch als Kundenattraktion bewerben" tags="" position="538,2651" size="200,100">(set: $stress to $stress + 40)
-
-Biodiversität sinkt weiter aber Rotfeuerfisch ist hübsch
-
-[[lokal weiter entlasten -&gt;Schildkröten am Riff]]</tw-passagedata><tw-passagedata pid="13" name="Schildkröten am Riff" tags="" position="294,2815" size="200,100">Riff ist ein wichtiger grazing/breeding ground für Schildkröten
-Tauchtourismus stört die Schildkröten
-
-[[Meinungen: Schutzzonen]]</tw-passagedata><tw-passagedata pid="14" name="Meinungen: Schutzzonen" tags="" position="294,2935" size="200,100">Sollen Schutzzonen eingerichtet werden?
-
-1: Schlüsselspezies fürs Riff: Dauerhaft schützen um dem Riff einen Teil der Belastung zu nehmen und so Überlebenswahrscheinlichkeiten zu erhöhen. 
-
-2: Viele Kunden kommen wegen der Schildkröten. Verstehe, dass wir sie nicht zuletzt deshalb schützen müssen, deswegen halten wir uns ja an die Regeln zu Abstand.Teile des Riffs wo die Schildkröten sich vornehmlich aufhalten nichtmehr zu betauchen zu krass und die Auswirkungen nur sehr langfristig positiv für die Tauchschule, wenn überhaupt. Könnten noch strengere Tauchverhaltensregeln auferlegen?
-
-
-
-[[Schutzzone dauerhaft nicht betauchen]]
-
-[[Schutzzone zeitweise nicht betauchen]]
-
-[[Schutzzone weiterhin betauchen aber strengere Regeln]]</tw-passagedata><tw-passagedata pid="15" name="Schutzzone dauerhaft nicht betauchen" tags="" position="49,3081" size="200,100">(set: $stress to $stress + 30)
-
-[[Abreise]]</tw-passagedata><tw-passagedata pid="16" name="Schutzzone zeitweise nicht betauchen" tags="" position="294,3085" size="200,100">(set: $stress to $stress + 0)
-
-[[Abreise]]</tw-passagedata><tw-passagedata pid="17" name="Schutzzone weiterhin betauchen aber strengere Regeln" tags="" position="545,3087" size="200,100">(set: $stress to $stress + 20)
-
-[[Abreise]]</tw-passagedata><tw-passagedata pid="18" name="Fenster" tags="" position="150,400" size="100,100">{(if: $fenster is 0)[Ihr scheint aus Richtung des Wassers zu landen, denn statt der Insel hast du einen Blick auf das Karibische Meer und große Riffstrukturen unter der Wasseroberfläche...]
-(if: $fenster is 1)[Ihr befindet euch weiterhin im Anflug und unter dir erstreckt sich das Riff.]}
-{&lt;style&gt; img {max-width:100%}
-&lt;/style&gt;
-&lt;img src=&quot;pic/OceanImageBank_KaterinaKatopis_42.jpg&quot;&gt;
-}
-(if: $fenster is 0)[Fasziniert betrachtest du die Verläufe von flacheren und tieferen Strukturen und stellst dir vor wie es unter der Oberfläche aussehen mag.] 
-
-
-Du...{
-(set: $fenster to 1)}
-[[... blickst zurück auf dein Handy.-&gt;Fenster zu Info]]
-(if:$popel is 0)[[... bohrst in der Nase.-&gt;Popeln]]
-(if:$landung is 1)[[... bereitest dich auf die Landung vor.-&gt;Ankommen]]
-&lt;audio controls autoplay loop&gt;
-  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-  &gt;</tw-passagedata><tw-passagedata pid="19" name="Info" tags="" position="550,398" size="100,100">{
-(set:$info to 1)
-####Infovideo zu Korallenriffen
-}
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/5Qa912Y3nZ8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-
-Riffe ganz Allgemein
-* Ökologische Bedeutung
-* Form und Funktion
-
-
-Nachdem du das Video zuende geschaut hast ...
-[[... blickst du aus dem Fenster.-&gt;Info zu Fenster]]
-(if:$popel is 0)[[... bohrst du in der Nase.-&gt;Popeln]]
-(if:$landung&gt;0)[[... bereitest du dich auf die Landung vor.-&gt;Ankommen]]
-
-
-&lt;audio controls autoplay loop&gt;
-&lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-&gt;
-[[Glossar]]</tw-passagedata><tw-passagedata pid="20" name="Popeln" tags="" position="925,400" size="100,100">{(if:$info is 1)[ (set:$landung to 1) ]
-Wirklich? Ok...}
-Na also gut.
-Du ziehst dir einen saftigen Popel aus der Nase. Was nun?
-
-&lt;==
-
-Du...
-[[... schaust in deinem Handgepäck nach einem Taschentuch.]]
-[[... schmierst den Popel so unauffällig wie möglich an die Armlehne deiner Sitznachbarin.]]
-[[... isst den Popel auf.]]
-
-&lt;audio controls autoplay loop&gt;
-  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-  &gt;</tw-passagedata><tw-passagedata pid="21" name="... schaust in deinem Handgepäck nach einem Taschentuch." tags="" position="775,525" size="100,100">(set:$popel to ($popel+10))
-Gesagt, getan. Du entsorgst deinen Fang erfolgreich und sauber und dein Blick wandert in Richtung ...
-
-[[... Handybildschirm.-&gt;Popel zu Info]]
-[[... Fenster.-&gt;Fenster]]
-&lt;audio controls autoplay loop&gt;
-  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-  &gt;</tw-passagedata><tw-passagedata pid="22" name="... schmierst den Popel so unauffällig wie möglich an die Armlehne deiner Sitznachbarin." tags="" position="925,525" size="100,100">(set:$popel to ($popel+20))
-Äußerst unauffällig setzt du deinen Plan in die Tat um. Ein anschließender Seitenblick zeigt dir die belustigte Miene deiner Sitznachbarin aber das könnte hundert andere Gründe haben.
-Deine Aufmerksamkeit wandert in Richtung ...
-
-[[... Handybildschirm.-&gt;Popel zu Info]]
-[[... Fenster.-&gt;Fenster]]
-&lt;audio controls autoplay loop&gt;
-  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="23" name="... isst den Popel auf." tags="" position="1075,525" size="100,100">{(set:$popel to ($popel+30))
-Gesagt, getan. Ein kapitaler Brocken. Du bist nun auf jeden Fall satt, entscheidest dich etwaige Blicke deiner Mitmenschen zu ignorieren und dein Blick wandert in Richtung ...}
-
-[[... Handybildschirm.-&gt;Popel zu Info]]
-[[... Fenster.-&gt;Fenster]]
-&lt;audio controls autoplay loop&gt;
-  &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-  &gt;</tw-passagedata><tw-passagedata pid="24" name="Fenster zu Info" tags="" position="150,275" size="100,100">(set:$popel to ($popel+1))
-(set:$landung to 1)
-(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="25" name="Info zu Fenster" tags="" position="550,275" size="100,100">(set:$popel to ($popel+1))
-(set:$landung to 1)
-(goto: &quot;Fenster&quot;)</tw-passagedata><tw-passagedata pid="26" name="Popel zu Info" tags="" position="925,650" size="100,100">(set:$landung to 1)
-(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">Nachmittags ist es so weit: Ihr packt das Equipment auf eines der Boote, bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
-Ihr kommt an, der Fahrer stellt den Motor aus, du setzt dich auf den Bootsrand und bereitest dich darauf vor dich rückwärts fallen zu lassen.
-Bist du bereit?
-
-[[Na Klar!-&gt;Tauch1]]
-[[Nope!]]
-&lt;audio player autoplay loop&gt;
-&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tauch1" tags="" position="292,974" size="200,100">Du drückst mit einer Hand deine Taucherbrille fest in dein Gesicht und lässt dich rückwärts fallen. Um dich schlägt das Wasser zusammen und Luftblasen verschleiern zunächst deine Sicht. Du orientierst dich und es bietet sich dir der folgende Anblick:
-
-&lt;style&gt; img {max-width:100%}
-
-&lt;/style&gt;
-&lt;img src=&quot;pic/OceanImageBank_MattCurnock_29.jpg&quot;&gt;
-
-((Infos Tauchgang))
-
-Begeistert zurück an Land, zum Abendessen kommt ihr zusammen.
-
-[[Abendessen-&gt;Initiale Krise]]
-
-&lt;audio controls autoplay&gt;
-&lt;source src=&quot;aud/splash-by-blaukreuz-6261.mp3&quot;&gt;
-&lt;audio controls autoplay loop&gt;
-&lt;source src=&quot;aud/under-water-sounds-while-scuba-diving-14866.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="29" name="Nope!" tags="" position="542,924" size="100,100">Du überprüfst nochmal dein Equipment, rückst alles zurecht und erinnerst dich daran was du gleich zu tun hast. Da kann nichts schief gehen.
-
-[[Na dann los!-&gt;Tauch1]]</tw-passagedata><tw-passagedata pid="30" name="Abreise" tags="" position="288,3250" size="200,100">(if: $stress&gt;99)[Kurz vor deiner geplanten Abreise ]
-(if: $stress&lt;100)[Kurz vor deiner geplanten Abreise geht es dem Riff weiterhin gut ]
-
-
-Der Aufenthalt des Charakters am Riff endet mit Rückflug.
-
-Es wird sich von dem Setting und den handelnden Charakteren verabschiedet und Handlungsstränge geschlossen.
-
-Der handelnde Charakter lässt die Zeit Revue passieren und so werden die getroffenen Entscheidungen erzählend zusammengefasst 
-
-Je nach vorangegangenen Entscheidungen ist das Riff von einer langen Bleiche betroffen, das Tauchresort in unterschiedlichem ökonomischen Zustand und die handelnden Charaktere unterschiedlich zufrieden. 
-
-&lt;img src=&quot;bild/1.jpg&quot;&gt;
-
-[[Referenzen-&gt;Credits]]</tw-passagedata><tw-passagedata pid="31" name="Notes" tags="" position="597,84" size="100,100">Tags nutzen für kopf/Fuß-Zeile oder &quot;Startup&quot;
-
-(set: &quot;Riff&quot; to (datamap:))
-(dm: [&quot;name&quot;, &quot;Korallenriff&quot;]) -&gt; Datamap
-
-https://www.youtube.com/watch?v=NZroyIYTk2k&amp;list=PLFgjYYTq6xyjBtXJTvEaBTVUWxirY6q24&amp;index=8 ab Mitte gucken
-
-dynamic links
-
-hooks: ab Mitte des videos: schriftfeld auf das man klickt wird ersetzt (bist du sicher dass du das tun willst?)</tw-passagedata><tw-passagedata pid="32" name="Meinungen: Klo" tags="" position="289,2115" size="200,100">Meinungen zu Klärsystem
-
-Das Tauchresort hat ein veraltetes Klärsystem/ Toiletten direkt über dem Riff.
-
-###Informationsmaterial zu Eutrophierung als Bedrohung für Korallenriffe
-* Konkurrenz Algen/Bakterien/Korallen
-
-((eventuell Rifftoilette als erste Maßnahme und dann zusätzlich zu Antriebsalternative für Boote?))
-
-1: Haben wir schon immer so gemacht. Alternative sehr teuer.
-Optional: Haben schon Geld für andere Umrüstung ausgegeben/haben ja etwas mehr Geld weil keins ausgegeben. Kunden normalerweise angetan von &quot;Erlebnistoilette&quot;
-
-2: Einfache Lösung mit großer Wirkung. &quot;Rückständig&quot;, dass noch nicht umgerüstet
-
-3: Etwas mehr Geld in die Hand nehmen und einmal richtig machen
-
-(if:$geld&lt;3)(text-style:&quot;strike&quot;)[in modernes Klärsystem investieren]
-(if:$geld&gt;2)[[in modernes Klärsystem investieren -&gt;Kläranlage]]
-[[in Sickergrube investieren -&gt;Sickergrube]]
-[[Geld sparen -&gt;Plumsklo]]</tw-passagedata><tw-passagedata pid="33" name="Kläranlage" tags="" position="38,2248" size="200,100">(set: $stress to $stress + 0)
-
-Kredit wird bewilligt, subventioniert?, Anlage wird gebaut, dauert Monate aber dann kann Rifftoilette abgebaut werden
-
-innerhalb von weiteren Monaten verschwinden die x-Bakterienteppiche und erste Korallen siedeln sich wieder an
-
-[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Rotfeuerfische am Riff]]</tw-passagedata><tw-passagedata pid="34" name="Plumsklo" tags="" position="549,2247" size="200,100">(set: $stress to $stress + 35)
-
-Geld gespart und kann nun in Werbung/Reparaturen am Gebäude oder Boot gesteckt werden
-
-Bewuchs bleibt dieser Teil des Riffs bleibt &quot;tot&quot;
-
-[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Rotfeuerfische am Riff]]</tw-passagedata><tw-passagedata pid="35" name="Sonnencreme" tags="" position="294,1644" size="200,100">Sonnencreme ist schädlich fürs Riff
-So schädlich ist es wirklich.
-Es gibt verschiedene Alternativen: Vor und Nachteile
-
-[[Meinungen Sonnencreme]]</tw-passagedata><tw-passagedata pid="36" name="ohne Riffprodukte" tags="" position="671,1498" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="37" name=" Lokal" tags="" position="799,1501" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="38" name=" Bio/Öko" tags="" position="922,1503" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="39" name="Sickergrube" tags="" position="303,2249" size="200,100">[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Rotfeuerfische am Riff]]</tw-passagedata><tw-passagedata pid="40" name="Auswirkungen: Fisch bejagen und essen" tags="" position="33,2652" size="200,100">(set: $stress to $stress + 0)
-(set:$cook to ($cook+1))
-
-Chefin bittet dich 
-Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail und bekommst kurz darauf eine begeisterte Antwort mit dem Angebot euch Equipment und einweisung zu stellen.
-((Bild Ausrüstung))
-
-Ein paar Tage später erhaltet ihr Besuch von einem Instructor. Er bringt einige Dreizackspreere und Harpunen mit Gummizügen mit und gibt dir und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken.
-
-Die Chefin besteht darauf dass alle TauchbegleiterInnen sich an dem Projekt beteiligen.
-Dive Master 3 will selber keine Tiere töten. Es kommt zu einer hitzigen Diskussion mit der Chefin. Dive Master 3 verweigert und wechselt 2 Wochen später zu anderer Tauchschule
-
-Ihr macht einige Tauchgänge im Tauchbegleitungsteam um die Handhabung zu lernen.
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FQXplP4AyRQ?controls=0&amp;amp;start=5&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-((Bilder/Video Jagd: bestenfalls first person perspective))
-
-Ihr bringt 500/30Tauchende Fische nach Hause. Führt Buch
-
-(if:$cook is 0)[Koch geht]
-(if:$cook is 0)[Koch voll genervt]
-
-[[lokal weiter entlasten -&gt;Schildkröten am Riff]]
-</tw-passagedata><tw-passagedata pid="41" name="Credits" tags="" position="293,3450" size="200,100">
-
-Bilder:
-
-CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/#
-
-Sound:
-Unter-Wasser-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;
-
-Unter-Wasser-Tauch-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;</tw-passagedata><tw-passagedata pid="42" name="Erster Tag" tags="" position="298,632" size="200,100">###Tag 1
-Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. &lt;b&gt;Morgen $name! Gut geschlafen?&lt;/b&gt;, begrüßt dich Mira freundlich.(if:$popel&lt;40 and &gt;19)[ Du scheinst dir einen neuen Spitznamen eingefangen zu haben, Moco ist ist wohl Spanisch und bedeutet so viel wie &#39;Popel&#39;.] Gebannt hören du und die anderen Neuen zu, was Mira euch beizubringen hat. Nachmittags bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
-&lt;style&gt; img {max-width:70%}&lt;/style&gt; 
-&lt;img src = &quot;pic/pixab/diving-equipment-6810171_960_720.jpg&quot; &gt;
-
-Abends schließt Mira den Unterricht mit einigen allgemeinen Infos zu Korallen:
-((Infovideo 2))
-
-Ihr lasst den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
-
-[[Der erste Tauchgang -&gt;Erste Bootsfahrt]]
-&lt;audio controls autoplay loop&gt;
- 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="43" name="Flughafen" tags="" position="300,168" size="200,100">##Abflug
-Du hast einen Platz zur Ausbildung zum Dive Master ergattert, die letzten Monate viel gespart und einen bezahlbaren Flug nach Roatán bekommen. 
-
-Endlich geht es los! Nachdem du dich von deinen Liebsten für das nächste halbe Jahr verabschiedet hast, stellst du dich bei der Gepäckkontrolle an.
-=&gt;&lt;=
-&lt;style&gt; img {max-width:100%}&lt;/style&gt;
-&lt;img src = &quot;pic/pixab/airport-6911566_1280.jpg&quot; &gt;
-&lt;==&gt;
-Du reist einige Wochen vor der Saison an, um dich in einem Tauchresort ausbilden zu lassen und dann die Monate darauf als Dive Master zu arbeiten - also die Gäste des Resorts bei ihren Tauchgängen am lokalen Riff zu begleiten. 
-
-Während sich die Schlange langsam weiterbewegt, überfliegst du die ersten Abschnitte vom &lt;a href=&quot;https://de.wikipedia.org/wiki/Roat%C3%A1n&quot;; target=&quot;_blank&quot;&gt;Wikipedia-Artikel zu Roatán&lt;/a&gt;.
-Als du zuende gelesen hast, suchst du ein Infovideo zu Korallenriffen, doch bevor du es startest erreicht die Schlange die Gepäckkontrolle und du wirst aufgefordert deine Sachen abzugeben.
-
-Du speicherst das Video für später, deine Sachen werden durchleuchtet und du ...
-[[machst dich auf den Weg zum Gate.-&gt;Flug]]
-&lt;audio controls autoplay loop&gt;
-&lt;source src=&quot;aud/plane/international-airport-intercom-madeira-19947.mp3&quot;
-&gt;</tw-passagedata><tw-passagedata pid="44" name="Meinungen Sonnencreme" tags="" position="294,1794" size="200,100">X:
-Y:
-Z:
-
-[[Freiheit]]
-[[Alternative 1]]
-[[ALternative 2]]</tw-passagedata><tw-passagedata pid="45" name="Freiheit" tags="" position="204,1952" size="100,100">[[lokal das Riff weiter entlasten?-&gt;Meinungen: Klo]]</tw-passagedata><tw-passagedata pid="46" name="Alternative 1" tags="" position="342,1950" size="100,100">[[lokal das Riff weiter entlasten?-&gt;Meinungen: Klo]]</tw-passagedata><tw-passagedata pid="47" name="ALternative 2" tags="" position="469,1956" size="100,100">[[lokal das Riff weiter entlasten?-&gt;Meinungen: Klo]]</tw-passagedata><tw-passagedata pid="48" name="Verhalten der Tauchenden" tags="" position="1948,1446" size="200,100">Facts about:
-Störung des Riffs durch
-Tauchende können Höhe nicht gut kontrollieren - damage corals
-nähern sich den Tieren - ändern Verhalten
-
-[[Meinungen zu  Tauchregeln]]</tw-passagedata><tw-passagedata pid="49" name="Meinungen zu  Tauchregeln" tags="" position="1948,1596" size="200,100">Advanced Open Water level als bedingung für bestimmte Bereiche des Riffs
-
-Intensiviertes Training</tw-passagedata><tw-passagedata pid="50" name="Weitere Entscheidungsideen" tags="" position="2096,596" size="100,100">letzte Seite von Burke et al 2011 - what to do
-
-eine lokale NGO unterstützen</tw-passagedata><tw-passagedata pid="51" name="Glossar" tags="" position="1702,788" size="100,100">Kurzinfo Roatan
-
-Übersicht Korallenpolypen
-
-Übersicht RiffTypen</tw-passagedata></tw-storydata>
+[[Abendliche Debatte was zu tun ist -&gt; Meinungen zu Rofeuerfisch-Entscheidung]]</tw-passagedata><tw-passagedata pid="58" name="BleichenInfo" tags="" position="284,1246" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="[[(Tauch-)Resort" tags="" position="1813,429" size="100,100">Das Tauchresort ist ein fiktiver Betrieb auf der Insel Roatan. Sie ist der Schauplatz des Reflectory. Es besteht aus einer Tauchschule mit Verpflegung und Unterbringung für die Gäste.
+Die Tauchschule gibt es seit vielen Jahren und besteht aus einigen Bungalows und Holzhäusern. Teile der Anlage wie die Abwasserentsorgung sind bereits veraltet.
+
+Das Resort beschäftigt:
+- Die Chefin, Jane
+- Mehrere TauchlehrerInnen, unter anderem Miri
+- Mehrere TauchbegleiterInnen, unter anderem dich
+- Mehrere BootsfahrerInnen
+- Ein Küchenteam
+- Reinigungskräfte
+
+
+Chefin, mehrere TauchlehrerInnen und Tauch-BegleiterInnen, BootsfahrerInnen, Küchenpersonal, Reinigungskräfte,... + mehrere Boote, &quot;Riff-Toiletten?&quot;))</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
