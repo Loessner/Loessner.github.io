@@ -137,11 +137,13 @@ Hallo $name! Willkommen zur aktuellen Arbeitsversion von:
 &lt;img src = &quot;pic/OceanImageBank_JordanRobins_02.jpg&quot; &gt;
 Hierbei handelt es sich um &#39;&#39;Reflectory&#39;&#39; - eine interaktive Geschichte in deren Verlauf du aufgefordert wirst Entscheidungen zu treffen, welche den Verlauf der Geschichte beeinflussen. Du solltest dir daher die Zeit nehmen um deine Entscheidungen gut abzuwägen...
 
-Im Verlauf der Geschichte findest du am Ende der Seite immer wieder den Link zum &#39;&#39;Glossar&#39;&#39;. Dort kannst du Begriffe und Namen noch einmal nachschlagen. Alternativ kannst du natürlich auch das Internet zur Recherche nutzen.
+Gelegentlich findest du am Ende der Seite den Link zum &#39;&#39;Glossar&#39;&#39;. Dort kannst du Begriffe und Namen noch einmal nachschlagen. Alternativ kannst du natürlich auch das Internet zur Recherche nutzen.
 
-Für eine optimale Erfahrung empfielt es sich den Ton anzustellen und Kopfhörer zu verwenden zu wechseln.
+Alle Charaktere und die Tauchschule sind fiktiv, das Bildmaterial stammt nicht zwangsläufig vom Schauplatz der Westkaribik.
 
-Alle Charaktere sind bisher von einer Person eingesprochen, dies wird für die finale Version überarbeitet. 
+Alle Charaktere sind bisher von einer Person eingesprochen, dies wird für die finale Version überarbeitet.
+
+Für eine optimale Erfahrung empfielt es sich den Ton anzustellen und Kopfhörer zu verwenden.
 
 Viel Spaß!
 {&lt;audio controls autoplay loop&gt; 
@@ -173,21 +175,23 @@ Nach der Landung verlässt du den Flughafen und lässt dich begeistert von all d
 Auf dem Weg zur Rezeption kommt dir eine Frau entgegen: 
 &lt;b&gt;&quot;Hey ho! Du bist $name, nehme ich an? Schön, dass du da bist! Ich bin Jane. Wie war der Flug?&quot;&lt;/b&gt;
 &lt;==&gt;
-Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange keinen erwachsenen Menschen einen Popel essen sehen hat.](if:$popel&lt;10)[Sie erkennt dich auch und hofft dass du deinen Blick aus dem Fenster genossen hast und sie sich darauf freut diese Welt mit dir zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Mira&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
+Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange nicht mehr einen erwachsenen Menschen gesehen hat der seine Popel isst.](if:$popel&lt;10)[Sie erkennt dich auch und hofft dass du deinen Blick aus dem Fenster genossen hast und sie sich darauf freut diese Welt mit dir zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Miri&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
 
 ---
+
+Jane gibt euch beiden eine Führung über das Gelände:
 &lt;audio class=&quot;shown&quot; controls&gt;
-&lt;source src=&quot;0 Jane über resort.mp3&quot;&gt;
+&lt;source src=&quot;aud/0 Jane über resort.mp3&quot;&gt;
 &lt;/audio&gt;
-- Mira, die Chefin, führt euch herum und stellt den Betrieb vor:
-((Vorstellung Betrieb: &quot;Alt-eingesessene&quot; Tauchschule mit Verpflegung und Unterbringung; Chefin, mehrere TauchlehrerInnen und Tauch-BegleiterInnen, BootsfahrerInnen, Küchenpersonal, Reinigungskräfte,... + mehrere Boote, &quot;Riff-Toiletten?&quot;))
+Als Abschluss der Tour zeigt Mira euch eure Zimmer, du wirfst deinen Backpack ab.
 
 ---
 
-Du bist nun Teil einer Industrie die vom Riff-Tourismus lebt und jährlich 36 Mrd$ umsetzt.
+Du bist nun Teil einer weltweiten Industrie die vom Riff-Tourismus lebt und jährlich 36 Miliiarden US-Dollar umsetzt.
 
 ---
-Als Abschluss der Tour zeigt Mira dir dein Zimmer, du wirfst deinen Backpack ab und lernst den Rest der Leute beim Abendessen kennen. Morgen startet das Programm...
+
+Beim Abendessen kennen lernst du den Rest des Teams kennen. Morgen startet das Programm...
 
 [[Erster Tag]]
 
@@ -285,7 +289,12 @@ Langfristig immer wieder Kritik und Verwunderung der Kunden, dass Tauchschule ni
 Abstract von Abelson 2020:
 Klimawandel und Ansauerung sind globale Probleme die langfristig in den Griff bekommen werden müssen. Bis dahin kann es sein, dass das Riff durch Bleichen stirbt. Wie kann dem Riff Zeit erkauft werden? Wie kann lokal gehandelt werden um den Stress der Korallen zu vermindern?
 
-[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="8" name="Initiale Krise" tags="" position="292,1099" size="200,100">Nachricht, dass andere Riffe in der Nähe von Bleiche betroffen sind.
+[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="8" name="Initiale Krise" tags="" position="292,1099" size="200,100">
+
+#!Hier ist das Vorläufige Ende des Reflectory!
+
+
+Nachricht, dass andere Riffe in der Nähe von Bleiche betroffen sind.
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mtyiOcix7ws&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -402,12 +411,8 @@ Du...{
 (set:$info to 1)
 ####Infovideo zu Korallenriffen
 }
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/dBv_OP7dwrU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-
-Riffe ganz Allgemein
-* Ökologische Bedeutung
-* Form und Funktion
+&lt;iframe width=&quot;1268&quot; max-width:100% height=&quot;713&quot;
+src=&quot;https://www.youtube.com/embed/iZAAZBZILdo&quot; title=&quot;Korallenriffe   Bauwerke der Natur&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 
 Nachdem du das Video zuende geschaut hast ...
@@ -417,12 +422,17 @@ Nachdem du das Video zuende geschaut hast ...
 
 
 &lt;audio controls autoplay loop&gt;
-&lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+&lt;source src=&quot;aud/plane/XXXairplane_ambience-6830.mp3&quot;
 &gt;&lt;/audio&gt;
 (set:$vorher to &quot;Info&quot;)
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="20" name="Popeln" tags="" position="1010,566" size="100,100">{(if:$info is 1)[ (set:$landung to 1) ]
 Wirklich? Ok...}
 Na also gut.
+=&gt;&lt;=
+&lt;style&gt; img {max-width:60%}&lt;/style&gt;
+&lt;img src = &quot;pic/pixab/travel-6030190_960_720.png&quot; &gt;
+
+&lt;==&gt;
 Du ziehst dir einen saftigen Popel aus der Nase. Was nun?
 
 &lt;==
@@ -435,7 +445,12 @@ Du...
 &lt;audio controls autoplay loop&gt;
   &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
   &gt;</tw-passagedata><tw-passagedata pid="21" name="... schaust in deinem Handgepäck nach einem Taschentuch." tags="" position="860,691" size="100,100">(set:$popel to ($popel+10))
-Gesagt, getan. Du entsorgst deinen Fang erfolgreich und sauber und dein Blick wandert in Richtung ...
+Gesagt, getan. 
+=&gt;&lt;=
+&lt;style&gt; img {max-width:60%}&lt;/style&gt;
+&lt;img src = &quot;pic/pixab/travel-6030190_960_720.png&quot; &gt;
+&lt;==&gt;
+Du entsorgst deinen Fang sauber und erfolgreich im Taschentuch und dein Blick wandert in Richtung ...
 
 [[... Handybildschirm.-&gt;Popel zu Info]]
 [[... Fenster.-&gt;Fenster]]
@@ -443,13 +458,23 @@ Gesagt, getan. Du entsorgst deinen Fang erfolgreich und sauber und dein Blick wa
   &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
   &gt;</tw-passagedata><tw-passagedata pid="22" name="... schmierst den Popel so unauffällig wie möglich an die Armlehne deiner Sitznachbarin." tags="" position="1010,691" size="100,100">(set:$popel to ($popel+20))
 Äußerst unauffällig setzt du deinen Plan in die Tat um. Ein anschließender Seitenblick zeigt dir die belustigte Miene deiner Sitznachbarin aber das könnte hundert andere Gründe haben.
+=&gt;&lt;=
+&lt;style&gt; img {max-width:60%}&lt;/style&gt;
+&lt;img src = &quot;pic/pixab/travel-6030190_960_720.png&quot; &gt;
+&lt;==&gt;
+
 Deine Aufmerksamkeit wandert in Richtung ...
 
 [[... Handybildschirm.-&gt;Popel zu Info]]
 [[... Fenster.-&gt;Fenster]]
 &lt;audio controls autoplay loop&gt;
   &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="23" name="... isst den Popel auf." tags="" position="1160,691" size="100,100">{(set:$popel to ($popel+30))
-Gesagt, getan. Ein kapitaler Brocken. Du bist nun auf jeden Fall satt, entscheidest dich etwaige Blicke deiner Mitmenschen zu ignorieren und dein Blick wandert in Richtung ...}
+Gesagt, getan. Ein kapitaler Brocken. 
+=&gt;&lt;=
+&lt;style&gt; img {max-width:60%}&lt;/style&gt;
+&lt;img src = &quot;pic/pixab/travel-6030190_960_720.png&quot; &gt;
+&lt;==&gt;
+Du bist nun auf jeden Fall satt, entscheidest dich etwaige Blicke deiner Mitmenschen zu ignorieren und dein Blick wandert in Richtung ...}
 
 [[... Handybildschirm.-&gt;Popel zu Info]]
 [[... Fenster.-&gt;Fenster]]
@@ -460,23 +485,28 @@ Gesagt, getan. Ein kapitaler Brocken. Du bist nun auf jeden Fall satt, entscheid
 (goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="25" name="Info zu Fenster" tags="" position="550,275" size="100,100">(set:$popel to ($popel+1))
 (set:$landung to 1)
 (goto: &quot;Fenster&quot;)</tw-passagedata><tw-passagedata pid="26" name="Popel zu Info" tags="" position="1010,816" size="100,100">(set:$landung to 1)
-(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">Nachmittags ist es so weit: Ihr packt das Equipment auf eines der Boote, bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
+(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">Am nächsten Morgen ist es so weit: Ihr bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
 Ihr kommt an, der Fahrer stellt den Motor aus, du setzt dich auf den Bootsrand und bereitest dich darauf vor dich rückwärts fallen zu lassen.
 Bist du bereit?
 
 [[Na Klar!-&gt;Tauch1]]
 [[Nope!]]
 &lt;audio player autoplay loop&gt;
-&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tauch1" tags="" position="292,974" size="200,100">Du drückst mit einer Hand deine Taucherbrille fest in dein Gesicht und lässt dich rückwärts fallen. Um dich schlägt das Wasser zusammen und Luftblasen verschleiern zunächst deine Sicht. Du orientierst dich und es bietet sich dir der folgende Anblick:
+&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tauch1" tags="" position="292,974" size="200,100">Du drückst mit einer Hand deine Taucherbrille fest in dein Gesicht und lässt dich rückwärts fallen. Um dich schlägt das Wasser zusammen und Luftblasen verschleiern zunächst deine Sicht. Du orientierst dich und dir bietet sich der folgende Anblick:
 
 &lt;style&gt; img {max-width:100%}
-
 &lt;/style&gt;
 &lt;img src=&quot;pic/OceanImageBank_MattCurnock_29.jpg&quot;&gt;
 
-((Infos Tauchgang))
+Du und die anderen Neuen udn Miri folgt einer der Tauchlehrerinnen die sich hier bereits auskennt, immer euren Auftrieb achtend um das Riff nicht zu beschädigen.
+Begeistert beobachtest die vielen verschiedenen farbigen Fische, Muscheln, Krabben und natürlich die all die verschiedenen Korallen.
+Das Highlight des Tauchgangs war als Miri einen Oktopus entdeckte, der sich aus seinem Versteck wagte.
+&lt;style&gt; img {max-width:100%}
+&lt;/style&gt;
+&lt;img src=&quot;pic/OceanImageBank_UmeedMistry_14.jpg&quot;&gt;
+All dies lebt auf, zwischen und unter der großen zerklüfteten Struktur, die du ohne Miri&#39;s Unterricht einfach als Fels wahrgenommen hättest: Der Kalk vieler Generationen von Korallen.
 
-Begeistert zurück an Land, zum Abendessen kommt ihr zusammen.
+Nach dem Tauchgang begebt ihr in Hochstimmung zurück an Land, verbringt den Nachmittag mit mehr Theorie und kommt als Team zum Abendessen wieder zusammen.
 
 [[Abendessen-&gt;Initiale Krise]]
 
@@ -580,7 +610,7 @@ Sound:
 Unter-Wasser-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;
 
 Unter-Wasser-Tauch-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;</tw-passagedata><tw-passagedata pid="42" name="Erster Tag" tags="" position="298,632" size="200,100">###Tag 1
-Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. &lt;b&gt;Morgen $name! Gut geschlafen?&lt;/b&gt;, begrüßt dich Mira freundlich.(if:$popel&lt;40 and &gt;19)[ Du scheinst dir einen neuen Spitznamen eingefangen zu haben, Moco ist ist wohl Spanisch und bedeutet so viel wie &#39;Popel&#39;.] Gebannt hören du und die anderen Neuen zu, was Mira euch beizubringen hat. Nachmittags bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
+Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. &lt;b&gt;Morgen $name! Gut geschlafen?&lt;/b&gt;, begrüßt dich Mira freundlich.(if:$popel&lt;40 and &gt;19)[ Du scheinst dir einen neuen Spitznamen eingefangen zu haben, Moco ist wohl Spanisch und bedeutet so viel wie &#39;Popel&#39;...] Gebannt hören du und die anderen Neuen zu, was Mira euch beizubringen hat. Nachmittags bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
 &lt;style&gt; img {max-width:70%}&lt;/style&gt; 
 &lt;img src = &quot;pic/pixab/diving-equipment-6810171_960_720.jpg&quot; &gt;
 
@@ -591,7 +621,7 @@ Ihr lasst den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlic
 
 [[Der erste Tauchgang -&gt;Erste Bootsfahrt]]
 &lt;audio controls autoplay loop&gt;
- 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+ 	&lt;source src=&quot;aud/XXXmorning-sound-birds-chirp-10828.mp3&quot;&gt;
 	&lt;/audio&gt;
 (set:$vorher to &quot;Erster Tag&quot;)
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="43" name="Flughafen" tags="" position="300,168" size="200,100">##Abflug
@@ -641,7 +671,10 @@ Hier kannst du jederzeit Namen und Begriffe nachschlagen. Danach kommst du |glos
 |glossar&gt;[[[[Rifftypen]]]]
 |glossar&gt;[[[[(Tauch-)Resort]]]]
 
-Hier geht es |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]].</tw-passagedata><tw-passagedata pid="52" name="Polyp" tags="" position="1700,423" size="100,100">bild polyp
+Hier geht es |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]].</tw-passagedata><tw-passagedata pid="52" name="Polyp" tags="" position="1700,423" size="100,100">&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/OceanImageBank_EllenCuylaerts_08.jpg&quot; &gt;
+
+Als Polypen bezeichnet man die einzelnen Korallenindividuen, die als Kolonie einen Korallenstock formen. Sie sind oft sehr klein.
 
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="53" name="Roatán" tags="" position="1697,297" size="100,100">&lt;style&gt; img {max-width:100%}&lt;/style&gt;
 &lt;img src = &quot;pic/CIA_map_Central_America_&amp;_Caribbean.png&quot; &gt;
