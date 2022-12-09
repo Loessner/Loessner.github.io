@@ -125,7 +125,7 @@ tw-icon { display:none; }
 (set:$fenster to 0)
 (set:$info to 0)
 (set:$cook to 0)
-(set:$vorher to 0)
+(set:$vorher to &quot;Start&quot;)
 }
 (if:$landung is 0)[
 =&gt;&lt;=
@@ -141,7 +141,7 @@ Gelegentlich findest du am Ende der Seite den Link zum &#39;&#39;Glossar&#39;&#3
 
 Alle Charaktere und die Tauchschule sind fiktiv, das Bildmaterial stammt nicht zwangsläufig vom Schauplatz der Westkaribik.
 
-Alle Charaktere sind bisher von einer Person eingesprochen, dies wird für die finale Version überarbeitet.
+Alle Charaktere sind vorläufig von einer Person eingesprochen, dies wird für die finale Version überarbeitet.
 
 Für eine optimale Erfahrung empfielt es sich den Ton anzustellen und Kopfhörer zu verwenden.
 
@@ -166,32 +166,33 @@ Du schaust ...
 &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
 &gt;&lt;/audio&gt;
 (set:$vorher to &quot;Flug&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="3" name="Ankommen" tags="" position="300,500" size="200,100">#Die Ankunft
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="3" name="Ankommen" tags="" position="300,500" size="200,100">###Die Ankunft
 Nach der Landung verlässt du den Flughafen und lässt dich begeistert von all den ungewohnten Farben, Gerüchen und Geräuschen treiben bevor du einen Bus zu deinem Ziel ein Stück außerhalb der Stadt nimmst. Dort angekommen, betrittst du das Tauchresort: Eine weitläufige Anlage mit einigen Häusern, bunt verteilt zwischen dichter tropischer Vegetation.
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
 &lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
 
 Auf dem Weg zur Rezeption kommt dir eine Frau entgegen: 
-&lt;b&gt;&quot;Hey ho! Du bist $name, nehme ich an? Schön, dass du da bist! Ich bin Jane. Wie war der Flug?&quot;&lt;/b&gt;
+&lt;b&gt;&quot;Hey ho! Du bist $name, nehme ich an? Schön, dass du da bist! Ich bin Alma. Wie war der Flug?&quot;&lt;/b&gt;
 &lt;==&gt;
-Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange nicht mehr einen erwachsenen Menschen gesehen hat der seine Popel isst.](if:$popel&lt;10)[Sie erkennt dich auch und hofft dass du deinen Blick aus dem Fenster genossen hast und sie sich darauf freut diese Welt mit dir zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Miri&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
+Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange nicht mehr einen erwachsenen Menschen gesehen hat der seine Popel isst.](if:$popel&lt;10)[Sie erkennt dich auch und hofft, dass du deinen Blick aus dem Fenster genossen hast und freut sich mit dir das Riff zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Kena&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
 
 ---
 
-Jane gibt euch beiden eine Führung über das Gelände:
+Alma gibt dir und Kena eine Führung über das Gelände:
+((vorläufiges Voicing))
 &lt;audio class=&quot;shown&quot; controls&gt;
 &lt;source src=&quot;aud/0 Jane über resort.mp3&quot;&gt;
 &lt;/audio&gt;
-Als Abschluss der Tour zeigt Mira euch eure Zimmer, du wirfst deinen Backpack ab.
+Als Abschluss der Tour zeigt Alma euch eure Zimmer, du wirfst deinen Backpack ab und atmest einmal tief durch ... angekommen.
 
 ---
 
-Du bist nun Teil einer weltweiten Industrie die vom Riff-Tourismus lebt und jährlich 36 Miliiarden US-Dollar umsetzt.
+Du bist nun Teil einer weltweiten Industrie die vom Riff-Tourismus lebt und jährlich 36 Milliarden US-Dollar umsetzt. Viele Gemeinschaften sind für ihr Überleben direkt von den Korallenriffen abhängig.
 
 ---
 
-Beim Abendessen kennen lernst du den Rest des Teams kennen. Morgen startet das Programm...
+Abends lernst du den Rest des Teams kennen. Morgen startet das Ausbildungsprogramm...
 
 [[Erster Tag]]
 
@@ -199,7 +200,7 @@ Beim Abendessen kennen lernst du den Rest des Teams kennen. Morgen startet das P
  	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
 	&lt;/audio&gt;
 (set:$vorher to &quot;Ankommen&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="4" name="Konsum" tags="" position="300,1396" size="200,100">####Informaterial zu Tierhaltung und Co2
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="4" name="Konsum" tags="" position="300,1377.6666666666667" size="200,100">####Informaterial zu Tierhaltung und Co2
 
 Riff-fishing: Jagdleinen scrape-off
 
@@ -289,31 +290,32 @@ Langfristig immer wieder Kritik und Verwunderung der Kunden, dass Tauchschule ni
 Abstract von Abelson 2020:
 Klimawandel und Ansauerung sind globale Probleme die langfristig in den Griff bekommen werden müssen. Bis dahin kann es sein, dass das Riff durch Bleichen stirbt. Wie kann dem Riff Zeit erkauft werden? Wie kann lokal gehandelt werden um den Stress der Korallen zu vermindern?
 
-[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="8" name="Initiale Krise" tags="" position="292,1099" size="200,100">
+[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="8" name="Initiale Krise" tags="" position="300.3333333333333,1020.6666666666666" size="200,100">###Abendessen
+Ihr sitzt zusammen als Alma euch niedergeschlagen einen aktuellen Nachrichtenbeitrag zeigt:
 
-#!Hier ist das Vorläufige Ende des Reflectory!
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/mtyiOcix7ws&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
+Die Stimmung ist auf einmal bedrückt. Vorsichtig bemerkst du, dass die Korallen heute doch gesund aussahen und das Great Barrier Reef sehr weit weg ist.
 
-Nachricht, dass andere Riffe in der Nähe von Bleiche betroffen sind.
+Darauf Alma:
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/1 Alma über Bleiche.mp3&quot;&gt;
+&lt;/audio&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mtyiOcix7ws&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+zwar viele tausend km entfernt
+unsere situation nicht besser
+alle sprechen von great barrier reef
+mesoamerican reef ist das zweitgrößte
+seit 2018 sctld - stony coral loss disease,
+- gewebe stirbt
+- Riffe die es befällt verlieren viele ihrer riffbildenden korallen
+- durch den fortschreitenden Klimawandel hatten wir in den letzten Jahren immer wieder Bleichen
+- unser kleines Saumriff ist bisher noch ganz gut verschont geblieben aber das ist nur eine Frage der Zeit...
 
-https://www.sueddeutsche.de/wissen/korallen-riff-mexiko-krankheit-sctld-1.5601031
+[[Was passiert bei einer Korallenbleiche?-&gt;BleichenInfo]]
 
-####Infomaterial zu Korallenbleiche
-//
-* Was ist eine Bleiche?
-* Folgen/Bedeutung
-* Wie wird sie ausgelöst?
-* Begünstigende Faktoren
-//
-Einbettung:
-(Fotos)
-(tatsächliche Onlineartikel zu Bleichen?)
-
-Ihr entscheidet euch als Tauchsresort aktiv zu werden um euer Riff zu schützen. Doch wo anfangen? Temperaturanstieg und Ansauerung sind die grundlegende Probleme. Das Resort bietet Verpflegung für Kunden und Angestellte. Tauchlehrerin macht den Vorschlag Küche auf vegan umzustellen.
-
-[[BleichenInfo]]</tw-passagedata><tw-passagedata pid="9" name="Saison beginnt" tags="" position="295,2569" size="200,100">Saison beginnt
+(set:$vorher to &quot;Initiale Krise&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="9" name="Saison beginnt" tags="" position="295,2569" size="200,100">Saison beginnt
 , dem Riff geht es gut soweit
 aufgeregt, du begleitest Gruppen
 einer der Kunden schmerzhaften Stich - behauptet ein wunderschöner Fisch habe ihn gestochen, Wird behandelt
@@ -370,10 +372,10 @@ verschreckt einige Ökokunden aber begeistert andere
 
 Biodiversität sinkt weiter aber Rotfeuerfisch ist hübsch
 
-[[lokal weiter entlasten -&gt;Schildkröten am Riff]]</tw-passagedata><tw-passagedata pid="13" name="Schildkröten am Riff" tags="" position="290,3201" size="200,100">Riff ist ein wichtiger grazing/breeding ground für Schildkröten
+[[lokal weiter entlasten -&gt;Schildkröten am Riff]]</tw-passagedata><tw-passagedata pid="13" name="Schildkröten am Riff" tags="" position="290,3221" size="200,100">Riff ist ein wichtiger grazing/breeding ground für Schildkröten
 Tauchtourismus stört die Schildkröten
 
-[[Meinungen: Schutzzonen]]</tw-passagedata><tw-passagedata pid="14" name="Meinungen: Schutzzonen" tags="" position="288,3328" size="200,100">Sollen Schutzzonen eingerichtet werden?
+[[Meinungen: Schutzzonen]]</tw-passagedata><tw-passagedata pid="14" name="Meinungen: Schutzzonen" tags="" position="288,3348" size="200,100">Sollen Schutzzonen eingerichtet werden?
 
 1: Schlüsselspezies fürs Riff: Dauerhaft schützen um dem Riff einen Teil der Belastung zu nehmen und so Überlebenswahrscheinlichkeiten zu erhöhen. 
 
@@ -485,28 +487,28 @@ Du bist nun auf jeden Fall satt, entscheidest dich etwaige Blicke deiner Mitmens
 (goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="25" name="Info zu Fenster" tags="" position="550,275" size="100,100">(set:$popel to ($popel+1))
 (set:$landung to 1)
 (goto: &quot;Fenster&quot;)</tw-passagedata><tw-passagedata pid="26" name="Popel zu Info" tags="" position="1010,816" size="100,100">(set:$landung to 1)
-(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">Am nächsten Morgen ist es so weit: Ihr bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
+(goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="27" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">###Auf dem Boot
+Am nächsten Morgen ist es so weit: Ihr bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
 Ihr kommt an, der Fahrer stellt den Motor aus, du setzt dich auf den Bootsrand und bereitest dich darauf vor dich rückwärts fallen zu lassen.
 Bist du bereit?
 
 [[Na Klar!-&gt;Tauch1]]
 [[Nope!]]
 &lt;audio player autoplay loop&gt;
-&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tauch1" tags="" position="292,974" size="200,100">Du drückst mit einer Hand deine Taucherbrille fest in dein Gesicht und lässt dich rückwärts fallen. Um dich schlägt das Wasser zusammen und Luftblasen verschleiern zunächst deine Sicht. Du orientierst dich und dir bietet sich der folgende Anblick:
+&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tauch1" tags="" position="302,894" size="200,100">###Erster Tauchgang
+Du drückst mit einer Hand deine Taucherbrille fest in dein Gesicht und lässt dich rückwärts fallen. Um dich schlägt das Wasser zusammen und Luftblasen verschleiern zunächst deine Sicht. Du orientierst dich und dir bietet sich der folgende Anblick:
 
-&lt;style&gt; img {max-width:100%}
-&lt;/style&gt;
-&lt;img src=&quot;pic/OceanImageBank_MattCurnock_29.jpg&quot;&gt;
+&lt;style&gt; img {max-width:100%}&lt;/style&gt;
+&lt;img src = &quot;pic/OceanImageBank_MattCurnock_29.jpg&quot; &gt;
 
-Du und die anderen Neuen udn Miri folgt einer der Tauchlehrerinnen die sich hier bereits auskennt, immer euren Auftrieb achtend um das Riff nicht zu beschädigen.
-Begeistert beobachtest die vielen verschiedenen farbigen Fische, Muscheln, Krabben und natürlich die all die verschiedenen Korallen.
-Das Highlight des Tauchgangs war als Miri einen Oktopus entdeckte, der sich aus seinem Versteck wagte.
-&lt;style&gt; img {max-width:100%}
-&lt;/style&gt;
-&lt;img src=&quot;pic/OceanImageBank_UmeedMistry_14.jpg&quot;&gt;
-All dies lebt auf, zwischen und unter der großen zerklüfteten Struktur, die du ohne Miri&#39;s Unterricht einfach als Fels wahrgenommen hättest: Der Kalk vieler Generationen von Korallen.
+Du, Kena und die anderen Neuen folgt Alma, die euch das Riff zeigt, immer auf euren Auftrieb achtend um das Riff nicht zu beschädigen.
+Begeistert beobachtest du die vielen verschiedenen bunten Fische, Muscheln, Schnecken, Krabben und natürlich die all die verschiedenen Korallen.
+Das Highlight des Tauchgangs ist, als Kena zwei Oktopusse entdeckt, die sich aus ihren Verstecken gewagt haben.
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/OceanImageBank_UmeedMistry_14.jpg&quot; &gt;
+All dies lebt auf, zwischen und unter der großen zerklüfteten Struktur, die du vor kurzem noch einfach als Fels wahrgenommen hättest: Der Kalk vieler Generationen von Korallen.
 
-Nach dem Tauchgang begebt ihr in Hochstimmung zurück an Land, verbringt den Nachmittag mit mehr Theorie und kommt als Team zum Abendessen wieder zusammen.
+In bester Stimmung begebt ihr euch nach dem Tauchgang zurück an Land, verbringt den Nachmittag mit mehr Theorie und kommt als Team zum Abendessen wieder zusammen.
 
 [[Abendessen-&gt;Initiale Krise]]
 
@@ -517,9 +519,9 @@ Nach dem Tauchgang begebt ihr in Hochstimmung zurück an Land, verbringt den Nac
 &lt;source src=&quot;aud/under-water-sounds-while-scuba-diving-14866.mp3&quot;&gt;
 &lt;/audio&gt;
 (set:$vorher to &quot;Tauch1&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="29" name="Nope!" tags="" position="528,765" size="100,100">Du überprüfst nochmal dein Equipment, rückst alles zurecht und erinnerst dich daran was du gleich zu tun hast. Da kann nichts schief gehen.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="29" name="Nope!" tags="" position="534.6666666666666,760" size="200,100">Du überprüfst nochmal dein Equipment, rückst alles zurecht und erinnerst dich daran was du gleich zu tun hast. Kena nickt dir aufmunternd zu. Da kann nichts schief gehen.
 
-[[Na dann los!-&gt;Tauch1]]</tw-passagedata><tw-passagedata pid="30" name="Abreise" tags="" position="282,3643" size="200,100">(if: $stress&gt;99)[Kurz vor deiner geplanten Abreise ]
+[[Na dann los!-&gt;Tauch1]]</tw-passagedata><tw-passagedata pid="30" name="Abreise" tags="" position="283,3601" size="200,100">(if: $stress&gt;99)[Kurz vor deiner geplanten Abreise ]
 (if: $stress&lt;100)[Kurz vor deiner geplanten Abreise geht es dem Riff weiterhin gut ]
 
 
@@ -577,7 +579,7 @@ Bewuchs bleibt dieser Teil des Riffs bleibt &quot;tot&quot;
 So schädlich ist es wirklich.
 Es gibt verschiedene Alternativen: Vor und Nachteile
 
-[[Meinungen Sonnencreme]]</tw-passagedata><tw-passagedata pid="36" name="ohne Riffprodukte" tags="" position="679,1658" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="37" name=" Lokal" tags="" position="807,1661" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="38" name=" Bio/Öko" tags="" position="930,1663" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="39" name="Kompostklo" tags="" position="311,2409" size="200,100">[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Saison beginnt]]</tw-passagedata><tw-passagedata pid="40" name="Auswirkungen: Fisch bejagen und essen" tags="" position="29,3038" size="200,100">(set: $stress to $stress + 0)
+[[Meinungen Sonnencreme]]</tw-passagedata><tw-passagedata pid="36" name="ohne Riffprodukte" tags="" position="1155,1682.6666666666665" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="37" name=" Lokal" tags="" position="1332,1682.6666666666665" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="38" name=" Bio/Öko" tags="" position="1455,1684.6666666666665" size="100,100">[[Wir haben da dieses veraltete Kärsystem...-&gt;Sonnencreme]]</tw-passagedata><tw-passagedata pid="39" name="Kompostklo" tags="" position="311,2409" size="200,100">[[Saison beginnt und du begleitest die ersten Tauchgänge. -&gt;Saison beginnt]]</tw-passagedata><tw-passagedata pid="40" name="Auswirkungen: Fisch bejagen und essen" tags="" position="29,3038" size="200,100">(set: $stress to $stress + 0)
 (set:$cook to ($cook+1))
 
 Chefin bittet dich 
@@ -600,7 +602,7 @@ Ihr bringt 500/30Tauchende Fische nach Hause. Führt Buch
 (if:$cook is 0)[Koch voll genervt]
 
 [[lokal weiter entlasten -&gt;Schildkröten am Riff]]
-</tw-passagedata><tw-passagedata pid="41" name="Credits" tags="" position="287,3843" size="200,100">
+</tw-passagedata><tw-passagedata pid="41" name="Credits" tags="" position="280,3719" size="200,100">
 
 Bilder:
 
@@ -610,18 +612,17 @@ Sound:
 Unter-Wasser-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;
 
 Unter-Wasser-Tauch-Sound lizensfrei von &lt;a href=&quot;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=music&amp;amp;utm_content=6201&quot;&gt;Pixabay&lt;/a&gt;</tw-passagedata><tw-passagedata pid="42" name="Erster Tag" tags="" position="298,632" size="200,100">###Tag 1
-Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. &lt;b&gt;Morgen $name! Gut geschlafen?&lt;/b&gt;, begrüßt dich Mira freundlich.(if:$popel&lt;40 and &gt;19)[ Du scheinst dir einen neuen Spitznamen eingefangen zu haben, Moco ist wohl Spanisch und bedeutet so viel wie &#39;Popel&#39;...] Gebannt hören du und die anderen Neuen zu, was Mira euch beizubringen hat. Nachmittags bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
+Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterricht. &lt;b&gt;Morgen $name! Gut geschlafen?&lt;/b&gt;, begrüßt dich Kena freundlich.(if:$popel&lt;40 and &gt;19)[ Du scheinst dir einen neuen Spitznamen eingefangen zu haben, &#39;Moco&#39; ist wohl Spanisch und bedeutet so viel wie &#39;Popel&#39;...] Gebannt hören du und die anderen Neuen zu, was Kena euch beizubringen hat, später bekommt ihr eine Einweisung in das Tauchequipment des Resorts und macht praktische Übungen im Pool.
+=&gt;&lt;=
 &lt;style&gt; img {max-width:70%}&lt;/style&gt; 
 &lt;img src = &quot;pic/pixab/diving-equipment-6810171_960_720.jpg&quot; &gt;
+&lt;==&gt;
+Abends schließt Kena den Unterricht mit einem kleinen Überblick über lokale Tierarten, die ihr entdecken könnt. Sie fragt, ob sie euch bevor es losgeht noch ein wenig über Korallen- und Riffwachstum erklären soll?
 
-Abends schließt Mira den Unterricht mit einigen allgemeinen Infos zu Korallen und ihrem Wachstum:
-&lt;iframe width=&quot;1280&quot; height=&quot;720&quot; src=&quot;https://www.youtube.com/embed/MUPY4zs2hgI&quot; title=&quot;Miri&#39;s Infos zu Korallenwachstum&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-Ihr lasst den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
-
-[[Der erste Tauchgang -&gt;Erste Bootsfahrt]]
+[[Ja, gern.-&gt;Info Wachstum]]
+[[Nö, ich weiß bescheid.-&gt;ich weiß]]
 &lt;audio controls autoplay loop&gt;
- 	&lt;source src=&quot;aud/XXXmorning-sound-birds-chirp-10828.mp3&quot;&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
 	&lt;/audio&gt;
 (set:$vorher to &quot;Erster Tag&quot;)
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="43" name="Flughafen" tags="" position="300,168" size="200,100">##Abflug
@@ -634,7 +635,7 @@ Endlich geht es los! Nachdem du dich von deinen Liebsten für das nächste halbe
 &lt;==&gt;
 Du reist einige Wochen vor der Saison an, um dich in einem Tauchresort ausbilden zu lassen und dann die Monate darauf als Dive Master zu arbeiten - also die Gäste des Resorts bei ihren Tauchgängen am lokalen Riff zu begleiten. 
 
-Während sich die Schlange langsam weiterbewegt, überfliegst du die ersten Abschnitte vom &lt;a href=&quot;https://de.wikipedia.org/wiki/Roat%C3%A1n&quot;; target=&quot;_blank&quot;&gt;Wikipedia-Artikel zu Roatán&lt;/a&gt;.
+Während sich die Schlange langsam weiterbewegt, überfliegst du die ersten zwei Abschnitte vom &lt;a href=&quot;https://de.wikipedia.org/wiki/Roat%C3%A1n&quot;; target=&quot;_blank&quot;&gt;Wikipedia-Artikel zu Roatán&lt;/a&gt;.
 Als du zuende gelesen hast, suchst du ein Infovideo zu Korallenriffen, doch bevor du es startest erreicht die Schlange die Gepäckkontrolle und du wirst aufgefordert deine Sachen abzugeben.
 
 Du speicherst das Video für später, deine Sachen werden durchleuchtet und du ...
@@ -661,26 +662,47 @@ Intensiviertes Training</tw-passagedata><tw-passagedata pid="50" name="Weitere E
 
 eine lokale NGO unterstützen
 
-stony coral tissue loss disease</tw-passagedata><tw-passagedata pid="51" name="Glossar" tags="" position="1610,75" size="200,200">#Glossar
+stony coral tissue loss disease</tw-passagedata><tw-passagedata pid="51" name="Glossar" tags="" position="1630,70" size="200,200">#Glossar
 Hier kannst du jederzeit Namen und Begriffe nachschlagen. Danach kommst du |glossar&gt;[(link:&quot;hier zurück zur Geschichte&quot;)[(goto:$vorher)]].
 
-|glossar&gt;[[[[Jane]]]]
-|glossar&gt;[[[[Miri]]]]
+|glossar&gt;[[[[Alma]]]]
+|glossar&gt;[[[[Kena]]]]
+|glossar&gt;[[[[Kenas Vorträge]]]]
 |glossar&gt;[[[[Polyp]]]]
 |glossar&gt;[[[[Roatán]]]]
 |glossar&gt;[[[[Rifftypen]]]]
+|glossar&gt;[[[[SCTLD]]]]
 |glossar&gt;[[[[(Tauch-)Resort]]]]
 
-Hier geht es |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]].</tw-passagedata><tw-passagedata pid="52" name="Polyp" tags="" position="1700,423" size="100,100">&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+Hier geht es |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]].</tw-passagedata><tw-passagedata pid="52" name="Polyp" tags="" position="1693.3333333333335,411.3333333333333" size="100,100">&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
 &lt;img src = &quot;pic/OceanImageBank_EllenCuylaerts_08.jpg&quot; &gt;
 
 Als Polypen bezeichnet man die einzelnen Korallenindividuen, die als Kolonie einen Korallenstock formen. Sie sind oft sehr klein.
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="53" name="Roatán" tags="" position="1697,297" size="100,100">&lt;style&gt; img {max-width:100%}&lt;/style&gt;
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="53" name="Roatán" tags="" position="1697,297" size="100,100">#Roatán
+&lt;style&gt; img {max-width:100%}&lt;/style&gt;
 &lt;img src = &quot;pic/CIA_map_Central_America_&amp;_Caribbean.png&quot; &gt;
-Roatán ist eine 60km lange und 8km breite Insel im westlichen Karibischen Meer. Sie gehört zum spanischsprachigen Land Honduras und liegt etwa 65 km vor der Küste. Hier liegt das Tauchresort, der Schauplatz des Reflectory.
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="54" name="Rifftypen" tags="" position="1808,302" size="100,100">|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="55" name="Jane" tags="" position="1579,418" size="100,100">Jane ist die Chefin des Tauchresorts.
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="56" name="Miri" tags="" position="1578,298" size="100,100">Miri ist deine Sitznachberin aus dem Flieger und später deine Tauchlehrerin. Sie hat Meeresbiologie studiert.
+Roatán ist eine 60km lange und 8km breite Insel im westlichen Karibischen Meer. Sie gehört zum spanischsprachigen Land Honduras und liegt etwa 65 km vor der Küste. Hier liegt das |glossar&gt;[(link:&quot;Tauchresort&quot;)[(goto:&quot;(Tauch-)Resort&quot;)]], der Schauplatz des Reflectory.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="54" name="Rifftypen" tags="" position="1811.3333333333333,297" size="100,100">###Rifftypen
+Man unterscheidet 3 Haupttypen von Riffen:
+
+####Saum-Riff
+Häufigster Rifftyp Ein Riff 
+
+####Barriere-Riff
+
+####Barriere-Riff
+
+Um dir nochmal von Mira erklären zu lassen wie Riffe wachsen, starte das Video bei Minute 4
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot;
+ src=&quot;https://www.youtube.com/embed/MUPY4zs2hgI&quot; title=&quot;Miri&#39;s Infos zu Korallenwachstum&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="55" name="Alma" tags="" position="1579,414.6666666666667" size="100,100">Alma ist die Chefin des |glossar&gt;[(link:&quot;Resorts&quot;)[(goto:&quot;Tauchresort&quot;)]].
+
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="56" name="Kena" tags="" position="1578,298" size="100,100">Kena ist deine Sitznachberin aus dem Flieger und später deine Tauchlehrerin. Sie hat Meeresbiologie studiert.
+
+Sie informiert im Laufe des Reflectory mit euner Reihe von |glossar&gt;[(link:&quot;Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]].
+
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="57" name="Rotfeuerfische am Riff" tags="" position="296,2713" size="200,100">Video mit Fisch - bist alarmiert. Hast schon von dem Fisch gehört. Was nun?
 1
 {&lt;style&gt; img {max-width:100%}
@@ -706,19 +728,93 @@ Roatán ist eine 60km lange und 8km breite Insel im westlichen Karibischen Meer.
 
 Geschichte der Ausbreiung und ihre Auswirkungen
 
-[[Abendliche Debatte was zu tun ist -&gt; Meinungen zu Rofeuerfisch-Entscheidung]]</tw-passagedata><tw-passagedata pid="58" name="BleichenInfo" tags="" position="284,1246" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="[[(Tauch-)Resort" tags="" position="1813,429" size="100,100">Das Tauchresort ist ein fiktiver Betrieb auf der Insel Roatan. Sie ist der Schauplatz des Reflectory. Es besteht aus einer Tauchschule mit Verpflegung und Unterbringung für die Gäste.
-Die Tauchschule gibt es seit vielen Jahren und besteht aus einigen Bungalows und Holzhäusern. Teile der Anlage wie die Abwasserentsorgung sind bereits veraltet.
+[[Abendliche Debatte was zu tun ist -&gt; Meinungen zu Rofeuerfisch-Entscheidung]]</tw-passagedata><tw-passagedata pid="58" name="BleichenInfo" tags="" position="300.6666666666667,1147" size="200,100">###Korallenbleichen
+//Kena schnappt sich ihr Tablet und beginnt zu skizzieren während sie erklärt:
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/2 Kena über Bleiche.mp3&quot;&gt;
+&lt;/audio&gt;
+- In der Haut vieler Korallenpolypen leben einzellige Algen, die nennt man Zooxanthellen
+- sie betreiben, wie andere Pflanzen auch, Photosynthese
+- nutzen Sonnenlicht um sich zu ernähren, geben davon etwas an die Koralle ab in deren Schutz sie sich befinden
+- Korallen haben so genug Energie um sich zu wehren gegen Krankheiten, Fressfeinde oder Makroalgen die ihnen hartumkämpften Platz streitig machen 
+=&gt;&lt;=
+&lt;style&gt; img {max-width:70%}&lt;/style&gt; 
+&lt;img src = &quot;pic/OceanImageBank_TheOceanAgency_BeforeAfter_01.jpg&quot; &gt;
+&lt;==&gt;
+Korallen sind aber anfällig gegen Hitze und wenige grad reichen aus um sie so unter Stress zu setzen, dass sie ihre Symbiose mit den Zooxanthellen aufgeben und sie rauswerfen.
+=&gt;&lt;=
+&lt;style&gt; img {max-width:70%}&lt;/style&gt; 
+&lt;img src = &quot;pic/OceanImageBank_TheOceanAgency_BeforeAfter_01.jpg&quot; &gt;
+&lt;==&gt;
+Ohne die farbigen Zooxanthellen scheint durch das durchsichtige Gewebe der Polypen das Kalkskelett durch, weswegen man von Korallenbleiche 
+=&gt;&lt;=
+&lt;style&gt; img {max-width:70%}&lt;/style&gt; 
+&lt;img src = &quot;pic/OceanImageBank_TheOceanAgency_BeforeAfter_01.jpg&quot; &gt;
+&lt;==&gt;
+die korallen sind dann noch nicht tot aber wachsen nicht mehr und sind dann sehr anfällig für Krankheiten, fressfeiden und konkurrenz und sterben oft bevor sich die lage noramlisiert.
+Sie können sich erholen und ihre zooxanthellen wieder auffrischen wenn die Temperatur früh genug wieder sinkt.
+
+durch den Klimawandel kommt es immer häufiger und länger zu diesen Temperaturanstiegen.
+
+ein weiteres Problem ist dass sich das CO2 was wir ausstoßen teilweise im Meer löst und zu Kohlensäure wird - der Ozean wird also sauerer.
+
+Die Säure ist nicht gut für das Kalk der Korallen, stört den Aufbau von neuem Kalk und macht den bestehenden Kalk der Riffe instabil.
+//
+
+Ihr entscheidet euch als Tauchsresort aktiv zu werden um euer Riff zu schützen. Doch wo anfangen? Temperaturanstieg und Ansauerung sind die grundlegende Probleme. Das Resort bietet Verpflegung für Kunden und Angestellte. Kena macht den Vorschlag Küche auf vegan umzustellen.
+
+
+CO2
+frei/vegan
+lokal/überregional</tw-passagedata><tw-passagedata pid="59" name="(Tauch-)Resort" tags="" position="1807.6666666666667,410" size="100,100">###Das Tauchresort
+=&gt;&lt;=
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
+&lt;==&gt;
+Das Resort ist ein fiktiver Betrieb auf der karibischen Insel |glossar&gt;[(link:&quot;Roatán&quot;)[(goto:&quot;Roatán&quot;)]]. Sie ist der Schauplatz des Reflectory. Es besteht aus einer Tauchschule mit Verpflegung und Unterbringung für die Gäste.
+Die Tauchschule gibt es seit vielen Jahren und besteht aus einigen Bungalows und Holzhäusern. Teile der Anlage wie die Toiletten und Abwasserentsorgung sind bereits veraltet.
 
 Das Resort beschäftigt:
-- Die Chefin, Jane
-- Mehrere TauchlehrerInnen, unter anderem Miri
-- Mehrere TauchbegleiterInnen, unter anderem dich
+- Die Chefin, |glossar&gt;[(link:&quot;Alma&quot;)[(goto:&quot;Alma&quot;)]]
+- Mehrere TauchlehrerInnen, unter anderem |glossar&gt;[(link:&quot;Kena&quot;)[(goto:&quot;Kena&quot;)]]
+- Einige TauchbegleiterInnen, unter anderem dich
 - Mehrere BootsfahrerInnen
 - Ein Küchenteam
 - Reinigungskräfte
 
+Hier kannst du dir noch einmal Almas Führung durch das Resort anhören:
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/0 Jane über resort.mp3&quot;&gt;
+&lt;/audio&gt;
 
-Chefin, mehrere TauchlehrerInnen und Tauch-BegleiterInnen, BootsfahrerInnen, Küchenpersonal, Reinigungskräfte,... + mehrere Boote, &quot;Riff-Toiletten?&quot;))</tw-passagedata></tw-storydata>
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="60" name="SCTLD" tags="" position="1925.3333333333335,294.6666666666667" size="100,100">#SCTLD
+&lt;style&gt; img {max-width:100%}&lt;/style&gt;
+&lt;img src = &quot;pic/OceanImageBank_ShaunWolfe_06.jpg&quot; &gt;
+//SCTLD// ist die Abkürzung für //Stony Coral Tissue Loss Disease//, zu Deutsch etwa: Steinkorallen-Gewebsverlustkrankheit. Dies ist eine Krankheit die sich seit 2014 von Florida her entlang der amerikanischen Ostküste ausbreitet und seit 2018 auch die riffbildenen Korallen des Karibischen Meeres befallen hat. Die infizierten |glossar&gt;[(link:&quot;Polypen&quot;)[(goto:&quot;Polyp&quot;)]] sterben und lösen sich vom Kalkstkelett ab, sie verlieren also ihr Gewebe. Die Todesrate unter den Korallen befallener Riffe ist äußerst hoch.
+
+Hier ein kurzer, aktueller &lt;a href=&quot;https://www.sueddeutsche.de/wissen/korallen-riff-mexiko-krankheit-sctld-1.5601031&quot;; target=&quot;_blank&quot;&gt;Zeitungsartikel&lt;/a&gt; zum Thema.
+
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="61" name="Info Wachstum" tags="" position="531.3333333333334,633.9999999999999" size="200,100">Kena schnappt sich ein Tablet und beginnt zu erklären:
+((vorläufige Tonspur))
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot;
+ src=&quot;https://www.youtube.com/embed/MUPY4zs2hgI&quot; title=&quot;Miri&#39;s Infos zu Korallenwachstum&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+Anschließend lasst ihr den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
+
+[[Nächster Tag-&gt;Erste Bootsfahrt]]</tw-passagedata><tw-passagedata pid="62" name="ich weiß" tags="" position="147.99999999999997,637.3333333333334" size="100,100">Du kannst dir Kenas Vortrag auch im späteren Verlauf der Geschichte noch im (set:$vorher to &quot;Erste Bootsfahrt&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]] angucken.
+
+Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
+
+[[Nächster Tag-&gt;Erste Bootsfahrt]]</tw-passagedata><tw-passagedata pid="63" name="2. Video" tags="" position="1583.3333333333335,642.6666666666666" size="100,100">Hier kannst du dir Kenas Vortrag über Korallen, Riff-Wachstum und Riff-Typen erneut anschauen:
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot;
+ src=&quot;https://www.youtube.com/embed/MUPY4zs2hgI&quot; title=&quot;Miri&#39;s Infos zu Korallenwachstum&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+ 
+ |glossar&gt;[(link:&quot;zurück zu Kenas anderen Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]]
+ |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="64" name="Kenas Vorträge" tags="" position="1583.3333333333335,527.6666666666667" size="100,100">###Kenas Vorträge
+|glossar&gt;[(link:&quot;1. Polypen, Riffwachstum, Rifftypen&quot;)[(goto:&quot;2. Video&quot;)]]
+
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
