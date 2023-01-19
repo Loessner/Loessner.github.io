@@ -127,7 +127,7 @@ tw-icon { display:none; }
 
 [tags="1"] {
     background-image: 	url("https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_TraceyJennings_15.jpg"); 
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="301,31" size="200,100">{(set:$name to (prompt:&quot;Wie nennt man dich?&quot;, &quot;Käpt&#39;n Nemo&quot;))
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="299,127" size="200,100">{(set:$name to (prompt:&quot;Wie nennt man dich?&quot;, &quot;Käpt&#39;n Nemo&quot;))
 (set:$popel to 0)
 (set:$landung to 0)
 (set:$stress to 0)
@@ -136,6 +136,7 @@ tw-icon { display:none; }
 (set:$info to 0)
 (set:$cook to 0)
 (set:$vorher to &quot;Start&quot;)
+(set:$realname to $name)
 }
 (if:$landung is 0)[
 =&gt;&lt;=
@@ -151,7 +152,7 @@ Gelegentlich findest du am Ende der Seite den Link zum &#39;&#39;Glossar&#39;&#3
 
 Alle Charaktere und die Tauchschule sind fiktiv, das Bildmaterial stammt nicht zwangsläufig vom Schauplatz der Westkaribik.
 
-Alle Charaktere sind vorläufig von einer Person eingesprochen, dies wird für die finale Version überarbeitet.
+Alle Charaktere sind vorläufig von einer Person eingesprochen, dies wird für die finale Version in besserer Qualität überarbeitet.
 
 Für eine optimale Erfahrung empfielt es sich den Ton anzustellen und Kopfhörer zu verwenden.
 
@@ -161,7 +162,7 @@ Viel Spaß!
 &gt;
 }]
 =&gt;&lt;=
-##(text-style: &quot;buoy&quot;,&quot;fade-in-out&quot;)[[Start-&gt;Flughafen]]</tw-passagedata><tw-passagedata pid="2" name="Flug" tags="" position="300,300" size="200,100">##Der Flug
+##(text-style: &quot;buoy&quot;,&quot;fade-in-out&quot;)[[Start-&gt;Flughafen]]</tw-passagedata><tw-passagedata pid="2" name="Flug" tags="" position="301,378" size="200,100">##Der Flug
 Beim Boarding tauschst du den Platz mit deiner Sitznachbarin, sodass du am Fenster sitzen kannst. Der Flieger startet und du überquerst ohne weitere Zwischenfälle den Atlantik...
 =&gt;&lt;=
 &lt;style&gt; img {max-width:60%}&lt;/style&gt;
@@ -172,11 +173,11 @@ Voller Vorfreude auf deine kommenden Abenteuer erinnerst du dich an das Video au
 Du schaust ...
 [[...aus dem Fenster um einen ersten Blick auf die Insel zu erhaschen.-&gt;Fenster]]
 [[...zurück auf den Bildschirm um das Video zu schauen. -&gt;Info]]
-&lt;audio controls autoplay loop&gt;
-&lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
-&gt;&lt;/audio&gt;
+
 (set:$vorher to &quot;Flug&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="3" name="Ankommen" tags="" position="300,500" size="200,100">###Die Ankunft
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+&gt;&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="3" name="Ankommen" tags="" position="300,500" size="200,100">###Die Ankunft
 Nach der Landung verlässt du den Flughafen und lässt dich begeistert von all den ungewohnten Farben, Gerüchen und Geräuschen treiben bevor du einen Bus zu deinem Ziel ein Stück außerhalb der Stadt nimmst. Dort angekommen, betrittst du das Tauchresort: Eine weitläufige Anlage mit einigen Häusern, bunt verteilt zwischen dichter tropischer Vegetation.
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
@@ -185,20 +186,20 @@ Nach der Landung verlässt du den Flughafen und lässt dich begeistert von all d
 Auf dem Weg zur Rezeption kommt dir eine Frau entgegen: 
 &lt;b&gt;&quot;Hey ho! Du bist $name, nehme ich an? Schön, dass du da bist! Ich bin Alma. Wie war der Flug?&quot;&lt;/b&gt;
 &lt;==&gt;
-Sie ist die Chefin des Resorts. Sie begrüßt dich wortreich und stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie schon lange nicht mehr einen erwachsenen Menschen gesehen hat der seine Popel isst.](if:$popel&lt;10)[Sie erkennt dich auch und hofft, dass du deinen Blick aus dem Fenster genossen hast und freut sich mit dir das Riff zu erkunden.] Sie schüttelt dir die Hand, stellt sich als &#39;Kena&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
+Alma ist die Chefin des Resorts. Sie stellt dich der neuen Tauchlehrerin vor, die kurz vor dir angekommen ist. Du erkennst sie als deine Sitznachbarin aus dem Flieger wieder. (if:$popel&lt;20 and &gt;9)[Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie vor der Landung schon kurz Angst hatte, du würdest deinen Popel an ihren Sitz schmieren, so wie du dich umgeschaut hast.] (if:$popel&lt;30 and &gt;19)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und mit breitem Grinsen gratuliert sie dir zu dem &quot;stattlichen Popel&quot; den du im Flieger geerntet hast. Sie erzählt dir, dass sie sich freuen würde, wenn du sowas in Zukunft nirgendwo zurücklässt wo sie noch sitzen will.](if:$popel&lt;40 and &gt;29)[(set:$name to &#39;Moco&#39;)Sie erkennt dich auch und erzählt dir mit breitem Grinsen, dass sie lange keinen erwachsenen Menschen mehr gesehen hat, der seine Popel isst.](if:$popel&lt;10)[Sie erkennt dich auch und hofft, dass du deinen Blick aus dem Fenster genossen hast und freut sich mit dir das Riff zu erkunden.] Sie reicht dir die Hand und stellt sich als &#39;&#39;Kena&#39;&#39; vor und erzählt, dass sie gerade ihren Master in Meeresbiologie abgeschlossen hat. Sie wird dich auf deine ersten Tauchgänge begleiten und dich ausbilden.
 
 ---
 
 Alma gibt dir und Kena eine Führung über das Gelände:
-((vorläufiges Voicing))
+((vorläufige Tonspur))
 &lt;audio class=&quot;shown&quot; controls&gt;
-&lt;source src=&quot;aud/Aud 0 Alma über Resort.mp3&quot;&gt;
+&lt;source src=&quot;aud/Aud 0 Alma über Resort.wav&quot;&gt;
 &lt;/audio&gt;
-Als Abschluss der Tour zeigt Alma euch eure Zimmer, du wirfst deinen Backpack ab und atmest einmal tief durch ... angekommen.
+Im Zimmer wirfst du deinen Backpack ab und atmest einmal tief durch ... angekommen.
 
 ---
 
-Du bist nun Teil einer weltweiten Industrie die vom Riff-Tourismus lebt und jährlich 36 Milliarden US-Dollar umsetzt. Viele Gemeinschaften sind für ihr Überleben direkt von den Korallenriffen abhängig.
+//Du bist nun Teil einer weltweiten Industrie die vom Riff-Tourismus lebt und jährlich 36 Milliarden US-Dollar umsetzt. Viele der lokalen Gemeinschaften sind für ihr Überleben direkt von den Korallenriffen abhängig.//
 
 ---
 
@@ -206,11 +207,14 @@ Abends lernst du den Rest des Teams kennen. Morgen startet das Ausbildungsprogra
 
 [[Erster Tag]]
 
-&lt;audio controls autoplay loop&gt;
- 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
-	&lt;/audio&gt;
 (set:$vorher to &quot;Ankommen&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="4" name="Meinungen zur Konsum-Entscheidung" tags="" position="296,1286" size="200,100">Kena macht einen Vorschlag:
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="4" name="Meinungen zur Konsum-Entscheidung" tags="" position="296,1286" size="200,100">###Meinungen zur CO2-Entscheidung
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
+
+Kena macht einen Vorschlag:
 (vorläufige Tonspur)
 &lt;audio class=&quot;shown&quot; controls&gt;
 &lt;source src=&quot;aud/Aud 3.1 Kena über Konsum.wav&quot;&gt;
@@ -239,7 +243,10 @@ die Umstellung auf lokale Produkte.
 [[Du bist zufrieden mit deiner Argumentation.-&gt;Meinung?]]
 
 (set:$vorher to &quot;Meinungen zur Konsum-Entscheidung&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="5" name="Auswirkungen Konsum" tags="" position="293,1424" size="200,100">(if:$vegan is &quot;für&quot; and $lokal is &quot;für&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+1)(set:$geld to $geld-2)In den folgenden Tagen setzt du deine Tauchausbildung fort, während Alma alle Hände voll zu tun hat, eure Entscheidung umzusetzen.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="5" name="Auswirkungen Konsum" tags="" position="293,1424" size="200,100">###Auswirkungen der Ernährungs-Entscheidung
+(if:$vegan is &quot;für&quot; and $lokal is &quot;für&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+1)(set:$geld to $geld-2)In den folgenden Tagen hat Alma Hände voll zu tun hat, eure Entscheidung umzusetzen.
 
 Sie informiert die kommenden Besucher über das geänderte Angebot, updated die Online-Profile, kündigt alte- und schließt neue Verträge mit Zulieferern für lokale, vegane Produkte.
 Auch Hank und sein Küchenteam sind sehr beschäftigt, denn sie müssen kurzfristig das Angebot der Küche auf vegan umstellen und sind dabei eingeschränkt auf die Produkte, die ihr lokal erhaltet.
@@ -248,49 +255,50 @@ Einige der Gäste, die bereits gebucht hatten, stornieren, weil sie sich in ihre
 
 Auch wenn der Großteil des Teams dafür war, sind Hank und ein paar andere unzufrieden mit der Entscheidung für die vegane Ernährung. Es gibt immer wieder Grundsatzdiskussionen und schließlich einen Streit woraufhin ein langjähriges Teammitglied kündigt.
 
-Alma muss nun kurzfristig jemand Neues einstellen. Der finanzielle Spielraum für diese Saison ist klein geworden, da beide Umstellungen den Betrieb zusätzliches Geld kosten aber kein Neues einbringen.
+Alma muss nun kurzfristig jemand Neues einstellen. //Der finanzielle Spielraum für diese Saison ist beinahe aufgebraucht, da beide Umstellungen den Betrieb zusätzliches Geld kosten aber kein Neues einbringen.//
 
-Nachdem sich die Wogen etwas geglättet haben, freut ihr euch darüber den CO2-Ausstoß des Resorts reduziert zu haben um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie die ihr vertretet und mit den Gästen thematisiert um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;für&quot; and $lokal is &quot;gegen&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+1)(set:$geld to $geld-1)In den folgenden Tagen setzt du deine Tauchausbildung fort, während Alma einiges zu tun hat, eure Entscheidung umzusetzen.
+Nachdem sich die Wogen etwas geglättet haben, freut ihr euch darüber den CO2-Ausstoß des Resorts reduziert zu haben um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie die ihr vertretet und mit den Gästen thematisiert um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;für&quot; and $lokal is &quot;gegen&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+1)(set:$geld to $geld-1) In den folgenden Tagen hat Alma einiges zu tun, eure Entscheidungen umzusetzen.
 
 Sie informiert die kommenden Besucher über das geänderte Angebot, updated die Online-Profile, kündigt alte- und schließt neue Verträge mit Zulieferern für vegane Produkte.
-Auch Hank und sein Küchenteam sind beschäftigt, denn sie müssen kurzfristig das Angebot der Küche auf vegan umstellen, haben aber die volle Auswahl der Produkte die Roatan importiert.
+Auch Hank und sein Küchenteam sind beschäftigt, denn sie müssen kurzfristig das Angebot der Küche auf vegan umstellen, haben aber die volle Auswahl der Produkte die Roatán importiert.
 
 Einige der Gäste, die bereits gebucht hatten, stornieren, weil sie sich in ihrer Freiheit eingeschränkt fühlen und erwarten, dass man bei einem Urlaub am Meer auch Fisch zu essen bekommt. Andere begrüßen das zeitgemäße Auftreten des Resorts und die stornierten Plätze werden bald von neuen Kunden gebucht.
 
 Auch wenn der Großteil des Teams dafür war, sind Hank und ein paar andere unzufrieden mit der Entscheidung für die vegane Ernährung. Es gibt immer wieder Grundsatzdiskussionen und schließlich einen Streit woraufhin ein langjähriges Teammitglied kündigt.
 
-Alma muss nun kurzfristig jemand Neues einstellen. Der finanzielle Spielraum für diese Saison ist etwas kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.
+Alma muss nun kurzfristig jemand Neues einstellen. //Der finanzielle Spielraum für diese Saison ist kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.//
 
-Nachdem sich die Wogen etwas geglättet haben, freut ihr euch darüber den CO2-Ausstoß des Resorts etwas reduziert zu haben um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie die ihr vertretet und mit den Gästen thematisiert um so ein langfristiges Bewusstsein zu fördern.]
-(if:$vegan is &quot;gegen&quot; and $lokal is &quot;für&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+0)(set:$geld to $geld-1)In den folgenden Tagen setzt du deine Tauchausbildung fort, während Alma einiges zu tun hat, eure Entscheidung umzusetzen.
+Nachdem sich die Wogen etwas geglättet haben, freut ihr euch darüber den CO2-Ausstoß des Resorts etwas reduziert zu haben um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie, die ihr vertretet und mit den Gästen thematisiert um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;gegen&quot; and $lokal is &quot;für&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+0)(set:$geld to $geld-1) In den folgenden Tagen hat Alma einiges zu tun, eure Entscheidung umzusetzen.
 
 Sie informiert die kommenden Besucher über das geänderte Angebot, kündigt alte- und schließt neue Verträge mit Zulieferern für lokale Produkte. Auch Hank und sein Küchenteam sind beschäftigt, denn sie müssen kurzfristig das Angebot der Küche anpassen, da nicht mehr alle Produkte lokal verfügbar sind.
 
 Ihr bekommt positives Feedback über Social Media und Gäste begrüßen das zeitgemäße Auftreten des Resorts.
 
-Der finanzielle Spielraum für diese Saison ist etwas kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.
+//Der finanzielle Spielraum für diese Saison ist etwas kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.//
 
-Nachdem sich die Wogen etwas geglättet haben, freut ihr euch darüber den CO2-Ausstoß des Resorts etwas reduziert zu haben um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie die ihr vertretet und mit den Gästen thematisiert um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;gegen&quot; and $lokal is &quot;gegen&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+0)(set:$geld to $geld-0)In den folgenden Tagen setzt du deine Tauchausbildung fort, während im Resort alles seinen gewohnten Weg geht.
+Ihr euch darüber den CO2-Ausstoß des Resorts etwas reduziert zu haben, um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie, die ihr vertretet und mit den Gästen thematisiert, um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;gegen&quot; and $lokal is &quot;gegen&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+0)(set:$geld to $geld-0) In den folgenden Tagen setzt du deine Tauchausbildung fort, während im Resort alles seinen gewohnten Weg geht.
 
-Auch wenn der Großteil des Teams dafür war, sind Kena und ein paar andere unzufrieden mit der Entscheidung den CO2-Ausstoß zu reduzieren. Es gibt immer wieder Grundsatzdiskussionen und schließlich einen Streit woraufhin ein langjähriges Teammitglied kündigt.
+Auch wenn der Großteil des Teams dafür war, sind Kena und ein paar andere unzufrieden mit der Entscheidung den CO2-Ausstoß nicht zu reduzieren. Es gibt immer wieder Grundsatzdiskussionen und schließlich einen Streit woraufhin ein langjähriges Teammitglied kündigt.
 
-Alma muss nun kurzfristig jemand Neues einstellen. //Der finanzielle Spielraum für diese Saison ist klein geworden, da beide Umstellungen den Betrieb zusätzliches Geld kosten aber kein Neues einbringen//.
+Alma muss nun kurzfristig jemand Neues einstellen. //Der finanzielle Spielraum für diese Saison ist weiterhin groß und ermöglicht an anderen Stellen in Nachhaltigkeit zu investieren.//
 
-Nachdem sich die Wogen etwas geglättet haben, freut ihr euch (und vor allem Kena und du) darauf, die zukunftsorientierte Philsosphie zu vertreten und mit den Gästen zu thematisieren und so ein langfristiges Bewusstsein zu fördern.]
+Nachdem sich die Wogen etwas geglättet haben, überlegt ihr weiter wie ihr das Riff schützen könnt mit etwas greifbareren Zielen als eurem Einfluss auf das Klima.]
 
 ---
 
-Unterdessen geht deine Ausbildung ...
+Unterdessen ... 
 
-[[... weiter.-&gt;Nachttauchgang]]
+[[... geht deine Ausbildung weiter.-&gt;Nachttauchgang]]
 
 (set:$vorher to &quot;Auswirkungen Konsum&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="6" name="Initiale Krise" tags="" position="300,1020" size="200,100">###Abendessen
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="6" name="Initiale Krise" tags="" position="300,1020" size="200,100">###Abendessen
 Ihr sitzt zusammen als Alma euch einen aktuellen Nachrichtenbeitrag zeigt:
 
 &lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/mtyiOcix7ws&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-Die Stimmung ist auf einmal bedrückt. Vorsichtig bemerkst du, dass die Korallen heute doch gesund aussahen und das Great Barrier Reef sehr weit weg ist.
+Die Stimmung ist auf einmal bedrückt. Vorsichtig merkst du an, dass die Korallen heute doch gesund aussahen und das Great Barrier Reef sehr weit weg ist.
 
 Darauf Alma:
 (Vorläufige Tonspur)
@@ -301,70 +309,97 @@ Darauf Alma:
 [[Was passiert bei einer Korallenbleiche?-&gt;BleichenInfo]]
 
 (set:$vorher to &quot;Initiale Krise&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="7" name="Unterdessen ..." tags="" position="278,2719" size="200,100">Du begleitest beinahe täglich die Gäste des Resorts auf Tauchgängen und kennst viele Bereiche des Riffs schon auswendig; weist wo welche Tiere und Pflanzen zu finden sind und welche der Korallen besonders prächtig sind. Du siehst sogar noch zwei weitere Male einen Walhai.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="7" name="Unterdessen ..." tags="" position="274,2647" size="200,100">###Eine seltsame Verletzung
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src =&quot;pic/OceanImageBank_AlexTyrrell_07.jpg&quot; &gt;
 
-Deine letzten Wochen im Resort brechen an als ein Gast nach einem Tauchgang mit einer seltsamen Verletzung zu dir kommt - einer schmerzhafte Schwellung am Arm. Er behautet ein getiegerter Fisch mit wunderschönen langen Flossen habe ihn gestochen. Dir ist dieser Fisch nicht bekannt, obwohl du dich mittlerweile gut am Riff auskennst. Du behandelst die Verletzung vorläufig und nach eurer Rückkehr an Land geht ihr zu Kena.
+Du begleitest beinahe täglich die Gäste des Resorts auf Tauchgängen und kennst viele Bereiche des Riffs schon auswendig; weist wo welche Tiere und Pflanzen zu finden sind und welche der Korallen besonders prächtig sind. Du siehst sogar noch zwei weitere Male einen Walhai.
+
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_RenataRomeo_43.jpg&quot; &gt;
+
+Deine letzten Wochen im Resort brechen an als ein Gast nach einem Tauchgang mit einer seltsamen Verletzung zu dir kommt: Eine schmerzhafte Schwellung am Arm. Er behautet ein getiegerter Fisch mit wunderschönen langen Flossen habe ihn gestochen. Dir ist dieser Fisch nicht bekannt, obwohl du dich mittlerweile gut am Riff auskennst. Du behandelst die Verletzung vorläufig und nach eurer Rückkehr an Land geht ihr gemeinsam zu Kena.
 
 [[Vielleicht weiß sie etwas? -&gt;Rotfeuerfische am Riff]]
 
 (set:$vorher to &quot;Unterdessen ...&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="8" name="Meinungen zu Rofeuerfisch-Entscheidung" tags="" position="285,2980" size="200,100">Ökol:
-Wieso einen Fisch jagen wenn es doch um Korallen geht?
-der Fisch bedroht die Gesundheit des Riffs
-Bejagen löst das Problem nicht dauerhaft/ zu kleiner bzw temporärer Unterschied
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt; 
+&lt;source src=&quot;aud/underwater-ambience-6201.mp3&quot;
+&gt;
+}</tw-passagedata><tw-passagedata pid="8" name="Meinungen zu Rofeuerfisch-Entscheidung" tags="" position="276,3024" size="200,100">###Meinungen zum Umgang mit dem Rotfeuerfisch
+In den kommenden Tagen werden immer mehr der Fische gemeldet und du selbst siehst bei deinen Tauchgängen auch immer wieder welche der anmutigen Fische.
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_GregoryPiper_43.jpg&quot; &gt;
 
-augenscheinlicher Konflikt mit veganismus Entscheidung
-augenscheinliche Problematik: Ist Überfischung nicht einer der größten lokalen Bedrohungen für Korallenriffe?
+Ihr beruft eine Teamsitzung ein und Kena stellt euch die Optionen vor:
+(vorläufige Tonspur)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 6.1 Kena über Rot.wav&quot;&gt;
+&lt;/audio&gt;
 
-Ökon: 
-Kundenattraktion: Fisch ist schön anzusehen
-alternative Kundenattraktion: Kunden an Jagt beteiligen
-Harpunen-Equipment günstig
-Jagen könnte Tierliebhaber unter den Kunden verschrecken
-Zubereitung und Verzehr im Resort bietet optionale Attraktion
-Zubereitung auf Grund von giftigen Stacheln aufwendig - mehr Küchenpersonal?
+Einer der anderen Tauchlehrer meldet sich zu Wort:
+(vorläufige Tonspur)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 6.2 Dive über Rot.wav&quot;&gt;
+&lt;/audio&gt;
 
-Soz: 
-gute Möglichkeit mit Kunden über Nachhaltigkeit zu kommunizieren
-Tiere töten ist immer verwerflich/möchte das nicht
-Feuerfisch ist guter Speise-Fisch
-Feuerfisch trägt schmerzhaftes Gift
+Hank:
+(vorläufige Tonspur)
+(if:$vegan is &quot;gegen&quot;)[&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 6.3.1 Hank über Rot.wav&quot;&gt;
+&lt;/audio&gt;](if:$vegan is &quot;für&quot;)[&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 6.3.2 Hank über Rot.wav&quot;&gt;
+&lt;/audio&gt;]
 
-[[Fisch bejagen-&gt; Auswirkungen: Fisch bejagen]]
-[[Fisch bejagen und essen-&gt;Auswirkungen: Fisch bejagen und essen]]
-[[Fisch als Kundenatraktion bewerben-&gt; Auswirkungen: Fisch als Kundenattraktion bewerben]]
+
+Du denkst ihr solltet ...
+[[... den Fisch bejagen.-&gt;Auswirkungen: Fisch bejagen]]
+[[... den Fisch bejagen und essen.-&gt;Auswirkungen: Fisch bejagen und essen]]
+[[... den Fisch als Kundenattraktion bewerben.-&gt;Auswirkungen: Fisch als Kundenattraktion bewerben]]
 
 (set:$vorher to &quot;Meinungen zu Rofeuerfisch-Entscheidung&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="9" name=" Auswirkungen: Fisch bejagen" tags="" position="292,3111" size="200,100">(set: $stress to $stress + 0)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="9" name="Auswirkungen: Fisch bejagen" tags="" position="283,3155" size="200,100">###Rotfeuerfisch auf der Speisekarte
+Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail.
+Ein paar Tage später erhaltet ihr Besuch von einem Vertreter der NGO, der euch einige Sets Ausrüstung stellt und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken gibt.
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_ShaunWolfe_43.jpg&quot; &gt;
+Alma besteht darauf, dass alle TauchbegleiterInnen sich an dem Projekt beteiligen. Jan, der Dive Master will sich nicht daran beteilligen Tiere zu töten und wechselt zu einer anderen Tauchschule.
 
-Chefin bittet dich 
-Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail und bekommst kurz darauf eine begeisterte Antwort mit dem Angebot euch Equipment und einweisung zu stellen.
-((Bild Ausrüstung))
+Ihr macht einen Tauchgang mit dem gesamten Tauchbegleitungsteam um die Handhabung zu lernen und möglichst viele der Rotfeuerfische abzusammeln:
+//Wenn du möchtest, schaue dir die erste Minute des Videos an, danach wiederholt sich das Geschaute zusehends. (Achtung! Hier wird gezeigt wie Fische getötet werden)//
+&lt;iframe width=&quot;100%&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FQXplP4AyRQ?controls=0&amp;amp;start=5&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-Ein paar Tage später erhaltet ihr Besuch von einem Instructor. Er bringt einige Dreizackspreere und Harpunen mit Gummizügen mit und gibt dir und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken.
+Ihr fangt hunderte Fische, bringt sie an Land und entsorgt sie dort.
 
-Die Chefin besteht darauf dass alle TauchbegleiterInnen sich an dem Projekt beteiligen.
-Dive Master 3 will selber keine Tiere töten. Es kommt zu einer hitzigen Diskussion mit der Chefin. Dive Master 3 verweigert und wechselt 2 Wochen später zu anderer Tauchschule
-
-Ihr macht einige Tauchgänge im Tauchbegleitungsteam um die Handhabung zu lernen.
-
-((Bilder/Video Jagd: bestenfalls first person perspective))
-
-Ihr bringt 500/30Tauchende Fische nach Hause. Führt Buch und entsorgt sie im Müll.
-
-verschreckt einige Ökokunden aber begeistert andere
+Von da an werden immer wieder auch mit Gästen Harpunentauchgänge gemacht und die Anzahl der Rotfeuerfische so klein gehalten, dass sie das Riff nicht belasten.
 
 
-[[Abschied]]</tw-passagedata><tw-passagedata pid="10" name=" Auswirkungen: Fisch als Kundenattraktion bewerben" tags="" position="539,3113" size="200,100">(set: $stress to $stress + 40)
+[[Der Abschied naht ...-&gt;Abschied]]{(set: $stress to $stress + 0)
+(set: $fish to &quot;hunt&quot;){&lt;audio controls autoplay loop&gt; 
+&lt;source src=&quot;aud/underwater-ambience-6201.mp3&quot;
+&gt;
+}
+}</tw-passagedata><tw-passagedata pid="10" name="Auswirkungen: Fisch als Kundenattraktion bewerben" tags="" position="530,3157" size="200,100">###Der Rotfeuerfisch als Kundenattraktion
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_CinziaOseleBismarck_01.jpg&quot; &gt;
+Die Zahl der Rotfeuerfische am Riff steigt über die Zeit weiter an, bis der Fisch das Riff dominiert.
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_CinziaOseleBismarck_18.jpg&quot; &gt;
+Viele der Kunden erfreuen sich an dem schönen Fisch, wobei langjährige Teammitglieder und Stammkunden feststellen, dass einige der anderen lokalen Arten immer seltener zu sehen sind. Langfristig nimmt die Artenvielfalt der Fische im Riff ab und Algenteppiche auf den Korallen werden immer häufiger und Krankheiten unter den Korallen nehmen zu.
 
-Biodiversität sinkt weiter aber Rotfeuerfisch ist hübsch
+[[Der Abschied naht ...-&gt;Abschied]]{(set: $stress to $stress + 40)
+(set: $fish to &quot;keep&quot;)}{&lt;audio controls autoplay loop&gt; 
+&lt;source src=&quot;aud/underwater-ambience-6201.mp3&quot;
+&gt;
+}</tw-passagedata><tw-passagedata pid="11" name="Abschied" tags="" position="277,3323" size="200,100">###Abschied
+Deine Zeit im Resort neigt sich dem Ende. Du genießt die verbleibenden Tauchgänge und besuchst nochmal deine Lieblingsspots; Werden sie noch da sein wenn du einmal wiederkommst? Werden die Korallenstöcke, die hier teils seit Jahrhunderten wachsen, in ein paar Jahren noch so voller Leben sein? - Die Fischschwärme, Schildkröten, Oktopusse, die Wahlhaie?
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/OceanImageBank_RenataRomeo_41.jpg&quot; &gt;
 
-[[lokal weiter entlasten -&gt;Abschied]]</tw-passagedata><tw-passagedata pid="11" name="Abschied" tags="" position="286,3279" size="200,100">
+Am Tag deiner Abreise gehst du noch einmal durch das Resort: Unter der Obefläche hat sich Vieles geändert seit du hier ankamst... Du nimmst Abschied vom Team und schulterst deinen Backpack. Alma und Kena bringen dich noch zum Flughafen Roatán und dann ist auch hier der Abschied gekommen: &#39;&#39;Auf Wiedersehen $realname(if: $name is &#39;Moco&#39;)[ aka Moco], danke für diese bewegte Zeit!&#39;&#39;
 
-[[Abreise]]
+Du verabschiedest dich und ...
+[[... machst dich auf den Weg zum Gate-&gt;Rückflug]]
 
 (set:$vorher to &quot;Abschied&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="12" name="Meinungen: Schutzzonen" tags="" position="1521,3264" size="200,100">Sollen Schutzzonen eingerichtet werden?
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
+&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="12" name="Meinungen: Schutzzonen" tags="" position="1521,3264" size="200,100">Sollen Schutzzonen eingerichtet werden?
 
 1: Schlüsselspezies fürs Riff: Dauerhaft schützen um dem Riff einen Teil der Belastung zu nehmen und so Überlebenswahrscheinlichkeiten zu erhöhen. 
 
@@ -382,13 +417,18 @@ Biodiversität sinkt weiter aber Rotfeuerfisch ist hübsch
 
 [[Abreisen]]</tw-passagedata><tw-passagedata pid="15" name="Schutzzone weiterhin betauchen aber strengere Regeln" tags="" position="1772,3396" size="200,100">(set: $stress to $stress + 20)
 
-[[Abreisen]]</tw-passagedata><tw-passagedata pid="16" name="Fenster" tags="" position="150,400" size="100,100">{(if: $fenster is 0)[Ihr scheint aus Richtung des Wassers zu landen, denn statt der Insel hast du einen Blick auf das Karibische Meer und große Riffstrukturen unter der Wasseroberfläche...]
-(if: $fenster is 1)[Ihr befindet euch weiterhin im Anflug und unter dir erstreckt sich das Riff.]}
+[[Abreisen]]</tw-passagedata><tw-passagedata pid="16" name="Fenster" tags="" position="150,400" size="100,100">{(if: $fenster is 0)[Ihr scheint aus Richtung des Wassers zu landen, denn statt der Insel hast du einen Blick auf das Karibische Meer und große Riffstrukturen unter der Wasseroberfläche...
 {&lt;style&gt; img {max-width:100%}
 &lt;/style&gt;
 &lt;img src=&quot;pic/OceanImageBank_KaterinaKatopis_42.jpg&quot;&gt;
 }
-(if: $fenster is 0)[Fasziniert betrachtest du die Verläufe von flacheren und tieferen Strukturen und stellst dir vor wie es unter der Oberfläche aussehen mag.] 
+Fasziniert betrachtest du die Verläufe von flacheren und tieferen Strukturen und stellst dir vor, wie es unter der Oberfläche aussehen mag.]
+(if: $fenster is 1)[Ihr befindet euch weiterhin im Anflug und unter dir erstreckt sich das Riff.
+{&lt;style&gt; img {max-width:100%}
+&lt;/style&gt;
+&lt;img src=&quot;pic/OceanImageBank_KaterinaKatopis_40.jpg&quot;&gt;
+}]}
+
 
 
 Du...{
@@ -400,10 +440,10 @@ Du...{
   &lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
   &gt;</tw-passagedata><tw-passagedata pid="17" name="Info" tags="" position="550,398" size="100,100">{
 (set:$info to 1)
-####Infovideo zu Korallenriffen
+###Infovideo zu Korallenriffen
 }
-&lt;iframe width=&quot;1268&quot; max-width:100% height=&quot;713&quot;
-src=&quot;https://www.youtube.com/embed/iZAAZBZILdo&quot; title=&quot;Korallenriffe   Bauwerke der Natur&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=100% height=&quot;713&quot;
+src=&quot;https://www.youtube.com/embed/98Soz01A_S8&quot; title=&quot;Korallenriffe   Bauwerke der Natur&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 
 Nachdem du das Video zuende geschaut hast ...
@@ -411,12 +451,10 @@ Nachdem du das Video zuende geschaut hast ...
 (if:$popel is 0)[[... bohrst du in der Nase.-&gt;Popeln]]
 (if:$landung&gt;0)[[... bereitest du dich auf die Landung vor.-&gt;Ankommen]]
 
-
-&lt;audio controls autoplay loop&gt;
-&lt;source src=&quot;aud/plane/XXXairplane_ambience-6830.mp3&quot;
-&gt;&lt;/audio&gt;
 (set:$vorher to &quot;Info&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="18" name="Popeln" tags="" position="1046,229" size="100,100">{(if:$info is 1)[ (set:$landung to 1) ]
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/plane/XXXairplane_ambience-6830.mp3&quot;
+&gt;&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="18" name="Popeln" tags="" position="1046,229" size="100,100">{(if:$info is 1)[ (set:$landung to 1) ]
 Wirklich? Ok...}
 Na also gut.
 =&gt;&lt;=
@@ -478,56 +516,70 @@ Du bist nun auf jeden Fall satt, entscheidest dich etwaige Blicke deiner Mitmens
 (goto: &quot;Fenster&quot;)</tw-passagedata><tw-passagedata pid="24" name="Popel zu Info" tags="" position="1046,479" size="100,100">(set:$landung to 1)
 (goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="25" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">###Auf dem Boot
 Am nächsten Morgen ist es so weit: Ihr bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
-Ihr kommt an, der Fahrer stellt den Motor aus, du setzt dich auf den Bootsrand und bereitest dich darauf vor dich rückwärts fallen zu lassen.
+Ihr kommt an, der Fahrer stellt den Motor aus, du setzt dich auf den Bootsrand und bereitest dich darauf vor, dich rückwärts fallen zu lassen.
 Bist du bereit?
 
 [[Na Klar!-&gt;Tauch1]]
-[[Nope!]]
+[[Nope!]]{
 &lt;audio player autoplay loop&gt;
-&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="26" name="Tauch1" tags="" position="302,894" size="200,100">###Erster Tauchgang
+&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;}</tw-passagedata><tw-passagedata pid="26" name="Tauch1" tags="" position="302,894" size="200,100">###Erster Tauchgang
 Du drückst mit einer Hand deine Taucherbrille fest in dein Gesicht und lässt dich rückwärts fallen. Um dich schlägt das Wasser zusammen und Luftblasen verschleiern zunächst deine Sicht. Du orientierst dich und dir bietet sich der folgende Anblick:
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt;
 &lt;img src = &quot;pic/OceanImageBank_MattCurnock_29.jpg&quot; &gt;
 
-Du, Kena und die anderen Neuen folgt Alma, die euch das Riff zeigt, immer auf euren Auftrieb achtend um das Riff nicht zu beschädigen.
-Begeistert beobachtest du die vielen verschiedenen bunten Fische, Muscheln, Schnecken, Krabben und natürlich die all die verschiedenen Korallen.
+Du, Kena und die anderen Neuen folgt Alma, die euch das Riff zeigt, immer auf euren Auftrieb achtend um kie Korallen nicht zu beschädigen.
+Begeistert beobachtest du die vielen verschiedenen bunten Fische, Muscheln, Schnecken, Krebse und natürlich die all die verschiedenen Korallen.
 Das Highlight des Tauchgangs ist, als Kena zwei Oktopusse entdeckt, die sich aus ihren Verstecken gewagt haben.
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
 &lt;img src = &quot;pic/OceanImageBank_UmeedMistry_14.jpg&quot; &gt;
-All dies lebt auf, zwischen und unter der großen zerklüfteten Struktur, die du vor kurzem noch einfach als Fels wahrgenommen hättest: Der Kalk vieler Generationen von Korallen.
+All dies lebt auf-, zwischen- und unter der großen zerklüfteten Struktur, die du vor kurzem noch einfach als Fels wahrgenommen hättest: Der Kalk vieler Generationen von Korallen.
 
 In bester Stimmung begebt ihr euch nach dem Tauchgang zurück an Land, verbringt den Nachmittag mit mehr Theorie und kommt als Team zum Abendessen wieder zusammen.
 
 [[Abendessen-&gt;Initiale Krise]]
 
+
+(set:$vorher to &quot;Tauch1&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
 &lt;audio controls autoplay&gt;
 &lt;source src=&quot;aud/splash-by-blaukreuz-6261.mp3&quot;&gt;
 &lt;/audio&gt;
 &lt;audio controls autoplay loop&gt;
 &lt;source src=&quot;aud/under-water-sounds-while-scuba-diving-14866.mp3&quot;&gt;
-&lt;/audio&gt;
-(set:$vorher to &quot;Tauch1&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="27" name="Nope!" tags="" position="534,760" size="200,100">Du überprüfst nochmal dein Equipment, rückst alles zurecht und erinnerst dich daran was du gleich zu tun hast. Kena nickt dir aufmunternd zu. Da kann nichts schief gehen.
+&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="27" name="Nope!" tags="" position="534,760" size="200,100">Du überprüfst nochmal dein Equipment, rückst alles zurecht und erinnerst dich daran was du gleich zu tun hast. Kena nickt dir aufmunternd zu. Da kann nichts schief gehen.
 
-[[Na dann los!-&gt;Tauch1]]</tw-passagedata><tw-passagedata pid="28" name="Abreise" tags="" position="288,3417" size="200,100">(if: $stress&gt;99)[Kurz vor deiner geplanten Abreise ]
-(if: $stress&lt;100)[Kurz vor deiner geplanten Abreise geht es dem Riff weiterhin gut ]
+[[Na dann los!-&gt;Tauch1]]{
+&lt;audio player autoplay loop&gt;
+&lt;source src=&quot;aud/long-tail-boat-33080.mp3&quot;&gt;}</tw-passagedata><tw-passagedata pid="28" name="Rückflug" tags="" position="279,3461" size="200,100">###Der Rückflug
+Während der Flieger startet und CO2 in die Atmoshpäre freisetzt, wirfst du noch einen Blick zurück und lässt die Auswirkungen deines Besuchs Revue passieren:
+=&gt;&lt;=
+&lt;style&gt; img {max-width:60%}&lt;/style&gt;
+&lt;img src = &quot;pic/pixab/travel-6030190_960_720.png&quot; &gt;
+&lt;==&gt;
 
+Du(if: $name is &quot;Moco&quot;)[ hast dir einen Spitznamen verdient,]
+(if: $vegan is &quot;für&quot;)[ hast die Ernährung des Resort auf vegan umgestellt](if: $vegan is &quot;gegen&quot;)[ hast die Ernährung des Resort nicht auf vegan umgestellt](if: $lokal is &quot;für&quot;)[ und nur noch lokale Produkte verwendet](if: $lokal is &quot;gegen&quot;)[ und weiterhin importierte Produkte verwendet] und so Einfluss auf den CO2-Ausstoß vieler Menschen und damit dem globalen Klimawandel und Ozeanansauerung genommen.
 
-Der Aufenthalt des Charakters am Riff endet mit Rückflug.
+(if: $sun is &quot;nope&quot;)[ Du hast oxybenzonhaltige Sonnencreme im Resort verboten und so das Riff lokal von dieser korallenschädigenden Chemikalie entlastet.](if: $sun is &quot;info&quot;)[ Du hast die Menschen im Resort über die Auswirkungen oxybenzonhaltiger Sonnencreme informiert und so das Riff lokal von dieser korallenschädigenden Chemikalie entlastet.]
 
-Es wird sich von dem Setting und den handelnden Charakteren verabschiedet und Handlungsstränge geschlossen.
+(if: $klo is &quot;klär&quot;)[Du hast in ein modernes Klärsystem investiert, welches den ungewollten Eintrag von Nährstoffen und vieler Chemikalien durch die Abwässer des Resorts ins Riff verhindert.](if: $klo is &quot;komp&quot;)[Du hast in Komposttoiletten investiert, welche den ungewollten Eintrag von Nährstoffen durch die Toilettenabwässer des Resorts ins Riff verhindern. Leider gehen weiterhin viele Abwässer des Resorts und die darin enthaltenen Chemikalien aus z.B Reinigungsmitteln und Hygieneprodukten ungeklärt ins Riff.](if: $klo is &quot;plums&quot;)[Du bist zunächst bei den bestehenden Rifftoiletten geblieben, weshalb weiterhin alle Abwässer des Resorts ungeklärt ins Riff gehen und es eutrophieren und mit Chemikalien belasten.]
 
-Der handelnde Charakter lässt die Zeit Revue passieren und so werden die getroffenen Entscheidungen erzählend zusammengefasst 
+(if: $fish is &quot;eat&quot;)[Du hast entschieden, gegen den invasiven Rotfeuerfisch vorzugehen indem er regelmäßig von Tauchenden mit Handharpunen gejagt und sogar gegessen wird. Auf diese Weise wird die lokale Belastung durch seinen Einfluss auf Artengemeinschaft minimiert und er wird als Ressource genutzt.](if: $fish is &quot;hunt&quot;)[Du hast entschieden, gegen den invasiven Rotfeuerfisch vorzugehen indem er regelmäßig von Tauchenden mit Handharpunen gejagt wird. Auf diese Weise wird die lokale Belastung durch seinen Einfluss auf das Gleichgewicht der Artengemeinschaft minimiert.](if: $fish is &quot;keep&quot;)[Du hast entschieden, nicht gegen den invasiven Rotfeuerfisch vorzugehen sondern ihn als Attraktion zu bewerben. So wurde zwar kurzfristig aus dem Fisch Profit geschlagen jedoch sein starker Einfluss auf das Gleichgewicht der Artengemeinschaft nicht verhindert wodurch viele Arten direkt dezimiert und die Korallen lokal belastet werden.]
 
-Je nach vorangegangenen Entscheidungen ist das Riff von einer langen Bleiche betroffen, das Tauchresort in unterschiedlichem ökonomischen Zustand und die handelnden Charaktere unterschiedlich zufrieden. 
+Du hast durch deine Aktionen die Widerstandsfähigkeit der Korallen lokal unterstützt (bzw. Schäden reduziert) und so dem Riff wertvolle Zeit erkauft, sich an die schnell ändernden Umweltbedingungen anzupassen. Ob es reichen wird, wird die Zukunft zeigen.
 
-&lt;img src=&quot;bild/1.jpg&quot;&gt;
+Laut dem aktuellen (2022) umfangreichen &lt;a href=&quot;https://www.ipcc.ch/report/ar6/wg2/&quot;; target=&quot;_blank&quot;&gt;Bericht&lt;/a&gt; des //UN Intergovernmental Panel on Climate Change// werden bei den aktuellen lokalen Entwicklungen und einem Temperaturanstieg um 1,5°C bis Ende des Jahrhunderts 70-90% aller Korallen tot sein. Bei 2°C über 99% der Korallen...
 
-[[Referenzen-&gt;Credits]]
+Du hast dich nicht gescheut, trotz der Meinungen Einzelner auch unpopuläre Entscheidungen zu fällen um das Riff zu schützen. Auch wenn dies kurzfristig zum Nachteil für die Wirtschaftlichkeit oder die Bedürfnisse Einiger ist, werden die Gemeinschaften von Menschen, Tieren, Pflanzen, und anderer Lebewesen die auf das Riff stark angewiesen sind, länger bestehen können.
+
+[[Ende]]
 
 (set:$vorher to &quot;Abreise&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="29" name="Notes" tags="" position="750,52" size="100,100">Tags nutzen für kopf/Fuß-Zeile oder &quot;Startup&quot;
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
+&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/plane/airplane_ambience-6830.mp3&quot;
+&gt;&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="29" name="Notes" tags="" position="750,52" size="100,100">Tags nutzen für kopf/Fuß-Zeile oder &quot;Startup&quot;
 
 (set: &quot;Riff&quot; to (datamap:))
 (dm: [&quot;name&quot;, &quot;Korallenriff&quot;]) -&gt; Datamap
@@ -536,24 +588,37 @@ https://www.youtube.com/watch?v=NZroyIYTk2k&amp;list=PLFgjYYTq6xyjBtXJTvEaBTVUWx
 
 dynamic links
 
-hooks: ab Mitte des videos: schriftfeld auf das man klickt wird ersetzt (bist du sicher dass du das tun willst?)</tw-passagedata><tw-passagedata pid="30" name="Meinungen: Klo" tags="" position="290,2473" size="200,100">###Meinungen zum Klärsystem
-
+hooks: ab Mitte des videos: schriftfeld auf das man klickt wird ersetzt (bist du sicher dass du das tun willst?)</tw-passagedata><tw-passagedata pid="30" name="Meinungen: Klo" tags="" position="286,2401" size="200,100">###Meinungen zum Klärsystem
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
 Kena:
-Ich denke es ist wichtig, dass wir dringend etwas tun, sodass wir das Riff nicht weiter eutrophieren und die Gesundheit der Korallen gefährden indem wir mit unseren Hinterlassenschaften direkt eutrophieren. Das Tauchresort hat ein veraltetes Klärsystem/ Toiletten direkt über dem Riff. Komposttoiletten scheinen eine relativ einfache Lösung mit großer Wirkung, weil dann zumindest die Fäkalien nicht ins Riff gelangen. Zwar ist es für die Touristen ein Erlebnis die Toiletten auf dem Wasser zu verwenden aber es ist auch &quot;rückständig&quot;, dass noch nicht auf eine nachhaltige Alternative umgerüstet haben. Die Kläranlage zu bauen braucht mehr Zeit aber sollte dann im Anschluss gemacht werden.
+(vorläufiges Voicing)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 5.1 Kena über Kaki.wav&quot;&gt;
+&lt;/audio&gt;
+
 
 Alma:
-Ich sehe zwar auch den Handlungsbedarf aber denke, dass wir nicht überstüzt handeln müssen. Schließlich haben wir das mit den Rifftoiletten schon immer so gemacht. Beides nacheinander zu machen ist zu teuer und ich denke es wäre das beste einmal richtig Geld in die Hand zu nehmen und ein modernes Klärsystem zu bauen, sodass die Abwässer von den Toiletten aber auch den Duschen, den Waschräumen und der Küche richtig geklärt wird, die jetzt teilweise ins Riff gelangen.
-Um den restlichen finanziellen Spielraum für diese Saison zu bewahren, könnten wir aber auch bei den Rifftoiletten bleiben und dann nächste Saison in das moderne Klärsystem investieren.
-(if:$geld&lt;3)[&#39;&#39;Wir haben diese Saison auch keine finanziellen Mittel mehr um das moderne Klärsystem zu bauen, da wir alles bei der Umstellung der Küche gelassen haben. Also was machen wir? Was meinst du, $name? Investieren wir jetzt in Komposttoiletten oder warten wir nächste Saison ab?&#39;&#39;](if:$geld&gt;2)[&#39;&#39;Wir haben diese Saison allerdings auch noch genug finanzielle Mittel um uns das moderne Klärsystem gerade so leisten können, da wir nicht alles bei der Umstellung der Küche gelassen haben. Also was machen wir? Was meinst du, $name?&#39;&#39;]
+(vorläufiges Voicing)
+(if:$geld&lt;3)[&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 5.2.1 Alma über Kaki.wav&quot;&gt;
+&lt;/audio&gt;](if:$geld&gt;2)[&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 5.2.2 Alma über Kaki.wav&quot;&gt;
+&lt;/audio&gt;]
 
 {(if:$geld&lt;3)[(text-style:&quot;strike&quot;)[[In modernes Klärsystem investieren (Nicht verfügbar)]]](if:$geld&gt;2)[[In modernes Klärsystem investieren -&gt;Kläranlage]]}
 [[In ein Kompostklo investieren -&gt;Kompostklo]]
 [[Das Geld sparen und nächste Saison abwarten -&gt;Plumsklo]]
 
 (set:$vorher to &quot;Meinungen: Klo&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="31" name="Kläranlage" tags="" position="58,2601" size="200,100">(set: $stress to $stress + 0)
-
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="31" name="Kläranlage" tags="" position="54,2529" size="200,100">(set: $stress to $stress + 0)
+(set: $klo to &quot;klär&quot;)
 Die Anlage wird geplant, in Auftrag gegeben und gebaut. Es dauert Monate und für lange Zeit ist auf dem Gelände des Resorts eine große Baustelle. Alma muss den Kunden während der Zeit einen Teil ihrer Zahlungen für die Unterkünfte erlassen zum Ausgleich für die Unannehmlichkeiten. Aber dann endlich können die Rifftoiletten abgebaut werden.
+
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
 
 All die ungeklärten Abwässer der Toiletten, Waschräumen und Küche werden nun vorher geklärt, von ungewollten Nährstoffen und Chemikalien befreit bevor sie ins Meer gelangen.
 
@@ -561,8 +626,13 @@ Innerhalb der folgenden Monate verschwinden die dichten Algenteppiche, wo die Ri
 
 Der fianzielle Spielraum des Resorts ist nun vollständig aufgebraucht.
 
-[[Unterdessen ...]]</tw-passagedata><tw-passagedata pid="32" name="Plumsklo" tags="" position="516,2603" size="200,100">(set: $stress to $stress + 35)
+[[Unterdessen ...]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="32" name="Plumsklo" tags="" position="512,2531" size="200,100">(set: $stress to $stress + 35)
 Ihr entscheidet euch bei den Rifftoiletten zu bleiben und vorerst keine Maßnahmen zu ergreifen.
+
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
 
 Ihr behaltet die finanzielle Flexibilität und später während der Saison kann das Geld noch in die Reperaturen am Gebäude nach einem Sturm und einem defekten Boot gesteckt werden.
 
@@ -571,16 +641,40 @@ Wenn alles gut läuft kann das Resort in den kommenden Jahren ein modernes Klär
 All die ungeklärten Abwässer der Toiletten, Waschräumen und der Küche des Resorts gelangen weiterhin ins Meer und die Nährstoffe und Chemikalien reichern sich weiter im Riff an.
 
 Im Bereich der Rifftoiletten bleibt der starke Algenbewuchs und es kommen deutlich weniger verschiedene Arten von Korallen, Fischen und anderel Lebewesen vor. Im Falle einer zusätzlichen Belastung durch zB eine Hitzewelle haben die Korallen hier einen schweren Stand.
+(set: $klo to &quot;plums&quot;)
+[[Unterdessen ...]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="33" name="Nachttauchgang" tags="" position="288,1544" size="200,100">###Der Nachttauchgang
+Unter Kenas Leitung kommst du mit deiner Tauchausbildung schnell voran; lernst deinen Auftrieb zu kontrollieren und dich bei schlechter Sicht zu orientieren. 
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_TraceyJennings_42.jpg&quot; &gt;Einer deiner Favoriten ist der erste Tauchgang bei Nacht, bei dem du ...
 
-[[Unterdessen ...]]</tw-passagedata><tw-passagedata pid="33" name="Nachttauchgang" tags="" position="283,1558" size="200,100">Unter Kenas Leitung kommst du mit deiner Tauchausbildung schnell voran; lernst deinen Auftrieb zu kontrollieren und dich bei schlechter Sicht zu orientieren. Einer deiner Favoriten ist der erste Nachttauchgang...
-&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_TraceyJennings_42.jpg&quot; &gt;
+
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_AlexTyrrell_04.jpg&quot; &gt;
+... fluoreszente Korallen, ...
+
+
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_AlexTyrrell_05.jpg&quot; &gt;
+... einen Fangschreckenkrebs, ...
+
+
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_ConnorHolland_39.jpg&quot; &gt;
+... eine Schildkröte, ...
+
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_MikeBartick_13.jpg&quot; &gt;
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_TraceyJennings_29.jpg&quot; &gt;
+... und mehrere Tintenfische bei der Jagd beobachtest.
 
 Am nächsten Tag wollt ihr zu einem weiter entfernten Teil des Riffes. Um dich auf der Bootsfahrt nicht zu verbrennen trägst du deine Sonnencreme besonders dick auf. &#39;&#39;Ist die mit Oxybenzon?&#39;&#39;, fragt Kena, schnappt sich die Tube und liest sich die Aufschrift durch: &#39;&#39;Jup, ist sie. Wasch dir das mal besser wieder runter bevor es losgeht und nimm meine.&#39;&#39;
 
 [[Oxy-was?-&gt;Sonnencreme]]
 
 (set:$vorher to &quot;Nachttauchgang&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="34" name="Kompostklo" tags="" position="289,2594" size="200,100">Es wird ein Komposttoilettengebäude gebaut. Die Planung und Umsetzung ist relativ schnell geschehen, sodass der Frieden im Resort nur kurz von einer Baustelle gestört wird. Anschließend werden die Rifftoiletten abgebaut.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/under-water-sounds-while-scuba-diving-14866.mp3&quot;&gt;
+&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="34" name="Kompostklo" tags="" position="285,2522" size="200,100">Es wird ein Komposttoilettengebäude gebaut. Die Planung und Umsetzung ist relativ schnell geschehen, sodass der Frieden im Resort nur kurz von einer Baustelle gestört wird. Anschließend werden die Rifftoiletten abgebaut.
+
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
 
 Innerhalb der folgenden Monate verschwinden die dichten Algenteppiche, wo die Rifftoiletten standen und neue Korallen siedeln sich wieder an.
 
@@ -589,31 +683,31 @@ Die nur teils geklärten Abwässer der Waschräume und der Küche gelangen jedoc
 Der finanzielle Spielraum des Resorts ist nun vollständig aufgebraucht.
 
 Wenn alles gut läuft kann das Resort in den kommenden Jahren ein modernes Klärsystem nachrüsten.
+(set: $klo to &quot;komp&quot;)
+[[Unterdessen ...]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="35" name="Auswirkungen: Fisch bejagen und essen" tags="" position="25,3158" size="200,100">###Rotfeuerfisch auf der Speisekarte
+Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail.
+Ein paar Tage später erhaltet ihr Besuch von einem Vertreter der NGO, der euch einige Sets Ausrüstung stellt und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken gibt.
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_ShaunWolfe_43.jpg&quot; &gt;
+Alma besteht darauf, dass alle TauchbegleiterInnen sich an dem Projekt beteiligen. Einer der anderen Dive Master will sich nicht daran beteilligen Tiere zu töten und wechselt zwei Wochen später zu einer anderen Tauchschule.
 
-[[Unterdessen ...]]</tw-passagedata><tw-passagedata pid="35" name="Auswirkungen: Fisch bejagen und essen" tags="" position="34,3114" size="200,100">(set: $stress to $stress + 0)
-(set:$cook to ($cook+1))
+Ihr macht einen Tauchgang mit dem gesamten Tauchbegleitungsteam um die Handhabung zu lernen und möglichst viele der Rotfeuerfische abzusammeln:
+//Wenn du möchtest, schaue dir die erste Minute des Videos an, danach wiederholt sich das Geschaute zusehends. (Achtung! Hier wird gezeigt wie Fische getötet werden)//
+&lt;iframe width=&quot;100%&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FQXplP4AyRQ?controls=0&amp;amp;start=5&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-Chefin bittet dich 
-Du schreibst der lokalen NGO &quot;Roatan Marine Park&quot; (RMP) eine Mail und bekommst kurz darauf eine begeisterte Antwort mit dem Angebot euch Equipment und einweisung zu stellen.
-((Bild Ausrüstung))
+{Ihr fangt hunderte Fische und bringt sie an Land. 
+(if:$cook is 0)[Hank und das Küchenteam setzen sich mit der aufwendigen Zubereitung auseinander. Es ist das einzige Fischgericht der Speisekarte, beim Team und den Gästen sehr beliebt und nach anfänglichem Murren und einigen schmerzhaften Stichen ist auch Hank von dem Speisefisch übrzeugt.]
+(if:$cook is 0)[(set:$cook to &quot;gone&quot;)Hank fühlt sich bei der Behandlung seiner Wünsche bei der Umstellung der Küche und nun die Entscheidung über den Fisch so im Stich gelassen, dass auch er sich eine andere Anstellung sucht. Alma muss kurzfristig einen Ersatz suchen. Rofeuerfisch ist das einzige Fischgericht der Speisekarte, beim Team und den Gästen sehr beliebt.]}
 
-Ein paar Tage später erhaltet ihr Besuch von einem Instructor. Er bringt einige Dreizackspreere und Harpunen mit Gummizügen mit und gibt dir und dem gesamten Tauchbegleitungsteam einen Workshop zur Handhabung und Jagdtaktiken.
+Von da an werden immer wieder auch mit Gästen Harpunentauchgänge gemacht und die Anzahl der Rotfeuerfische so klein gehalten, dass sie das Riff nicht belasten.
 
-Die Chefin besteht darauf dass alle TauchbegleiterInnen sich an dem Projekt beteiligen.
-Dive Master 3 will selber keine Tiere töten. Es kommt zu einer hitzigen Diskussion mit der Chefin. Dive Master 3 verweigert und wechselt 2 Wochen später zu anderer Tauchschule
-
-Ihr macht einige Tauchgänge im Tauchbegleitungsteam um die Handhabung zu lernen.
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/FQXplP4AyRQ?controls=0&amp;amp;start=5&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-((Bilder/Video Jagd: bestenfalls first person perspective))
-
-Ihr bringt 500/30Tauchende Fische nach Hause. Führt Buch
-
-(if:$cook is 0)[Koch geht]
-(if:$cook is 0)[Koch voll genervt]
-
-[[lokal weiter entlasten -&gt;Abschied]]
-</tw-passagedata><tw-passagedata pid="36" name="Credits" tags="" position="288,3550" size="200,100">
+[[Der Abschied naht ...-&gt;Abschied]]{(set: $stress to $stress + 0)
+(set: $fish to &quot;eat&quot;)
+}{&lt;audio controls autoplay loop&gt; 
+&lt;source src=&quot;aud/underwater-ambience-6201.mp3&quot;
+&gt;
+}</tw-passagedata><tw-passagedata pid="36" name="Credits" tags="" position="1270.6666666666667,797.3333333333328" size="200,100">
 
 Bilder:
 
@@ -629,7 +723,7 @@ Nach einem äußerst frühen Frühstück beginnt der theoretische Tauchunterrich
 &lt;style&gt; img {max-width:70%}&lt;/style&gt; 
 &lt;img src = &quot;pic/pixab/diving-equipment-6810171_960_720.jpg&quot; &gt;
 &lt;==&gt;
-Abends schließt Kena den Unterricht mit einem kleinen Überblick über lokale Tierarten, die ihr entdecken könnt. Sie fragt, ob sie euch, bevor es losgeht, noch ein wenig mehr über Korallen- und Riffwachstum erklären soll?
+Abends schließt Kena den Unterricht mit einem kleinen Überblick über lokale Tierarten, die ihr entdecken könnt. &#39;&#39;Soll ich euch noch ein wenig mehr über Korallen- und Riffwachstum erklären?&#39;&#39;
 
 [[Ja, gern.-&gt;Info Wachstum]]
 [[Nö, ich weiß bescheid.-&gt;ich weiß]]
@@ -637,8 +731,8 @@ Abends schließt Kena den Unterricht mit einem kleinen Überblick über lokale T
  	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
 	&lt;/audio&gt;
 (set:$vorher to &quot;Erster Tag&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="38" name="Flughafen" tags="" position="300,168" size="200,100">##Abflug
-Du hast einen Platz zur Ausbildung zum Dive Master ergattert, die letzten Monate viel gespart und einen bezahlbaren Flug nach Roatán bekommen. 
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="38" name="Flughafen" tags="" position="303,256" size="200,100">##Abflug
+Du hast einen Platz zur Ausbildung zum Dive Master ergattert, die letzten Monate viel gespart und einen bezahlbaren Flug nach &lt;a href=&quot;https://de.wikipedia.org/wiki/Roat%C3%A1n&quot;; target=&quot;_blank&quot;&gt;Roatán&lt;/a&gt; bekommen. 
 
 Endlich geht es los! Nachdem du dich von deinen Liebsten für das nächste halbe Jahr verabschiedet hast, stellst du dich bei der Gepäckkontrolle an.
 =&gt;&lt;=
@@ -647,45 +741,64 @@ Endlich geht es los! Nachdem du dich von deinen Liebsten für das nächste halbe
 &lt;==&gt;
 Du reist einige Wochen vor der Saison an, um dich in einem Tauchresort ausbilden zu lassen und dann die Monate darauf als Dive Master zu arbeiten - also die Gäste des Resorts bei ihren Tauchgängen am lokalen Riff zu begleiten. 
 
-Während sich die Schlange langsam weiterbewegt, überfliegst du die ersten zwei Abschnitte vom &lt;a href=&quot;https://de.wikipedia.org/wiki/Roat%C3%A1n&quot;; target=&quot;_blank&quot;&gt;Wikipedia-Artikel zu Roatán&lt;/a&gt;.
-Als du zuende gelesen hast, suchst du ein Infovideo zu Korallenriffen, doch bevor du es startest erreicht die Schlange die Gepäckkontrolle und du wirst aufgefordert deine Sachen abzugeben.
+Während sich die Schlange langsam weiterbewegt suchst du ein Infovideo zu Korallenriffen, doch bevor du es startest erreicht die Schlange die Gepäckkontrolle und du wirst aufgefordert deine Sachen abzugeben. Du speicherst das Video für später, deine Sachen werden durchleuchtet und du ...
+[[... machst dich auf den Weg zum Gate.-&gt;Flug]]
 
-Du speicherst das Video für später, deine Sachen werden durchleuchtet und du ...
-[[machst dich auf den Weg zum Gate.-&gt;Flug]]
-
+(set:$vorher to &quot;Flughafen&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
 &lt;audio controls autoplay loop&gt;
 &lt;source src=&quot;aud/plane/international-airport-intercom-madeira-19947.mp3&quot;
-&gt;&lt;/audio&gt;
-(set:$vorher to &quot;Flughafen&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="39" name="Meinungen Sonnencreme" tags="" position="278,1848" size="200,100">Kena:
-Oxybenzol sinkt nachdem es von der Haut abgewaschen wurde nach unten, weshalb es besonders da wirkt wo es gelöst wird. Zwar kommt es auch über abwässer ins Meer aber gerade für unser Riff sind wir einer der hauptverantwortlichen für Oxybenzoleintrag. Die Alternativprodukte sind häufig teurer aber wenn wir unser eigenes Riff schützen wollen, ist es ein verhältnismäßig geringes Übel diese Sorten Sonnencreme einfach zu verbieten. Wir könnten vorher informieren und dann offen auf die Gäste und neuen Teammitglieder zugehen und sie dazu auffordern ihre Sonnencremes zu checken und zu ersetzen.
+&gt;&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="39" name="Meinungen Sonnencreme" tags="" position="289,1797" size="200,100">### Meinungen zur Sonnencreme
+Kena:
+(vorläufige Tonspur)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 4.1 Kena über Creme.wav&quot;&gt;
+&lt;/audio&gt;
+
 
 Alma:
-Ich denke es ist wichtig, dass weiterhin alle tuen dürfen was sie für richtig halten. Ich strebe mich dagegen das Team und die Gäste derart zu bevormunden. Ich würde die Gäste bevor sie kommen über die schädliche Wirkung von Oxybenzol informieren und Alternativprodukte zum Kauf anbieten.
+(vorläufige Tonspur)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 4.2 Alma über Creme.wav&quot;&gt;
+&lt;/audio&gt;
+
 
 Wie sollt ihr euch entscheiden? Du argumentierst dafür die Gäste ...
-[[nur zu informieren und die Alternative zum Kauf anzubieten-&gt;nur informieren]]
-[[zu informieren, oxybenzolhaltige Sonnencreme zu verbieten und die Alternative zum Kauf anzubieten-&gt;Sonnencreme verbieten]]
+[[... zu informieren, oxybenzolhaltige Sonnencreme zu verbieten und die Alternative zum Kauf anzubieten.-&gt;Sonnencreme verbieten]]
+[[... nur zu informieren und die Alternative zum Kauf anzubieten.-&gt;nur informieren]]
 
 (set:$vorher to &quot;Meinungen Sonnencreme&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="40" name="nur informieren" tags="" position="174,1996" size="200,100">Ihr entscheidet euch gegen ein Verbot von oxybenzonhaltigen Cremes und vertraut darauf, dass die Gäste sich die Informationen auch durchlesen, die von Alma herumgesandt wurden.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="40" name="nur informieren" tags="" position="170,1924" size="200,100">Ihr entscheidet euch gegen ein Verbot von oxybenzonhaltigen Cremes und vertraut darauf, dass die Gäste sich die Informationen auch durchlesen, die von Alma herumgesandt wurden.
+
 Zusätzlich steht an der Rezeption von nun an eine Infotafel und am Tresen werden oxybenzonfreie Sonnencreme, Shampoo und andere Hygieneprodukte angeboten.
+
 Ihr habt einen weiteren Schritt unternommen um das Riff an dem ihr taucht zu schützen und langfristig auch andere Riffe indem ihr die Menschen informiert habt und sie bei ihrem nächsten Urlaub auf die Auswahl ihrer Hygieneprodukte achten. Durch das weniger aggressive Auftreten ohne Verbot sind jedoch nicht alle informiert worden, ihr habt jedoch auch niemanden in der eigenen Freiheit eingeschänkt.
+(set:$sun to &quot;info&quot;)
+---
 
 Inzwischen hast du deine Ausbildung zum //Dive Master// erfolgreich abgeschlossen und begleitest ...
 [[... deine ersten Tauchgruppen.-&gt;Walhai]]
 
 (set:$vorher to &quot;nur informieren&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="41" name="Sonnencreme verbieten" tags="" position="410,1996" size="200,100">Ihr entscheidet euch für ein Verbot von oxybenzonhaltigen Cremes und überprüft, ob die Gäste sich die Informationen, die von Alma herumgesandt wurden, auch umgesetzt haben.
-Zusätzlich steht an der Rezeption von nun an ein Verbotsschild mit Infotafel und am Tresen werden oxybenzonfreie Sonnencreme, Shampoo und andere Hygieneprodukte angeboten.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="41" name="Sonnencreme verbieten" tags="" position="406,1924" size="200,100">Ihr entscheidet euch für ein Verbot von oxybenzonhaltigen Cremes und überprüft, ob die Gäste sich die Informationen, die von Alma herumgesandt wurden, auch umgesetzt haben.
 
-Ihr habt einen weiteren Schritt unternommen um das Riff an dem ihr taucht zu schützen und langfristig auch andere Riffe indem ihr die Menschen informiert habt und sie bei ihrem nächsten Urlaub auf die Auswahl ihrer Hygieneprodukte achten. Durch das aggressive Auftreten mit Verbot sind zwar alle informiert worden, ihr habt jedoch auch niemanden in der eigenen Freiheit eingeschänkt.
+Zusätzlich steht an der Rezeption von nun an ein Verbotsschild mit Infotafel und am Tresen werden oxybenzonfreie Sonnencreme, Shampoo und andere Hygieneprodukte angeboten.
+=&gt;&lt;=
+&lt;style&gt; img {width:50%}&lt;/style&gt; &lt;img src = &quot;pic/pixab/prohibited-147408_640.png&quot; &gt;
+&lt;==&gt;
+Ihr habt einen weiteren Schritt unternommen um das Riff an dem ihr taucht zu schützen und langfristig auch andere Riffe indem ihr die Menschen informiert habt und sie bei ihrem nächsten Urlaub auf die Auswahl ihrer Hygieneprodukte achten. Durch das aggressive Auftreten mit Verbot sind zwar alle informiert worden, ihr habt jedoch auch einige Menschen vor den Kopf gestoßen, die ihre Sonnencremes auch freiwillig ersetzt hätten.
+(set:$sun to &quot;nope&quot;)
+---
 
 Inzwischen hast du deine Ausbildung zum //Dive Master// erfolgreich abgeschlossen und begleitest ...
 [[... deine ersten Tauchgruppen.-&gt;Walhai]]
 
 (set:$vorher to &quot;Sonnencreme verbieten&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="42" name="Verhalten der Tauchenden" tags="" position="1513,3664" size="200,100">Facts about:
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="42" name="Verhalten der Tauchenden" tags="" position="1513,3664" size="200,100">Facts about:
 Störung des Riffs durch
 Tauchende können Höhe nicht gut kontrollieren - damage corals
 nähern sich den Tieren - ändern Verhalten
@@ -696,19 +809,23 @@ Intensiviertes Training</tw-passagedata><tw-passagedata pid="44" name="Weitere E
 
 eine lokale NGO unterstützen
 
-stony coral tissue loss disease</tw-passagedata><tw-passagedata pid="45" name="Glossar" tags="" position="1630,70" size="200,200">#Glossar
+stony coral tissue loss disease</tw-passagedata><tw-passagedata pid="45" name="Glossar" tags="" position="1643.3333333333333,0" size="200,200">#Glossar
 Hier kannst du jederzeit Namen und Begriffe nachschlagen. Danach kommst du |glossar&gt;[(link:&quot;hier zurück zur Geschichte&quot;)[(goto:$vorher)]].
 
 |glossar&gt;[[[[Alma]]]]
+|glossar&gt;[(link:&quot;Bleiche&quot;)[(goto:&quot;2. Korallenbleichen&quot;)]]
+|glossar&gt;[[[[Eutrophierung]]]]
 |glossar&gt;[[[[Hank]]]]
 |glossar&gt;[[[[Kena]]]]
 |glossar&gt;[[[[Kenas Vorträge]]]]
+|glossar&gt;[[[[Korallen]]]]
+|glossar&gt;[(link:&quot;Korallenbleiche&quot;)[(goto:&quot;2. Korallenbleichen&quot;)]]
 |glossar&gt;[[[[Oxybenzon]]]]
 |glossar&gt;[[[[Polyp]]]]
 |glossar&gt;[[[[Roatán]]]]
+|glossar&gt;[[[[Rotfeuerfisch]]]]
 |glossar&gt;[[[[Rifftypen]]]]
 |glossar&gt;[[[[SCTLD - Stony Coral Tissue Loss Disease]]]]
-|glossar&gt;[[[[(Tauch-)Resort]]]]
 
 Hier geht es |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]].
 
@@ -716,16 +833,14 @@ Hier geht es |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorhe
 &lt;img src = &quot;pic/OceanImageBank_EllenCuylaerts_08.jpg&quot; &gt;
 //Korallenpolypen Draufsicht //
 
-Als Polypen bezeichnet man die einzelnen Korallenindividuen, die als Kolonie einen Korallenstock formen. Sie sind oft sehr klein.
+Als Polypen bezeichnet man die einzelnen |glossar&gt;[(link:&quot;Korallen&quot;)[(goto:&quot;Korallen&quot;)]]individuen, die als Kolonie einen Korallenstock formen. Sie sind oft sehr klein.
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
 &lt;img src = &quot;pic/selfmade/Riffwachstum.jpg&quot; &gt;
 //Skizze vom Lebenszyklus einer Koralle, Korallenstock, Polyp//
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="47" name="Roatán" tags="" position="1697,297" size="100,100">#Roatán
-&lt;style&gt; img {max-width:100%}&lt;/style&gt;
-&lt;img src = &quot;pic/CIA_map_Central_America_&amp;_Caribbean.png&quot; &gt;
-Roatán ist eine 60km lange und 8km breite Insel im westlichen Karibischen Meer. Sie gehört zum spanischsprachigen Land Honduras und liegt etwa 65 km vor der Küste. Hier liegt das |glossar&gt;[(link:&quot;Tauchresort&quot;)[(goto:&quot;(Tauch-)Resort&quot;)]], der Schauplatz des Reflectory.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="47" name="Roatán" tags="" position="1697,297" size="100,100">###Roatán
+Roatán ist eine 60km lange und 8km breite Insel im westlichen Karibischen Meer. Sie gehört zum spanischsprachigen Land Honduras und liegt etwa 65 km vor der Küste. Hier liegt das |glossar&gt;[(link:&quot;Tauchresort&quot;)[(goto:&quot;Das Resort&quot;)]], der Schauplatz des Reflectory.
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="48" name="Rifftypen" tags="" position="1811,297" size="100,100">###Rifftypen
 Man unterscheidet 3 Haupttypen von Riffen: Saumriff, Barriereriff und Atoll
 
@@ -737,23 +852,32 @@ Um dir nochmal von Mira erklären zu lassen wie Riffe wachsen, starte das Video 
 &lt;iframe width=&quot;100%&quot; height=&quot;400&quot;
  src=&quot;https://www.youtube.com/embed/MUPY4zs2hgI&quot; title=&quot;Miri&#39;s Infos zu Korallenwachstum&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="49" name="Alma" tags="" position="1579,414" size="100,100">Alma ist die Chefin des |glossar&gt;[(link:&quot;Resorts&quot;)[(goto:&quot;Tauchresort&quot;)]].
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="49" name="Alma" tags="" position="1579,414" size="100,100">###Alma
+Alma ist die Chefin des |glossar&gt;[(link:&quot;Resorts&quot;)[(goto:&quot;Das Resort&quot;)]].
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="50" name="Kena" tags="" position="1578,298" size="100,100">Kena ist deine Sitznachberin aus dem Flieger und später deine Tauchlehrerin. Sie hat Meeresbiologie studiert.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="50" name="Kena" tags="" position="1578,298" size="100,100">###Kena
+Kena ist deine Sitznachberin aus dem Flieger und später deine Tauchlehrerin. Sie hat Meeresbiologie studiert.
 
-Sie informiert im Laufe des Reflectory mit euner Reihe von |glossar&gt;[(link:&quot;Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]].
+Sie informiert im Laufe des Reflectory mit einer Reihe von |glossar&gt;[(link:&quot;Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]].
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="51" name="Rotfeuerfische am Riff" tags="" position="280,2848" size="200,100">Kena ist bei der Beschreibung alarmiert, sucht ein Bild und zeigt es dem Gast.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="51" name="Rotfeuerfische am Riff" tags="" position="272,2771" size="200,100">Kena ist bei der Beschreibung alarmiert, sucht ein Bild und zeigt es dem Gast:
 &lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_UmeedMistry_8.jpg&quot; &gt;
 
 &#39;&#39;Ja! Genau so sah der Fisch aus!&#39;&#39;
 
-Geschichte der Ausbreiung und ihre Auswirkungen
+Kena:
+(vorläufige Tonspur)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 6.0 Kena über Rot.wav&quot;&gt;
+&lt;/audio&gt;
 
-[[Abendliche Debatte was zu tun ist -&gt;Meinungen zu Rofeuerfisch-Entscheidung]]
+
+[[Die nächsten Tage-&gt;Anmerkung]]
 
 (set:$vorher to &quot;Rotfeuerfische am Riff&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="52" name="BleichenInfo" tags="" position="300,1147" size="200,100">###Korallenbleichen
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="52" name="BleichenInfo" tags="" position="300,1147" size="200,100">###Korallenbleichen
 Kena schnappt sich ihr Tablet und beginnt zu skizzieren während sie erklärt:
 
 
@@ -765,6 +889,9 @@ Kena schnappt sich ihr Tablet und beginnt zu skizzieren während sie erklärt:
 //Skizze: Position der Zooxanthellen innerhalb der Korallen//
 
 
+---
+
+
 Sie erklärt weiter:
 (vorläufige Tonspur)
 &lt;audio class=&quot;shown&quot; controls&gt;
@@ -774,6 +901,9 @@ Sie erklärt weiter:
 //Foto eines Riffes in Amerikanisch-Samoa (Süd-Pazifik): gesund (Dezember 2014) vs. gebleicht (Februar 2015) vs. tot mit Algenbewuchs (August 2015)//
 
 
+---
+
+Kena:
 (vorläufige Tonspur)
 &lt;audio class=&quot;shown&quot; controls&gt;
 &lt;source src=&quot;aud/Aud 2 Kena über Bleiche-03.wav&quot;&gt;
@@ -783,15 +913,21 @@ Sie erklärt weiter:
 //Skizze: Ozean-Ansauerung (Atmosphärisches CO2 löst sich im Ozean-Wasser und wirkt auf Kalkstrukturen)//
 
 
+---
+
+
 &lt;==&gt;
 
 Ihr entscheidet euch als Team aktiv zu werden, um euer Riff zu schützen. Doch wo anfangen? Der Temperaturanstieg und die Ansauerung des Ozeans sind die grundlegenden Probleme; beide maßgeblich verursacht durch den CO2-Ausstoß des Menschen. Eine Diskussion entseht ob ihr den CO2- Ausstoß des Resorts senken wollt und falls ja, dann wie?
+
 Du...
 
 [[... hörst dir die Meinungen der Anderen an.-&gt;Meinungen zur Konsum-Entscheidung]]
 
 (set:$vorher to &quot;BleichenInfo&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="53" name="(Tauch-)Resort" tags="" position="1807,410" size="100,100">###Das Tauchresort
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="53" name="Das Resort" tags="" position="1807,410" size="100,100">###Das Tauchresort
 =&gt;&lt;=
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
 &lt;img src = &quot;pic/pixab/building-69768.jpg&quot; &gt;
@@ -819,17 +955,17 @@ Hier kannst du dir noch einmal Almas Führung durch das Resort anhören:
 
 Hier ein kurzer, aktueller &lt;a href=&quot;https://www.sueddeutsche.de/wissen/korallen-riff-mexiko-krankheit-sctld-1.5601031&quot;; target=&quot;_blank&quot;&gt;Zeitungsartikel&lt;/a&gt; zum Thema.
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="55" name="Info Wachstum" tags="" position="531,633" size="200,100">Kena schnappt sich ein Tablet und beginnt zu erklären:
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="55" name="Info Wachstum" tags="" position="531,633" size="200,100">Kena schnappt sich ihr Tablet und beginnt zu skizzieren und erklären:
 ((vorläufige Tonspur))
 &lt;iframe width=&quot;100%&quot; height=&quot;400&quot;
  src=&quot;https://www.youtube.com/embed/MUPY4zs2hgI&quot; title=&quot;Miri&#39;s Infos zu Korallenwachstum&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 Anschließend lasst ihr den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
 
-[[Nächster Tag-&gt;Erste Bootsfahrt]]</tw-passagedata><tw-passagedata pid="56" name="ich weiß" tags="" position="147,637" size="100,100">Du kannst dir Kenas Vortrag auch im späteren Verlauf der Geschichte noch im (set:$vorher to &quot;Erste Bootsfahrt&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]] angucken.
+[[Nächster Tag-&gt;Erste Bootsfahrt]]</tw-passagedata><tw-passagedata pid="56" name="ich weiß" tags="" position="147,637" size="100,100">//Du kannst dir Kenas Vortrag auch im späteren Verlauf der Geschichte noch im (set:$vorher to &quot;Erste Bootsfahrt&quot;)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]] angucken.//
 
-Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
+Ihr lasst den Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten Ausflug ins Riff zu unternehmen...
 
 [[Nächster Tag-&gt;Erste Bootsfahrt]]</tw-passagedata><tw-passagedata pid="57" name="2. Video" tags="" position="1583,642" size="100,100">Hier kannst du dir Kenas Vortrag über Korallen, Riff-Wachstum und Riff-Typen erneut anschauen:
 &lt;iframe width=&quot;100%&quot; height=&quot;400&quot;
@@ -839,37 +975,68 @@ Tag gemeinsam ausklingen und könnt es kaum erwarten morgen endlich den ersten A
  |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="58" name="Kenas Vorträge" tags="" position="1583,527" size="100,100">###Kenas Vorträge
 |glossar&gt;[(link:&quot;1. Polypen, Riffwachstum, Rifftypen&quot;)[(goto:&quot;2. Video&quot;)]]
 |glossar&gt;[(link:&quot;2. Korallenbleichen&quot;)[(goto:&quot;2. Korallenbleichen&quot;)]]
+|glossar&gt;[(link:&quot;3. Sonnencreme, Oxibenzon&quot;)[(goto:&quot;Oxybenzon&quot;)]]
+|glossar&gt;[(link:&quot;4. Lokale Stressfaktoren und Eutrophierung&quot;)[(goto:&quot;Eutrophierung&quot;)]]
+|glossar&gt;[(link:&quot;5. Rotfeuerfische&quot;)[(goto:&quot;Rotfeuerfisch&quot;)]]
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="59" name="Quellen" tags="" position="974,3218" size="100,100">###Bildquellen
-(in der Reihenfolge der Erscheinung im Reflectory)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="59" name="Quellen" tags="" position="1152.333333333333,796.3333333333328" size="100,100">###Bildquellen
+//(in der Reihenfolge der Erscheinung im Reflectory)//
+Intro:
 https://d1qsp4j04beddk.cloudfront.net/OceanImageBank_TraceyJennings_15.jpg
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_JordanRobins_02.jpg
 Bild von &lt;a href=&quot;https://pixabay.com/de/users/arminep-8300920/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=6911566&quot;&gt;Armin Forster&lt;/a&gt; auf &lt;a href=&quot;https://pixabay.com/de//?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=6911566&quot;&gt;Pixabay&lt;/a&gt;
 Bild von &lt;a href=&quot;https://pixabay.com/de/users/videoplasty-19751245/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=6030190&quot;&gt;VideoPlasty.com&lt;/a&gt; auf &lt;a href=&quot;https://pixabay.com/de//?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=6030190&quot;&gt;Pixabay&lt;/a&gt;
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_KaterinaKatopis_42.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_KaterinaKatopis_40.jpg
 Bild von &lt;a href=&quot;https://pixabay.com/de/users/publicdomainpictures-14/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=69768&quot;&gt;PublicDomainPictures&lt;/a&gt; auf &lt;a href=&quot;https://pixabay.com/de//?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=69768&quot;&gt;Pixabay&lt;/a&gt;
 Bild von &lt;a href=&quot;https://pixabay.com/de/users/mariakray-23567841/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=6810171&quot;&gt;Maria&lt;/a&gt; auf &lt;a href=&quot;https://pixabay.com/de//?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=6810171&quot;&gt;Pixabay&lt;/a&gt;
 https://d1qsp4j04beddk.cloudfront.net/OceanImageBank_MattCurnock_29.jpg
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_UmeedMistry_14.jpg
+Bleiche:
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_TheOceanAgency_BeforeAfter_04.jpg
+Nachttauchgang:
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_TraceyJennings_42.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_AlexTyrrell_04.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_AlexTyrrell_05.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_ConnorHolland_39.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_MikeBartick_13.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_TraceyJennings_29.jpg
+Sonnencreme:
 Bild von &lt;a href=&quot;https://pixabay.com/de/users/mohamed_hassan-5229782/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=7268217&quot;&gt;Mohamed Hassan&lt;/a&gt; auf &lt;a href=&quot;https://pixabay.com/de//?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=7268217&quot;&gt;Pixabay&lt;/a&gt;
+Bild von &lt;a href=&quot;https://pixabay.com/de/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=147408&quot;&gt;OpenClipart-Vectors&lt;/a&gt; auf &lt;a href=&quot;https://pixabay.com/de//?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=147408&quot;&gt;Pixabay&lt;/a&gt;
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_TheOceanAgency_360_86.jpg
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_CinziaOseleBismarck_26.jpg
 https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_MartinColognoli_22.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_AlexTyrrell_07.jpg
+Rotfeuerfisch:
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_UmeedMistry_8.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_GregoryPiper_43.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_ShaunWolfe_43.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_CinziaOseleBismarck_01.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_CinziaOseleBismarck_01.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_CinziaOseleBismarck_18.jpg
+Abschied:
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_RenataRomeo_41.jpg
+https://d2zmi9say0r1yj.cloudfront.net/OceanImageBank_AlexMustard_04.jpg
 
 ###Videoquellen
-(in der Reihenfolge der Erscheinung im Reflectory)
+//(in der Reihenfolge der Erscheinung im Reflectory)//
 https://youtu.be/mtyiOcix7ws
+www.youtube.com/embed/FQXplP4AyRQ?
 
+###Verlinkungen zu externen Seiten
+//(in der Reihenfolge der Erscheinung im Reflectory)//
+https://de.wikipedia.org/wiki/Roat%C3%A1n
+https://www.ipcc.ch/report/ar6/wg2/
 
-
-
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="60" name="Hank" tags="" position="1463,302" size="100,100">##Hank
-Hank ist der Koch des Resort.
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="60" name="Hank" tags="" position="1463,302" size="100,100">###Hank
+Hank ist der Koch des Resorts und vertritt das Küchenteam.
 
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="61" name="Meinung?" tags="" position="122,1291" size="100,100">(if:$vegan is not &quot;?&quot; and $lokal is not &quot;?&quot;)[(goto:&quot;Auswirkungen Konsum&quot;)](if:$vegan is &quot;?&quot; or $lokal is &quot;?&quot;)[Du bist dir noch nicht ganz sicher. Du schläfst nochmal eine Nacht über der Entscheidung, hörst dir eventuell nochmal die verschiedenen Meinungen an und ...
-... [[du teilst den anderen am nächsten Tag deine Meinung mit.-&gt;Meinungen zur Konsum-Entscheidung]]]</tw-passagedata><tw-passagedata pid="62" name="2. Korallenbleichen" tags="" position="1585,760" size="100,100">Hier kannst du dir Kenas Vortrag über Korallenbleichen erneut anhören:
+... [[du teilst den anderen am nächsten Tag deine Meinung mit.-&gt;Meinungen zur Konsum-Entscheidung]]]</tw-passagedata><tw-passagedata pid="62" name="2. Korallenbleichen" tags="" position="1585,760" size="100,100">###Korallenbleiche
+Als Bleiche bzw Korallenbleiche bezeichnet man den Zustand in dem sich Hartkorallen befinden, wenn sie auf Grund von Stress die Symbiose mit ihren farbigen Zooxanthellen beenden und daher bleich aussehen.
+
+Hier kannst du dir Kenas Vortrag über Korallenbleichen erneut anhören:
 
 &lt;audio class=&quot;shown&quot; controls&gt;
 &lt;source src=&quot;aud/Aud 2 Kena über Bleiche-01.wav&quot;&gt;
@@ -892,67 +1059,143 @@ Hank ist der Koch des Resort.
 &lt;==&gt;
 
  |glossar&gt;[(link:&quot;zurück zu Kenas anderen Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]]
- |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="63" name="Sonnencreme" tags="" position="280,1699" size="200,100">Kena erklärt:
-Sonnencremes enthalten oft Oxybenzon. Der Stoff filtert die UV-Strahlung, ist also gut um dich vor einem Sonnenbrand zu schützen aber leider ist er auch giftig für die Korallen. Er stört bei der Bildung von Kalk und kann Bleichen auslösen. Oxybenzon ist oft auch in anderen Hygieneprodukten wie Shampoo oder Hautcremes enthalten.
+ |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="63" name="Sonnencreme" tags="" position="283,1674" size="200,100">###Lokaler Stressfaktor: Belastung durch Chemikalien
+
+Kena erklärt:
+&#39;&#39;Sonnencremes enthalten oft Oxybenzon. Der Stoff filtert die UV-Strahlung, ist also gut um dich vor einem Sonnenbrand zu schützen aber leider ist er auch giftig für die Korallen. Er stört bei der Bildung von Kalk und kann Bleichen auslösen. Oxybenzon ist oft auch in anderen Hygieneprodukten wie Shampoos oder Hautcremes enthalten.&#39;&#39;
 &lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/pixab/bottle-7268217_960_720.png&quot; &gt;
 
-Moment mal: werden Bleichen nicht durch Hitzestress und den Klimawandel ausgelöst?
+&#39;&#39;Moment mal: werden Bleichen nicht durch Hitzestress und den Klimawandel ausgelöst?&#39;&#39;
 
-Ja der Klimawandel ist das globale Problem, weshalb weltweit Korallen immer mehr unter Hitzestress geraten und bleichen. Aber einige Riffe sind stärker betroffen als andere. Wie gut die Korallen den Hitzestress vertragen hat viel damit zu tun wie viele lokale Stressfaktoren die Korallen bereits belasten. Es scheint je gesünder das Riff desto widerstandsfähiger ist es gegen Bleichen und desto besser kann es sich erholen. Die Belastung mit Hygieneprodukten, Arzneimitteln, Pestiziden und anderen Chemikalien, die über unsere Abässer oder direkt ins Riff geraten, stellen einen großen der lokalen Stressfaktoren dar.
+Kena:
+(vorläufige Tonspur)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 4.0 Kena über Oxybenzon.wav&quot;&gt;
+&lt;/audio&gt;
 
-Die Sonnencreme auf deiner Haut alleine wird vermutlich nicht das Riff bleichen aber es wird geschwächt und bei der nächsten Hitzewelle kann das einen entscheidenden Unterschied machen. Jährlich gelangen etwa 10.000 Tonnen Sonnencreme ins Meer von denen viele Stoffe wie Oxybenzon enthalten und lokal die Riffe belasten.
 ---
+
 Nach eurem Tauchgang schlagt ihr dem Team vor, oxybenzonhaltige Sonnencreme im Resort zu verbieten um das Riff besser zu schützen. Du ...
-[[... hörst dir die Meinungen dazu an-&gt;Meinungen Sonnencreme]]
+[[... hörst dir die Meinungen dazu an.-&gt;Meinungen Sonnencreme]]
 
 (set:$vorher to &quot;Sonnencreme&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="64" name="Walhai" tags="" position="296,2117" size="200,100">###Erster Einsatz
-Zwei andere TauchbegleiterInnen und du fahrt mit einer Gruppe Gäste wieder zum weit außen gelegenen Teil des Riffes (mit neuer Sonnencreme). 
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="64" name="Walhai" tags="" position="292,2045" size="200,100">###Erster Einsatz
+Du fährst mit deiner ersten eigenen Gruppe Gäste zu dem weit außen gelegenen Teil des Riffes (ausgerüstet mit neuer Sonnencreme). 
 &lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_TheOceanAgency_360_86.jpg&quot; &gt;
-Du kennst den Spot mittlerweile gut und freust dich, den Gästen die verschiedenen Highlights an spektakulären Korallenformationen zu zeigen und hoffst eine Schildkröte zu finden. Ihr seid gerade an der Riffkante, unter euch fällt der Riffhang steil in die Dunkelheit ab: hier beginnt das offene Wasser des Ozeans. Alles läuft gut, als du plötzlich eine große, dunkle Gestalt erkennst, die sich aus dem undurchsichtigen Blau des offenen Wassers löst und ... [[auf euch zuschwimmt.-&gt;Walhai!]]
+Du kennst den Spot mittlerweile gut und freust dich, den Gästen die verschiedenen Highlights an spektakulären Korallenformationen und vielleicht einer Schildkröte zu zeigen. 
+
+Ihr seid gerade an der Riffkante und unter euch fällt der Riffhang steil in die Dunkelheit ab: hier beginnt das tiefe offene Wasser des Karibischen Meeres...
+
+Alles läuft gut, als du plötzlich [[eine gewaltige, dunkle Gestalt-&gt;Walhai!]] erkennst, die sich aus dem undurchsichtigen Blau des offenen Wassers löst und auf euch zuschwimmt.
 
 (set:$vorher to &quot;Walhai&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="65" name="Oxybenzon" tags="" position="2105,413" size="100,100">
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
+&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/under-water-sounds-while-scuba-diving-14866.mp3&quot;&gt;
+&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="65" name="Oxybenzon" tags="" position="1575,877.3333333333333" size="100,100">###Oxybenzon
+Oxybenzon ist oft in Sonnencremes enthalten. Der Stoff filtert die UV-Strahlung, ist also gut um dich vor einem Sonnenbrand zu schützen aber leider ist er auch giftig für die Korallen. Er stört bei der Bildung von Kalk und kann Bleichen auslösen. Oxybenzon ist oft auch in anderen Hygieneprodukten wie Shampoos oder Hautcremes enthalten
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/pixab/bottle-7268217_960_720.png&quot; &gt;
 
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="66" name="Walhai!" tags="" position="296,2229" size="200,100">&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_CinziaOseleBismarck_26.jpg&quot; &gt;
-Langsam treibt der etwa 10 Meter lange Hai an euch vorüber, bloß einige Meter entfernt, außerhalb des Riffes. Ein Walhai, wie du sehr gut weißt: Der größte Fisch der Welt, begleitet von einer Gruppe kleinerer Fische. Der erste der friedlichen Planktonfresser diese Saison ist ein paar Wochen früher als ihr erwartet habt. Deine Gruppe und du kommt aus dem Staunen kaum heraus und auf der Rückfahrt an Land gibt es nur das eine Thema.
+Kena über die Wirkung von Oxybenzon:
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 4.0 Kena über Oxybenzon.wav&quot;&gt;
+&lt;/audio&gt;
+ |glossar&gt;[(link:&quot;zurück zu Kenas anderen Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]]
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="66" name="Walhai!" tags="" position="292,2157" size="200,100">&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_CinziaOseleBismarck_26.jpg&quot; &gt;
+Langsam treibt der etwa 10 Meter lange Hai an euch vorüber, bloß einige Meter entfernt, außerhalb des Riffes. Ein Walhai, wie du als Guide sehr gut weißt: Der größte Fisch der Welt, begleitet von einer Gruppe kleinerer Fische. Der erste der friedlichen Planktonfresser diese Saison ist ein paar Wochen früher als ihr erwartet habt. Deine Gruppe und du kommt aus dem Staunen kaum heraus und auf der Rückfahrt an Land gibt es nur dieses eine Thema.
 
-Das Leben im Ozean ist eng miteinander verknüpft.
-Auch wenn der Walhai nicht im Riff lebt ist es doch für die Stoffkreisläufe zentral wichtig, die den Walhai und seine Artgenossen jeden Frühling wieder in diese Region führen.
+---
 
-Abends bei der Teambesprechung überlegt ihr erneut was ihr tuen könnt um euer Riff, die davon abhängige Artenvielfalt und letztlich die Existenzgrundlage des Tauchresorts zu schützen. Du erinnerst dich, dass Kena etwähnt hatte, es gäbe noch mehr [[lokale Stressfaktoren]], welche die Riffe bedrohen.
+//Das Leben im Ozean ist eng miteinander verknüpft.
+Auch wenn der Walhai nicht im Riff lebt, ist das Riff doch für die Nahrungskreisläufe zentral wichtig, die den Walhai und seine Artgenossen jeden Frühling wieder in diese Region führen und ernähren.//
+
+---
+
+Abends bei der Teambesprechung überlegt ihr erneut was ihr tuen könnt um euer Riff, die davon abhängige Artenvielfalt und letztlich die Existenzgrundlage des Tauchresorts zu schützen. Du erinnerst dich, dass Kena erwähnt hatte, es gäbe noch mehr [[lokale Stressfaktoren]] außer Chemikalien wie Oxybenzon, welche die Riffe bedrohen.
 
 (set:$vorher to &quot;Walhai!&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="67" name="lokale Stressfaktoren" tags="" position="292,2348" size="200,100">(set:$geld=2)
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
+&lt;audio controls autoplay loop&gt;
+&lt;source src=&quot;aud/under-water-sounds-while-scuba-diving-14866.mp3&quot;&gt;
+&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="67" name="lokale Stressfaktoren" tags="" position="288,2276" size="200,100">###Lokaler Stressfaktor: Eutrophierung
+(set:$geld=2)
 Kena:
-Neben den schädlichen Chemikalien, die in die Riffe gelangen sind 
-die zunehmende Bebauung der Küsten, die Überfischung und destruktive Fischereipraktiken wie Dynamitfischen und Eutrophierung große lokale Stressfaktoren für die Korallenriffe.
+&#39;&#39;Neben den schädlichen Chemikalien, die in die Riffe gelangen sind 
+die zunehmende Bebauung der Küsten, die Überfischung und destruktive Fischereipraktiken wie Dynamitfischen und Eutrophierung große lokale Stressfaktoren für die Korallenriffe.&#39;&#39;
 &lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_MartinColognoli_22.jpg&quot; &gt;
-Spuren von Dynamitfischerei in Indonesien
+//Spuren von Dynamitfischerei in Indonesien//
+
+---
 
 Kena:
-Letztgenanntes, die Eutrophierung bedeutet, dass zusätzliche Nährstoffe ins Riff gelangen.
-
-Das klingt erstmal nach einer guten Sache, ist aber vor allem gut für die Algen, die mit den Korallen um den Lebensraum konkurrieren.
-Die Korallen versuchen sich gegen die überwuchernden Algen zur Wehr zu setzen und werden dabei von algenfressenden Fischen unterstützt. 
-Werden nun die Korallen geschwächt z.B. durch eine Bleiche, oder werden die algenfressenden Fische überfischt oder die Algen mit zusätzlichen Nährstoffen versorgt
-dann kann es sein, dass die Algen einen geschlossenen Teppich über den Korallen bilden, aufrecht erhalten und die Korallen darunter sterben.
-
-Sterben die Korallen, fehlen die Baumeister des Riffes und das Riff hat langfristig keine Chance...
+(vorläufige Tonspur)
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 5.0 Kena über Kaki.wav&quot;&gt;
+&lt;/audio&gt;
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_CinziaOseleBismarck_26.jpg&quot; &gt;
+//Beziehungen herbivorer Fische, Algen und Korallen//
 
 &lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_CinziaOseleBismarck_26.jpg&quot; &gt;
-((Bild Beziehungen herbivorer Fische, Algen und Korallen))
+//Algendominiertes Riff//
 
 ---
 Die anderen im Team schauen einander an: &#39;&#39;Eutrophieren wir denn das Riff?&#39;&#39;
 
-&#39;&#39;Die Rifftoiletten&#39;&#39;, antwortet Alma, &#39;&#39;tatsächlich ist auf hunderte Meter um die Toiletten der Bewuchs der Algen sichtbar stärker. Unsre Hinterlassenschaften gehen ungeklärt direkt ins Riff und sind sehr nährstoffhaltig. Um das Problem anzugehen, müsste man entweder ein teures Klärsystem bauen oder wir könnten mit Komposttoiletten aushelfen.&#39;&#39;
+&#39;&#39;Die Rifftoiletten&#39;&#39;, antwortet Alma, &#39;&#39;tatsächlich ist auf hunderte Meter um die Toiletten der Bewuchs der Algen sichtbar stärker. Unsere Hinterlassenschaften gehen ungeklärt direkt ins Riff und sind sehr nährstoffhaltig. Um das Problem anzugehen, müsste man entweder ein teures Klärsystem bauen oder wir könnten mit Komposttoiletten aushelfen.&#39;&#39;
 
-[[Was meint ihr?-&gt;Meinungen: Klo]]
+[[Was meint ihr dazu?-&gt;Meinungen: Klo]]
 
 (set:$vorher to &quot;lokale Stressfaktoren&quot;)
-|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="68" name="In modernes Klärsystem investieren (Nicht verfügbar)" tags="" position="521,2475" size="200,100">Alma schaut dich an: &#39;&#39;Wir haben leider wirklich für diese Saison keinen finanziellen Spielraum mehr um ein modernes Klärsystem zu bauen, da unser Budget mit der Umstellung der Küche weitestgehend aufgebracht wurde. Wir müssen eine andere [[Entscheidung treffen.-&gt;Meinungen: Klo]]&#39;&#39;
-</tw-passagedata><tw-passagedata pid="69" name="Abreisen" tags="" position="1573,3510" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="68" name="In modernes Klärsystem investieren (Nicht verfügbar)" tags="" position="517,2403" size="200,100">Alma schaut dich an: &#39;&#39;Wir haben leider wirklich für diese Saison keinen finanziellen Spielraum mehr um ein modernes Klärsystem zu bauen, da unser Budget mit der Umstellung der Küche weitestgehend aufgebracht wurde. Wir müssen eine andere [[Entscheidung treffen.-&gt;Meinungen: Klo]]&#39;&#39;{&lt;audio controls autoplay loop&gt;
+ 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="69" name="Abreisen" tags="" position="1573,3510" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="70" name="Anmerkung" tags="" position="271,2897" size="200,100">//Anmerkung: Die ersten indischen Rotfeuerfische in den Riffen um Roatan wurden tatsächlich bereits 2009 gesichtet, von dort aus breitete er sich innerhalb weniger Jahre durch Korallenriffe des gesamten Karbischen Meeres aus und wurde zu einer der bedenklichsten Umwelt-Bedrohungen der Region erklärt.//
+
+[[Weiter-&gt;Meinungen zu Rofeuerfisch-Entscheidung]]</tw-passagedata><tw-passagedata pid="71" name="Rotfeuerfisch" tags="" position="1590.0000000000005,1110" size="100,100">###Rotfeuerfische
+Der indische Rotfeuerfisch //Pterois miles// ist eine räuberische Spezies die sich seit Beginn der 2000er Jahre invasiv im Atlantik ausbreitet und die Korallenriffe befällt.
+&lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_UmeedMistry_8.jpg&quot; &gt;
+Kena über die Ausbreitung:
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 6.0 Kena über Rot.wav&quot;&gt;
+&lt;/audio&gt;
+Kena über die Bejagung:
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 6.1 Kena über Rot.wav&quot;&gt;
+&lt;/audio&gt;
+|glossar&gt;[(link:&quot;zurück zu Kenas anderen Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]]
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="72" name="Walhaie" tags="" position="2003.6666666666665,588.0000000000001" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="73" name="Eutrophierung" tags="" position="1586.666666666667,994" size="100,100">###Eutrophierung
+bezeichnet die Algenblüte, welche auf den Eintrag von zusätzlichen Nährstoffen in ein Gewässer folgt. Im Falle von Korallenriffen ist dies schädlich für Korallen, welche in Konkurrenz zu den Algen stehen.
+
+Kena über Eutrophierung:
+&lt;audio class=&quot;shown&quot; controls&gt;
+&lt;source src=&quot;aud/Aud 5.0 Kena über Kaki.wav&quot;&gt;
+&lt;/audio&gt;
+
+|glossar&gt;[(link:&quot;zurück zu Kenas anderen Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]]
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="74" name="Ende" tags="" position="282.3333333333333,3595.666666666667" size="200,100">=&gt;&lt;=
+Herzlichen Glückwunsch zum Abschließen des Reeflectories &quot;Das Riff&quot;. Vielen Dank für deine Aufmerksamkeit, $realname!
+&lt;==&gt;
+&lt;style&gt; img {max-width:100%}&lt;/style&gt; 
+&lt;img src = &quot;pic/OceanImageBank_AlexMustard_04.jpg&quot; &gt;{&lt;audio controls autoplay loop&gt; 
+&lt;source src=&quot;aud/underwater-ambience-6201.mp3&quot;
+&gt;
+}
+=&gt;&lt;=
+(text-style:&quot;double-underline&quot;, &quot;buoy&quot;, &quot;smear&quot;)[#The End]
+
+(set:$vorher to &quot;Ende&quot;)
+Quellen für Bild und Tonmaterial befinden sich im |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="75" name="Korallen" tags="" position="1698.333333333333,520.3333333333334" size="100,100">Korallen sind Tiere die man zwei Gruppen unterteilt:
+
+1.: Riffbildende Korallen, die Kalkskelette bilden. Sie werden auch als Steinkorallen, Hartkorallen oder hermatypische Korallen bezeichnet.
+
+2.: Weichkorallen, welche keine Kalkskelette bilden
+
+Korallen bilden Kolonien, die auch als Korallenstöcke bezeichnet werden und aus den einzelnen |glossar&gt;[(link:&quot;Polypen&quot;)[(goto:&quot;Polyp&quot;)]] bestehen.
+
+|glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
