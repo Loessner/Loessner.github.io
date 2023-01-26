@@ -437,7 +437,7 @@ Du verabschiedest dich und ...
 
 Du...{
 (set: $fenster to 1)}
-[[... blickst zurück auf dein Handy.-&gt;Fenster zu Info]]
+(if:$info2 is 0)[[... blickst zurück auf dein Handy.-&gt;Fenster zu Info]]
 (if:$popel is 0)[[... bohrst in der Nase.-&gt;Popeln]]
 (if:$landung is 1)[[... bereitest dich auf die Landung vor.-&gt;Ankommen]]
 &lt;audio controls autoplay loop&gt;
@@ -517,6 +517,7 @@ Du bist nun auf jeden Fall satt, entscheidest dich etwaige Blicke deiner Mitmens
 (set:$landung to 1)
 (goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="23" name="Info zu Fenster" tags="" position="550,275" size="100,100">(set:$popel to ($popel+1))
 (set:$landung to 1)
+(set:$info2 to 1)
 (goto: &quot;Fenster&quot;)</tw-passagedata><tw-passagedata pid="24" name="Popel zu Info" tags="" position="1046,479" size="100,100">(set:$landung to 1)
 (goto: &quot;Info&quot;)</tw-passagedata><tw-passagedata pid="25" name="Erste Bootsfahrt" tags="" position="300,764" size="200,100">###Auf dem Boot
 Am nächsten Morgen ist es so weit: Ihr bekommt ein Briefing und macht die erste Fahrt raus aufs Riff.
@@ -1066,7 +1067,7 @@ Hank ist der Koch des Resorts und vertritt das Küchenteam.
 
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
 |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="61" name="Meinung?" tags="" position="122,1291" size="100,100">(if:$vegan is not &quot;?&quot; and $lokal is not &quot;?&quot;)[(goto:&quot;Auswirkungen Konsum&quot;)](if:$vegan is &quot;?&quot; or $lokal is &quot;?&quot;)[Du bist dir noch nicht ganz sicher. Du schläfst nochmal eine Nacht über der Entscheidung, hörst dir eventuell nochmal die verschiedenen Meinungen an und ...
-... [[du teilst den anderen am nächsten Tag deine Meinung mit.-&gt;Meinungen zur Konsum-Entscheidung]]]</tw-passagedata><tw-passagedata pid="62" name="2. Korallenbleichen" tags="" position="1581.6666666666667,760" size="100,100">###Korallenbleiche
+... [[du teilst den anderen am nächsten Tag deine Meinung mit.-&gt;Meinungen zur Konsum-Entscheidung]]]</tw-passagedata><tw-passagedata pid="62" name="2. Korallenbleichen" tags="" position="1581,760" size="100,100">###Korallenbleiche
 Als Bleiche bzw Korallenbleiche bezeichnet man den Zustand in dem sich Hartkorallen befinden, wenn sie auf Grund von Stress die Symbiose mit ihren farbigen Zooxanthellen beenden und daher bleich aussehen.
 
 Hier kannst du dir Kenas Vortrag über Korallenbleichen erneut anhören:
@@ -1150,7 +1151,7 @@ Auch wenn der Walhai nicht im Riff lebt, ist das Riff doch für die Nahrungskrei
 
 ---
 
-Abends bei der Teambesprechung überlegt ihr erneut was ihr tuen könnt um euer Riff, die davon abhängige Artenvielfalt und letztlich die Existenzgrundlage des Tauchresorts zu schützen. Du erinnerst dich, dass Kena erwähnt hatte, es gäbe noch mehr [[lokale Stressfaktoren]] außer Chemikalien wie Oxybenzon, welche die Riffe bedrohen.
+Abends bei der Teambesprechung überlegt ihr erneut was ihr tun könnt um euer Riff, die davon abhängige Artenvielfalt und letztlich die Existenzgrundlage des Tauchresorts zu schützen. Du erinnerst dich, dass Kena erwähnt hatte, es gäbe noch mehr [[lokale Stressfaktoren]] außer Chemikalien wie Oxybenzon, welche die Riffe bedrohen.
 
 (set:$vorher to &quot;Walhai!&quot;)
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
@@ -1191,7 +1192,7 @@ Die Anderen im Team schauen einander an: &#39;&#39;Eutrophieren wir denn das Rif
  	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
 	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="68" name="In modernes Klärsystem investieren (Nicht verfügbar)" tags="" position="517,2403" size="200,100">Alma schaut dich an: &#39;&#39;Wir haben leider wirklich für diese Saison keinen finanziellen Spielraum mehr um ein modernes Klärsystem zu bauen, da unser Budget mit der Umstellung der Küche weitestgehend aufgebracht wurde. Wir müssen eine andere [[Entscheidung treffen.-&gt;Meinungen: Klo]]&#39;&#39;{&lt;audio controls autoplay loop&gt;
  	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
-	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="69" name="Abreisen" tags="" position="1573,3510" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="70" name="Anmerkung" tags="" position="271,2897" size="200,100">//Anmerkung: Die ersten indischen Rotfeuerfische in den Riffen um Roatan wurden tatsächlich bereits 2009 gesichtet, von dort aus breitete er sich innerhalb weniger Jahre durch Korallenriffe des gesamten Karbischen Meeres aus und wurde zu einer der bedenklichsten Umwelt-Bedrohungen der Region erklärt.//
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="69" name="Abreisen" tags="" position="1573,3510" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="70" name="Anmerkung" tags="" position="271,2897" size="200,100">//Anmerkung: Die ersten indischen Rotfeuerfische in den Riffen um Roatán wurden tatsächlich bereits 2009 gesichtet, von dort aus breitete er sich innerhalb weniger Jahre durch Korallenriffe des gesamten Karbischen Meeres aus und wurde zu einer der bedenklichsten Umwelt-Bedrohungen der Region erklärt.//
 
 [[Weiter-&gt;Meinungen zu Rofeuerfisch-Entscheidung]]</tw-passagedata><tw-passagedata pid="71" name="Rotfeuerfisch" tags="" position="1590,1110" size="100,100">###Rotfeuerfische
 Der indische Rotfeuerfisch //Pterois miles// ist eine räuberische Spezies die sich seit Beginn der 2000er Jahre invasiv im Atlantik ausbreitet und die Korallenriffe befällt.
@@ -1217,7 +1218,7 @@ Kena über Eutrophierung:
 |glossar&gt;[(link:&quot;zurück zu Kenas anderen Vorträgen&quot;)[(goto:&quot;Kenas Vorträge&quot;)]]
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
 |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="74" name="Ende" tags="" position="282,3595" size="200,100">=&gt;&lt;=
-Herzlichen Glückwunsch zum Abschließen des Reeflectorys &quot;Das Riff&quot;. Vielen Dank für deine Aufmerksamkeit, $realname!
+Herzlichen Glückwunsch zum Abschließen des Reflectorys &quot;Das Riff&quot;. Vielen Dank für deine Aufmerksamkeit, $realname!
 &lt;==&gt;
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
 &lt;img src = &quot;pic/OceanImageBank_AlexMustard_04.jpg&quot; &gt;{&lt;audio controls autoplay loop&gt; 
@@ -1237,10 +1238,10 @@ Quellen für Bild und Tonmaterial befinden sich im |glossar&gt;[(link:&quot;Glos
 Korallen bilden Kolonien, die auch als Korallenstöcke bezeichnet werden und aus den einzelnen |glossar&gt;[(link:&quot;Polypen&quot;)[(goto:&quot;Polyp&quot;)]] bestehen.
 
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
-|glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="76" name="Fluoreszenz" tags="" position="1734.666666666667,678.3333333333334" size="100,100">Der Begriff //Fluoreszenz// beschreibt die Abgabe von Licht nachdem Licht aufgenommen wurde. Manche Lebewesen sind so in der Lage im Dunkeln zu leuchten um beispielsweise zu kommunizieren, zu jagen oder Fressfeinde zu irritieren. Dies wird als Biofluoreszenz bezeichnet und ist eine Form von Bioluminiszenz.
+|glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="76" name="Fluoreszenz" tags="" position="1734,678" size="100,100">Der Begriff //Fluoreszenz// beschreibt die Abgabe von Licht nachdem Licht aufgenommen wurde. Manche Lebewesen sind so in der Lage im Dunkeln zu leuchten um beispielsweise zu kommunizieren, zu jagen oder Fressfeinde zu irritieren. Dies wird als Biofluoreszenz bezeichnet und ist eine Form von Bioluminiszenz.
  
  |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
- |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="77" name="Makroalgen" tags="" position="1734.6666666666665,797" size="100,100">Algen werden in Makro- und Mikroalgen unterschieden. Mikroalgen sind vor allem die einzelligen Algen, Makroalgen sind meist mit bloßem Auge erkennbar bis viele Meter groß.
+ |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="77" name="Makroalgen" tags="" position="1734,797" size="100,100">Algen werden in Makro- und Mikroalgen unterschieden. Mikroalgen sind vor allem die einzelligen Algen, Makroalgen sind meist mit bloßem Auge erkennbar bis viele Meter groß.
 
  |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
  |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata></tw-storydata>
