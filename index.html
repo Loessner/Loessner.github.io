@@ -131,7 +131,7 @@ tw-icon { display:none; }
 (set:$popel to 0)
 (set:$landung to 0)
 (set:$stress to 0)
-(set:$geld to 3)
+(set:$geld to 4)
 (set:$fenster to 0)
 (set:$info to 0)
 (set:$cook to 0)
@@ -140,7 +140,7 @@ tw-icon { display:none; }
 }
 (if:$landung is 0)[
 =&gt;&lt;=
-Hallo $name! Willkommen zur aktuellen Arbeitsversion von:
+Hallo $name! Willkommen zu:
 
 (text-style:&quot;double-underline&quot;, &quot;buoy&quot;, &quot;smear&quot;)[#DAS RIFF] 
 &lt;==&gt;
@@ -242,25 +242,25 @@ die Umstellung auf lokale Produkte.
 	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="5" name="Auswirkungen Konsum" tags="" position="293,1424" size="200,100">###Auswirkungen der Ernährungs-Entscheidung
 (if:$vegan is &quot;für&quot; and $lokal is &quot;für&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+1)(set:$geld to $geld-2)In den folgenden Tagen hat Alma alle Hände voll zu tun hat, eure Entscheidung umzusetzen.
 
-Sie informiert die kommenden Besucher über das geänderte Angebot, updated die Online-Profile, kündigt alte- und schließt neue Verträge mit Zulieferern für lokale, vegane Produkte.
+Sie informiert die kommenden Besucher über das geänderte Angebot, updated die Online-Profile, kündigt alte- und schließt neue Verträge mit Lieferanten für lokale, vegane Produkte.
 Auch Hank und sein Küchenteam sind sehr beschäftigt, denn sie müssen kurzfristig das Angebot der Küche auf vegan umstellen und sind dabei eingeschränkt auf die Produkte, die ihr lokal erhaltet.
 
 Einige der Gäste beschweren sich, weil sie erwarten, dass man bei einem Urlaub am Meer auch Fisch zu essen bekommt. Andere begrüßen das zeitgemäße Auftreten des Resorts und die stornierten Plätze werden bald von neuen Kunden gebucht.
 
 Auch wenn der Großteil des Teams dafür war, sind Hank und ein paar andere unzufrieden mit der Entscheidung für die vegane Ernährung. Es gibt immer wieder Grundsatzdiskussionen und schließlich einen Streit woraufhin ein langjähriges Teammitglied kündigt. Alma muss nun kurzfristig jemand Neues einstellen.
 
-//Der finanzielle Spielraum für diese Saison ist beinahe aufgebraucht, da beide Umstellungen den Betrieb zusätzliches Geld kosten aber kein Neues einbringen.//
+Der finanzielle Spielraum für diese Saison ist beinahe aufgebraucht, da beide Umstellungen den Betrieb zusätzliches Geld kosten aber kein Neues einbringen.
 
 Nachdem sich die Wogen etwas geglättet haben, freut ihr euch darüber den CO2-Ausstoß des Resorts reduziert zu haben um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie die ihr vertretet und mit den Gästen thematisiert um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;für&quot; and $lokal is &quot;gegen&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+1)(set:$geld to $geld-1) In den folgenden Tagen hat Alma einiges zu tun, eure Entscheidungen umzusetzen.
 
-Sie informiert die kommenden Besucher über das geänderte Angebot, updated die Online-Profile, kündigt alte- und schließt neue Verträge mit Zulieferern für vegane Produkte.
+Sie informiert die kommenden Besucher über das geänderte Angebot, updated die Online-Profile, kündigt alte- und schließt neue Verträge mit Lieferanten für vegane Produkte.
 Auch Hank und sein Küchenteam sind beschäftigt, denn sie müssen kurzfristig das Angebot der Küche auf vegan umstellen, haben aber die volle Auswahl der Produkte die Roatán importiert.
 
 Einige der Gäste beschweren sich, weil sie erwarten, dass man bei einem Urlaub am Meer auch Fisch zu essen bekommt. Andere begrüßen das zeitgemäße Auftreten des Resorts und die stornierten Plätze werden bald von neuen Kunden gebucht.
 
 Auch wenn der Großteil des Teams dafür war, sind Hank und ein paar andere unzufrieden mit der Entscheidung für die vegane Ernährung. Es gibt immer wieder Grundsatzdiskussionen und schließlich einen Streit woraufhin ein langjähriges Teammitglied kündigt. Alma muss nun kurzfristig jemand Neues einstellen.
 
-//Der finanzielle Spielraum für diese Saison ist kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.//
+Der finanzielle Spielraum für diese Saison ist kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.
 
 Nachdem sich die Wogen etwas geglättet haben, freut ihr euch darüber den CO2-Ausstoß des Resorts etwas reduziert zu haben um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie, die ihr vertretet und mit den Gästen thematisiert um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;gegen&quot; and $lokal is &quot;für&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+0)(set:$geld to $geld-1) In den folgenden Tagen hat Alma einiges zu tun, eure Entscheidung umzusetzen.
 
@@ -268,13 +268,13 @@ Sie informiert die kommenden Besucher über das geänderte Angebot, kündigt alt
 
 Ihr bekommt positives Feedback über Social Media und Gäste begrüßen das zeitgemäße Auftreten des Resorts.
 
-//Der finanzielle Spielraum für diese Saison ist etwas kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.//
+Der finanzielle Spielraum für diese Saison ist etwas kleiner geworden, da die Umstellung den Betrieb zusätzliches Geld kostet aber kein zusätzliches einbringt.
 
-Ihr euch darüber den CO2-Ausstoß des Resorts etwas reduziert zu haben, um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie, die ihr vertretet und mit den Gästen thematisiert, um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;gegen&quot; and $lokal is &quot;gegen&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+0)(set:$geld to $geld-0) In den folgenden Tagen setzt du deine Tauchausbildung fort, während im Resort alles seinen gewohnten Weg geht.
+Ihr habt den CO2-Ausstoß des Resorts etwas reduziert, um die Riffe weltweit ein wenig zu entlasten. Vor allem aber habt ihr nun eine zukunftsorientierte Philsosphie, die ihr vertretet und mit den Gästen thematisiert, um so ein langfristiges Bewusstsein zu fördern.](if:$vegan is &quot;gegen&quot; and $lokal is &quot;gegen&quot;)[(set: $stress to $stress + 0)(set:$cook to $cook+0)(set:$geld to $geld-0) In den folgenden Tagen setzt du deine Tauchausbildung fort, während im Resort alles seinen gewohnten Weg geht.
 
 Auch wenn der Großteil des Teams dafür war, sind Kena und ein paar andere unzufrieden mit der Entscheidung den CO2-Ausstoß nicht zu reduzieren. Es gibt immer wieder Grundsatzdiskussionen und schließlich einen Streit woraufhin ein langjähriges Teammitglied kündigt.
 
-Alma muss nun kurzfristig jemand Neues einstellen. //Der finanzielle Spielraum für diese Saison ist weiterhin groß und ermöglicht an anderen Stellen in Nachhaltigkeit zu investieren.//
+Alma muss nun kurzfristig jemand Neues einstellen. Der finanzielle Spielraum für diese Saison ist weiterhin groß und ermöglicht an anderen Stellen in Nachhaltigkeit zu investieren.
 
 Nachdem sich die Wogen etwas geglättet haben, überlegt ihr weiter wie ihr das Riff schützen könnt mit etwas greifbareren Zielen als eurem Einfluss auf das Klima.]
 
@@ -332,7 +332,7 @@ Jan, der andere Tauchlehrer, meldet sich zu Wort:
 &lt;source src=&quot;aud/Aud 6.2 Dive über Rot.wav&quot;&gt;
 &lt;/audio&gt;
 
-Hank:
+Hank gibt zu bedenken:
 (if:$vegan is &quot;gegen&quot;)[&lt;audio class=&quot;shown&quot; controls&gt;
 &lt;source src=&quot;aud/Aud 6.3.1 Hank über Rot.wav&quot;&gt;
 &lt;/audio&gt;](if:$vegan is &quot;für&quot;)[&lt;audio class=&quot;shown&quot; controls&gt;
@@ -393,7 +393,7 @@ Du verabschiedest dich und ...
 (set:$vorher to &quot;Abschied&quot;)
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{
 &lt;audio controls autoplay loop&gt;
- 	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
+ 	&lt;source src=&quot;aud/underwater-ambience-6201.mp3&quot;&gt;
 	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="12" name="Meinungen: Schutzzonen" tags="" position="1521,3264" size="200,100">Sollen Schutzzonen eingerichtet werden?
 
 1: Schlüsselspezies fürs Riff: Dauerhaft schützen um dem Riff einen Teil der Belastung zu nehmen und so Überlebenswahrscheinlichkeiten zu erhöhen. 
@@ -618,8 +618,8 @@ Alma:
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]{&lt;audio controls autoplay loop&gt;
  	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
 	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="31" name="Kläranlage" tags="" position="54,2529" size="200,100">{(set: $stress to $stress + 0)
-(set: $klo to &quot;klär&quot;)
-###Modernes Klärsystem}
+(set: $klo to &quot;klär&quot;)}
+###Modernes Klärsystem
 Die Anlage wird geplant, in Auftrag gegeben und gebaut. Es dauert Monate und für lange Zeit ist auf dem Gelände des Resorts eine große Baustelle. Alma muss den Kunden während der Zeit einen Teil ihrer Zahlungen für die Unterkünfte erlassen zum Ausgleich für die Unannehmlichkeiten. Aber dann endlich können die Rifftoiletten abgebaut werden.
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
@@ -633,8 +633,8 @@ Innerhalb der folgenden Monate verschwinden die dichten Algenteppiche, wo die Ri
 
 [[Unterdessen ...]]{&lt;audio controls autoplay loop&gt;
  	&lt;source src=&quot;aud/morning-sound-birds-chirp-10828.mp3&quot;&gt;
-	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="32" name="Plumsklo" tags="" position="512,2531" size="200,100">{(set: $stress to $stress + 35)
-###Rifftoiletten}
+	&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="32" name="Plumsklo" tags="" position="512,2531" size="200,100">{(set: $stress to $stress + 35)}
+###Rifftoiletten
 Ihr entscheidet euch bei den Rifftoiletten zu bleiben und vorerst keine Maßnahmen zu ergreifen.
 
 &lt;style&gt; img {max-width:100%}&lt;/style&gt; 
@@ -705,7 +705,7 @@ Ihr macht einen Tauchgang mit dem gesamten Tauchbegleitungsteam um die Handhabun
 
 {Ihr fangt hunderte Fische und bringt sie an Land. 
 (if:$cook is 0)[Hank und das Küchenteam setzen sich mit der aufwendigen Zubereitung auseinander. Es ist das einzige Fischgericht der Speisekarte, beim Team und den Gästen sehr beliebt und nach anfänglichem Murren und einigen schmerzhaften Stichen ist auch Hank von dem Speisefisch übrzeugt.]
-(if:$cook is 0)[(set:$cook to &quot;gone&quot;)Hank fühlt sich bei der Behandlung seiner Wünsche bei der Umstellung der Küche und nun die Entscheidung über den Fisch so im Stich gelassen, dass auch er sich eine andere Anstellung sucht. Alma muss kurzfristig einen Ersatz suchen. Rofeuerfisch ist das einzige Fischgericht der Speisekarte, beim Team und den Gästen sehr beliebt.]}
+(if:$cook is 1)[(set:$cook to &quot;gone&quot;)Hank fühlt sich bei der Behandlung seiner Wünsche bei der Umstellung der Küche und nun die Entscheidung über den Fisch so im Stich gelassen, dass auch er sich eine andere Anstellung sucht. Alma muss kurzfristig einen Ersatz suchen. Rotfeuerfisch ist das einzige Fischgericht der Speisekarte, beim Team und den Gästen sehr beliebt.]}
 
 Von da an werden immer wieder auch mit Gästen Harpunentauchgänge gemacht und die Anzahl der Rotfeuerfische so klein gehalten, dass sie das Riff nicht belasten.
 
@@ -759,14 +759,12 @@ Während sich die Schlange langsam weiterbewegt, suchst du ein Infovideo zu Kora
 &lt;source src=&quot;aud/plane/international-airport-intercom-madeira-19947.mp3&quot;
 &gt;&lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="39" name="Meinungen Sonnencreme" tags="" position="289,1797" size="200,100">### Meinungen zur Sonnencreme
 Kena:
-(vorläufige Tonspur)
 &lt;audio class=&quot;shown&quot; controls&gt;
 &lt;source src=&quot;aud/Aud 4.1 Kena über Creme.wav&quot;&gt;
 &lt;/audio&gt;
 
 
 Alma:
-(vorläufige Tonspur)
 &lt;audio class=&quot;shown&quot; controls&gt;
 &lt;source src=&quot;aud/Aud 4.2 Alma über Creme.wav&quot;&gt;
 &lt;/audio&gt;
@@ -884,7 +882,7 @@ Sie informiert im Laufe des Reflectory mit einer Reihe von |glossar&gt;[(link:&q
 
 |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
 |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="51" name="Rotfeuerfische am Riff" tags="" position="272,2771" size="200,100">###Ein neuer Fisch
-Kena ist bei der Beschreibung alarmiert, sucht ein Bild und zeigt es dem Gast:
+&#39;&#39;Was gibt&#39;s $name?&#39;&#39;, grinst dich Kena an, wird dann bei der Beschreibung des Fisches sehr ernst, sucht ein Bild heraus und zeigt es dem Gast:
 &lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/lion/OceanImageBank_UmeedMistry_8.jpg&quot; &gt;
 
 &#39;&#39;Ja! Genau so sah der Fisch aus!&#39;&#39;
@@ -1158,8 +1156,8 @@ Abends bei der Teambesprechung überlegt ihr erneut was ihr tun könnt um euer R
 &lt;/audio&gt;}</tw-passagedata><tw-passagedata pid="67" name="lokale Stressfaktoren" tags="" position="288,2276" size="200,100">###Lokaler Stressfaktor: Eutrophierung
 (set:$geld=2)
 Kena:
-&#39;&#39;Neben den schädlichen Chemikalien, die in die Riffe gelangen sind 
-die zunehmende Bebauung der Küsten, die Überfischung und destruktive Fischereipraktiken wie Dynamitfischen und Eutrophierung große lokale Stressfaktoren für die Korallenriffe.&#39;&#39;
+&#39;&#39;Neben den schädlichen Chemikalien, die in die Riffe gelangen, sind 
+die zunehmende Bebauung der Küsten, die Überfischung und destruktive Fischereipraktiken wie Dynamitfischen und Eutrophierung, große lokale Stressfaktoren für die Korallenriffe.&#39;&#39;
 &lt;style&gt; img {width:100%}&lt;/style&gt; &lt;img src = &quot;pic/OceanImageBank_MartinColognoli_22.jpg&quot; &gt;
 //Spuren von Dynamitfischerei in Indonesien//
 
@@ -1224,7 +1222,9 @@ Herzlichen Glückwunsch zum Abschließen des Reflectorys &quot;Das Riff&quot;. V
 }
 =&gt;&lt;=
 (text-style:&quot;double-underline&quot;, &quot;buoy&quot;, &quot;smear&quot;)[#The End]
-
+&lt;==&gt;
+Fülle bitte die Stellungnahme aus, um mir bei meiner Forschungsarbeit zu helfen. Vielen Dank! Um die Stellungnahme digital auszufüllen, folge diesem &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLScSn6aTaEtXZj_mNrFLFPusu1m3HJn458OtVMDE1d0uuBewiQ/viewform?usp=sf_link&quot;; target=&quot;_blank&quot;&gt;Link&lt;/a&gt; oder schreibe die Antworten von Hand auf den vogedruckten Zetteln.
+=&gt;&lt;=
 (set:$vorher to &quot;Ende&quot;)
 Quellen für Bild und Tonmaterial befinden sich im |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]</tw-passagedata><tw-passagedata pid="75" name="Korallen" tags="" position="1698,520" size="100,100">Korallen sind Tiere die man zwei Gruppen unterteilt:
 
@@ -1241,8 +1241,8 @@ Korallen bilden Kolonien, die auch als Korallenstöcke bezeichnet werden und aus
  |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="77" name="Makroalgen" tags="" position="1734,797" size="100,100">Algen werden in Makro- und Mikroalgen unterschieden. Mikroalgen sind vor allem die einzelligen Algen, Makroalgen sind meist mit bloßem Auge erkennbar bis viele Meter groß.
 
  |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
- |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="78" name="Extrainfo" tags="" position="701.6666666666667,990.8333333333335" size="100,100">
-ExtraInfo: wirtschaftlich das wertvollse Ökosystem für Fischerei, Küstenschutz, Tourismus und Entdeckung neuer Arzneien wie Antibiotika (vllt Almas ansprache über Status der Korallenriffe?)</tw-passagedata><tw-passagedata pid="79" name="Jan" tags="" position="1464.6666666666665,414.66666666666663" size="100,100">Jan ist ein Tauchlehrer im |glossar&gt;[(link:&quot;Resort&quot;)[(goto:&quot;Das Resort&quot;)]]. Er bringt dir nach deiner Ankunft zusammen mit |glossar&gt;[(link:&quot;Kena&quot;)[(goto:&quot;Kena&quot;)]] das Tauchen bei und hält einen Vortrag über |glossar&gt;[(link:&quot;Korallen und Riffwachstum&quot;)[(goto:&quot;2. Video&quot;)]].
+ |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata><tw-passagedata pid="78" name="Extrainfo" tags="" position="701,990" size="100,100">
+ExtraInfo: wirtschaftlich das wertvollse Ökosystem für Fischerei, Küstenschutz, Tourismus und Entdeckung neuer Arzneien wie Antibiotika (vllt Almas ansprache über Status der Korallenriffe?)</tw-passagedata><tw-passagedata pid="79" name="Jan" tags="" position="1464,414" size="100,100">Jan ist ein Tauchlehrer im |glossar&gt;[(link:&quot;Resort&quot;)[(goto:&quot;Das Resort&quot;)]]. Er bringt dir nach deiner Ankunft zusammen mit |glossar&gt;[(link:&quot;Kena&quot;)[(goto:&quot;Kena&quot;)]] das Tauchen bei und hält einen Vortrag über |glossar&gt;[(link:&quot;Korallen und Riffwachstum&quot;)[(goto:&quot;2. Video&quot;)]].
 
  |glossar&gt;[(link:&quot;Glossar&quot;)[(goto:&quot;Glossar&quot;)]]
  |glossar&gt;[(link:&quot;zurück zur Geschichte&quot;)[(goto:$vorher)]]</tw-passagedata></tw-storydata>
